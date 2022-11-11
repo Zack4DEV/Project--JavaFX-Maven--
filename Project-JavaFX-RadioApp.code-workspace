@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "automatic"
+	},
+	"extensions": {
+		"recommendations": [
+			"github.github-vscode-theme",
+			"ms-vscode.theme-tomorrowkit",
+			"github.codespaces",
+			"eamodio.gitlens"
+		]
+	}
+}
