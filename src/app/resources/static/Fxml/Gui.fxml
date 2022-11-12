@@ -9,63 +9,30 @@
 <?import javafx.scene.web.WebEngine?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="967.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="692.0" prefWidth="967.0"
+   xmlns="http://javafx.com/javafx/19"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="">
    <children>
       <AnchorPane prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="1.0" layoutY="1.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginemfm">
-               <MediaView fx:id="mediamfm">
-                  <html><body><audio id="playermfm" controls="mfm">
-                     <source src="http://streamer.eagrpservices.com/audio/mfmradio.ogg" preload="auto" type="audio/mp3" />
-                  </audio></body></html>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playermfm =
-                  document.getElementById("playermfm"), var urimfm = new
-                  Audio("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
-                  var playedmfm = document.createElement("playedmfm");
-                  playedmfm.addEventListener("playedmfm",function playmfm(){
-                  urimfm.play(); }); playermfm.appendChild("playedmfm")</script>
-                  </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="28.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/mfm.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickermfm" layoutX="56.0" layoutY="118.0" mnemonicParsing="false" onAction="#buttonplayermfm" style="-fx-background-radius: 100;" text="mfm" />
-
-
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="28.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/mfm.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringmfm" layoutX="56.0" layoutY="118.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="mfm" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="172.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-11.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="engineaswat">
-               <MediaView fx:id="mediaaswat">
-                  <audio id="playeraswat" controls="aswat">
-                     <source src="http://broadcast.ice.infomaniak.ch/aswat-high.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playeraswat =
-                  document.getElementById("playeraswat"), var uriaswat = new
-                  Audio("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
-                  var playedaswat = document.createElement("playedaswat");
-                  playedaswat.addEventListener("playedaswat",function
-                  playaswat(){ uriaswat.play(); });
-                  playeraswat.appendChild("playedaswat");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/aswat.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickeraswat" layoutX="48.0" layoutY="120.0" mnemonicParsing="false" onAction="#buttonaswat" style="-fx-background-radius: 100;" text="aswat" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/aswat.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringaswat" layoutX="48.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="aswat" />
 
 
          </children>
@@ -73,29 +40,12 @@
       <AnchorPane layoutX="326.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-11.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginechada">
-               <MediaView fx:id="mediachada">
-                  <audio id="playerchada" controls="chada">
-                     <source src="http://broadcast.ice.infomaniak.ch/chada-high.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerchada =
-                  document.getElementById("playerchada"), var urichada = new
-                  Audio("http://broadcast.ice.infomaniak.ch/chada-high.mp3");
-                  var playedchada = document.createElement("playedchada");
-                  playedchada.addEventListener("playedchada",function
-                  playchada(){ urichada.play(); });
-                  playerchada.appendChild("playedchada");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/chada.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickerchada" layoutX="57.0" layoutY="121.0" mnemonicParsing="false" onAction="#buttonchada" style="-fx-background-radius: 100;" text="chada" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/chada.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringchada" layoutX="57.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="chada" />
 
 
          </children>
@@ -103,28 +53,12 @@
       <AnchorPane layoutX="489.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-11.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginemars">
-               <MediaView fx:id="medimars">
-                  <audio id="playermars" controls="mars">
-                     <source src="http://streamer.eagrpservices.com/audio/radiomars.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playermars =
-                  document.getElementById("playermars"), var urimars = new
-                  Audio("http://streamer.eagrpservices.com/audio/radiomars.mp3");
-                  var playedmars = document.createElement("playedmars");
-                  playedmars.addEventListener("playedmars",function playmars(){
-                  urimars.play(); });
-                  playermars.appendChild("playedmars");</script> </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/mars.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickermars" layoutX="53.0" layoutY="121.0" mnemonicParsing="false" onAction="#buttonmars" style="-fx-background-radius: 100;" text="mars" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/mars.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringmars" layoutX="53.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="mars" />
 
 
          </children>
@@ -132,30 +66,12 @@
       <AnchorPane layoutX="652.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-13.0" prefHeight="173.0" prefWidth="165.0" />
-            <WebEngine fx:id="enginemedradio">
-               <MediaView fx:id="mediamedradio">
-                  <audio id="playermedradio" controls="med radio">
-                     <source src="http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playermedradio =
-                  document.getElementById("playermedradio"), var urimedradio =
-                  new
-                  Audio("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3");
-                  var playedmedradio = document.createElement("playedmedradio");
-                  playedmedradio.addEventListener("playedmedradio",function
-                  playmedradio(){ urimedradio.play(); });
-                  playermedradio.appendChild("playedmedradio");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/medradio.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickermedradio" layoutX="46.0" layoutY="120.0" mnemonicParsing="false" onAction="#buttonmedradio" style="-fx-background-radius: 100;" text="med radio" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/medradio.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringmedradio" layoutX="46.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="med radio" />
 
 
          </children>
@@ -163,29 +79,12 @@
       <AnchorPane layoutX="803.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginetania">
-               <MediaView fx:id="mediatania">
-                  <audio id="playertania" controls="2m">
-                     <source src="http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playertania =
-                  document.getElementById("playertania"), var uritania = new
-                  Audio("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8");
-                  var playedtania = document.createElement("playedtania");
-                  playedtania.addEventListener("playedtania",function
-                  playtania(){ uritania.play(); });
-                  playertania.appendChild("playedtania");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/2m.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickertania" layoutX="72.0" layoutY="122.0" mnemonicParsing="false" onAction="#buttontania" style="-fx-background-radius: 100;" text="2m" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/2m.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringtania" layoutX="72.0" layoutY="122.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="2m" />
 
 
          </children>
@@ -193,29 +92,12 @@
       <AnchorPane layoutY="173.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="engineatlantic">
-               <MediaView fx:id="mediaatlantic">
-                  <audio id="playeratlantic" controls="atlantic">
-                     <source src="http://atlanticradio.ma:8000/stream/1/" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playeratlantic =
-                  document.getElementById("playeratlantic"), var uriatlantic =
-                  new Audio("http://atlanticradio.ma:8000/stream/1/"); var
-                  playedatlantic = document.createElement("playedatlantic");
-                  playedatlantic.addEventListener("playedatlantic",function
-                  playatlantic(){ uriatlantic.play(); });
-                  playeratlantic.appendChild("playedatlantic");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/atlantic.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickeratlantic" layoutX="45.0" layoutY="121.0" mnemonicParsing="false" onAction="#buttonatlantic" style="-fx-background-radius: 100;" text="atlantic" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/atlantic.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringatlantic" layoutX="45.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="atlantic" />
 
 
          </children>
@@ -223,29 +105,12 @@
       <AnchorPane layoutX="164.0" layoutY="173.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-2.0" prefHeight="173.0" prefWidth="165.0" />
-            <WebEngine fx:id="engineyabiladi">
-               <MediaView fx:id="mediayabiladi">
-                  <audio id="playeryabiladi" controls="yabiladi">
-                     <source src="http://snassen.yabiladi.com:8000/stream/1" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playeryabiladi =
-                  document.getElementById("playeryabiladi"), var uriyabiladi =
-                  new Audio("http://snassen.yabiladi.com:8000/stream/1"); var
-                  playedyabiladi = document.createElement("playedyabiladi");
-                  playedyabiladi.addEventListener("playedyabiladi",function
-                  playyabiladi(){ uriyabiladi.play(); });
-                  playeryabiladi.appendChild("playedyabiladi");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/yabiladi.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickeryabiladi" layoutX="52.0" layoutY="123.0" mnemonicParsing="false" onAction="#buttonyabiladi" style="-fx-background-radius: 100;" text="yabiladi" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/yabiladi.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringyabiladi" layoutX="52.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="yabiladi" />
 
 
          </children>
@@ -253,28 +118,12 @@
       <AnchorPane layoutX="326.0" layoutY="173.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-11.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginemedi">
-               <MediaView fx:id="mediamedi">
-                  <audio id="playermedi" controls="medi1">
-                     <source src="http://51.222.88.199:80/medi1" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playermedi =
-                  document.getElementById("playermedi"), var urimedi = new
-                  Audio("http://51.222.88.199:80/medi1"); var playedmedi =
-                  document.createElement("playedmedi");
-                  playedmedi.addEventListener("playedmedi",function playmedi(){
-                  urimedi.play(); });
-                  playermedi.appendChild("playedmedi");</script> </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="33.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/medi1.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickermedi" layoutX="57.0" layoutY="124.0" mnemonicParsing="false" onAction="#buttonmedi" style="-fx-background-radius: 100;" text="medi1" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="33.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/medi1.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringmedi" layoutX="57.0" layoutY="124.0" mnemonicParsing="false" onAction="#onPlaymedi" style="-fx-background-radius: 100;" text="medi1" />
 
 
          </children>
@@ -282,28 +131,12 @@
       <AnchorPane layoutX="483.0" layoutY="173.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-5.0" prefHeight="173.0" prefWidth="165.0" />
-            <WebEngine fx:id="engineness">
-               <MediaView fx:id="medianess">
-                  <audio id="playerness" controls="ness">
-                     <source src="http://radio.nessradio.net:8000/nessradio.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerness =
-                  document.getElementById("playerness"), var uriness = new
-                  Audio("http://radio.nessradio.net:8000/nessradio.mp3"); var
-                  playedness = document.createElement("playedness");
-                  playedness.addEventListener("playedness",function playness(){
-                  uriness.play(); });
-                  playerness.appendChild("playedness");</script> </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/ness.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickerness" layoutX="62.0" layoutY="125.0" mnemonicParsing="false" onAction="#buttonness" style="-fx-background-radius: 100;" text="ness" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/ness.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringness" layoutX="62.0" layoutY="125.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="ness" />
 
 
          </children>
@@ -311,30 +144,12 @@
       <AnchorPane layoutX="645.0" layoutY="173.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-3.0" layoutY="-1.0" prefHeight="175.0" prefWidth="165.0" />
-            <WebEngine fx:id="enginehitradio">
-               <MediaView fx:id="mediahitradio">
-                  <audio id="playerhitradio" controls="hit radio">
-                     <source src="http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerhitradio =
-                  document.getElementById("playerhitradio"), var urihitradio =
-                  new
-                  Audio("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3");
-                  var playedhitradio = document.createElement("playedhitradio");
-                  playedhitradio.addEventListener("playedhitradio",function
-                  playhitradio(){ urihitradio.play(); });
-                  playerhitradio.appendChild("playedhitradio");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/hitradio.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickerhitradio" layoutX="49.0" layoutY="125.0" mnemonicParsing="false" onAction="#buttonhitradio" style="-fx-background-radius: 100;" text="hit radio" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/hitradio.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringhitradio" layoutX="49.0" layoutY="125.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="hitradio" />
 
 
          </children>
@@ -342,29 +157,12 @@
       <AnchorPane layoutX="803.0" layoutY="173.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginehitmaroc">
-               <MediaView fx:id="mediahitmaroc">
-                  <audio id="playerhitmaroc" controls="hit maroc">
-                     <source src="http://api.webrad.io/data/streams/68/hits1-maroc" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerhitmaroc =
-                  document.getElementById("playerhitmaroc"), var urihitmaroc =
-                  new Audio("http://api.webrad.io/data/streams/68/hits1-maroc");
-                  var playedhitmaroc = document.createElement("playedhitmaroc");
-                  playedhitmaroc.addEventListener("playedhitmaroc",function
-                  playhitmaroc(){ urihitmaroc.play(); });
-                  playerhitmaroc.appendChild("playedhitmaroc");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="104.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/hitmaroc.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickerhitmaroc" layoutX="48.0" layoutY="124.0" mnemonicParsing="false" onAction="#buttonhitmaroc" style="-fx-background-radius: 100;" text="hit maroc" />
+            <ImageView fitHeight="97.0" fitWidth="104.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/hitmaroc.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringhitmaroc" layoutX="48.0" layoutY="124.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="hit maroc" />
 
 
          </children>
@@ -372,29 +170,12 @@
       <AnchorPane layoutY="346.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginetarab">
-               <MediaView fx:id="mediatarab">
-                  <audio id="playertarab" controls="tarab">
-                     <source src="http://streaming2.rimradio.ma/livetarab" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playertarab =
-                  document.getElementById("playertarab"), var uritarab = new
-                  Audio("http://streaming2.rimradio.ma/livetarab"); var
-                  playedtarab = document.createElement("playedtarab");
-                  playedtarab.addEventListener("playedtarab",function
-                  playtarab(){ uritarab.play(); });
-                  playertarab.appendChild("playedtarab");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/tarab.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickertarab" layoutX="53.0" layoutY="118.0" mnemonicParsing="false" onAction="#buttontarab" style="-fx-background-radius: 100;" text="tarab" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/tarab.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringtarab" layoutX="53.0" layoutY="118.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="tarab" />
 
 
          </children>
@@ -402,29 +183,12 @@
       <AnchorPane layoutX="164.0" layoutY="346.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-3.0" prefHeight="173.0" prefWidth="172.0" />
-            <WebEngine fx:id="enginewatania">
-               <MediaView fx:id="mediawatania">
-                  <audio id="playerwatania" controls="watania">
-                     <source src="http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerwatania =
-                  document.getElementById("playerwatania"), var uriwatania = new
-                  Audio("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8");
-                  var playedwatania = document.createElement("playedwatania");
-                  playedwatania.addEventListener("playedwatania",function
-                  playwatania(){ uriwatania.play(); });
-                  playerwatania.appendChild("playedwatania");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/watania.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="watania" layoutX="58.0" layoutY="120.0" mnemonicParsing="false" onAction="#buttonwatania" style="-fx-background-radius: 100;" text="watania" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/watania.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="watania" layoutX="58.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="watania" />
 
 
          </children>
@@ -432,31 +196,12 @@
       <AnchorPane layoutX="326.0" layoutY="346.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-6.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginemoroccoenglish">
-               <MediaView fx:id="mediamoroccoenglish">
-                  <audio id="playermoroccoenglish" controls="morocco english">
-                     <source src="http://streamer.radio.co/s6cba51492/listen" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playermoroccoenglish =
-                  document.getElementById("playermoroccoenglish"), var
-                  urimoroccoenglish = new
-                  Audio("http://streamer.radio.co/s6cba51492/listen"); var
-                  playedmoroccoenglish =
-                  document.createElement("playedmoroccoenglish");
-                  playedmoroccoenglish.addEventListener("playedmoroccoenglish",function
-                  playmoroccoenglish(){ urimoroccoenglish.play(); });
-                  playermoroccoenglish.appendChild("playedmoroccoenglish");</script>
-                  </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="4.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/moroccoenglish.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickermoroccoenglish" layoutX="30.0" layoutY="120.0" mnemonicParsing="false" onAction="#buttonmoroccoenglish" prefHeight="25.0" prefWidth="104.0" style="-fx-background-radius: 100;" text="morocco english" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="4.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/moroccoenglish.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringmoroccoenglish" layoutX="30.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlaymoroccoenglish" prefHeight="25.0" prefWidth="104.0" style="-fx-background-radius: 100;" text="morocco english" />
 
 
          </children>
@@ -464,29 +209,12 @@
       <AnchorPane layoutX="483.0" layoutY="346.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginetamazgha">
-               <MediaView fx:id="mediatamazgha">
-                  <audio id="playertamazgha" controls="tamzgha">
-                     <source src="http://streaming2.rimradio.ma/liveamazighe" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playertamazgha =
-                  document.getElementById("playertamazgha"), var uritamazgha =
-                  new Audio("http://streaming2.rimradio.ma/liveamazighe"); var
-                  playedtamazgha = document.createElement("playedtamazgha");
-                  playedtamazgha.addEventListener("playedtamazgha",function
-                  playtamazgha(){ uritamazgha.play(); });
-                  playertamazgha.appendChild("playedtamazgha");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="12.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/tamazgha.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickertamazgha" layoutX="51.0" layoutY="121.0" mnemonicParsing="false" onAction="#buttontamazgha" style="-fx-background-radius: 100;" text="tamazgha" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="12.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/tamazgha.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringtamazgha" layoutX="51.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="tamazgha" />
 
 
          </children>
@@ -494,29 +222,12 @@
       <AnchorPane layoutX="643.0" layoutY="346.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-4.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="engineizlan">
-               <MediaView fx:id="mediaizlan">
-                  <audio id="playerizlan" controls="izlan">
-                     <source src="http://izlan.fr/radios/atlas/stream" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerizlan =
-                  document.getElementById("playerizlan"), var uriizlan = new
-                  Audio("http://izlan.fr/radios/atlas/stream"); var playedizlan
-                  = document.createElement("playedizlan");
-                  playedizlan.addEventListener("playedizlan",function
-                  playizlan(){ uriizlan.play(); });
-                  playerizlan.appendChild("playedizlan");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="106.0" fitWidth="141.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/izlan.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickerizlan" layoutX="64.0" layoutY="122.0" mnemonicParsing="false" onAction="#buttonizlan" style="-fx-background-radius: 100;" text="izlan" />
+            <ImageView fitHeight="106.0" fitWidth="141.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/izlan.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringizlan" layoutX="64.0" layoutY="122.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="izlan" />
 
 
          </children>
@@ -524,29 +235,12 @@
       <AnchorPane layoutX="803.0" layoutY="346.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-3.0" prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginecoran">
-               <MediaView fx:id="mediacoran">
-                  <audio id="playercoran" controls="coran">
-                     <source src="http://dedi.radio-coran.net:8000/livehq.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playercoran =
-                  document.getElementById("playercoran"), var uricoran = new
-                  Audio("http://dedi.radio-coran.net:8000/livehq.mp3"); var
-                  playedcoran = document.createElement("playedcoran");
-                  playedcoran.addEventListener("playedcoran",function
-                  playcoran(){ uricoran.play(); });
-                  playercoran.appendChild("playedcoran");</script> </body>
-                  </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/coran.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickercoran" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#buttoncoran" style="-fx-background-radius: 100;" text="coran" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="11.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/coran.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringcoran" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="coran" />
 
 
          </children>
@@ -554,31 +248,12 @@
       <AnchorPane layoutY="519.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView prefHeight="173.0" prefWidth="163.0" />
-            <WebEngine fx:id="enginemontecarlo">
-               <MediaView fx:id="mediamontecarlo">
-                  <audio id="playermontecarlo" controls="montecarlo">
-                     <source src="http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playermontecarlo =
-                  document.getElementById("playermontecarlo"), var urimontecarlo
-                  = new
-                  Audio("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3");
-                  var playedmontecarlo =
-                  document.createElement("playedmontecarlo");
-                  playedmontecarlo.addEventListener("playedmontecarlo",function
-                  playmontecarlo(){ urimontecarlo.play(); });
-                  playermontecarlo.appendChild("playedmontecarlo");</script>
-                  </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/montecarlo.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickermontecarlo" layoutX="34.0" layoutY="123.0" mnemonicParsing="false" onAction="#buttonmontecarlo" style="-fx-background-radius: 100;" text="montecarlo" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="24.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/montecarlo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringmontecarlo" layoutX="34.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlaymonte" style="-fx-background-radius: 100;" text="montecarlo" />
 
 
          </children>
@@ -586,31 +261,12 @@
       <AnchorPane layoutX="165.0" layoutY="519.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-2.0" prefHeight="173.0" prefWidth="165.0" />
-            <WebEngine fx:id="enginealjazeera">
-               <MediaView fx:id="mediaaljazeera">
-                  <audio id="playeraljazeera" controls="aljazeera">
-                     <source src="http://aljazeeradoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playeraljazeera =
-                  document.getElementById("playeraljazeera"), var urialjazeera =
-                  new
-                  Audio("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8");
-                  var playedaljazeera =
-                  document.createElement("playedaljazeera");
-                  playedaljazeera.addEventListener("playedaljazeera",function
-                  playaljazeera(){ urialjazeera.play(); });
-                  playeraljazeera.appendChild("playedaljazeera");</script>
-                  </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/aljazeera.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickeraljazeera" layoutX="50.0" layoutY="122.0" mnemonicParsing="false" onAction="#buttonaljazeera" style="-fx-background-radius: 100;" text="aljazeera" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/aljazeera.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringaljazeera" layoutX="50.0" layoutY="122.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="aljazeera" />
 
 
          </children>
@@ -618,31 +274,12 @@
       <AnchorPane layoutX="645.0" layoutY="519.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-2.0" prefHeight="173.0" prefWidth="165.0" />
-            <WebEngine fx:id="enginenewsarabia">
-               <MediaView fx:id="mediaskynewsarabia">
-                  <audio id="playerskynewsarabia" controls="skynewsarabia">
-                     <source src="http://skynewsarabiadoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerskynewsarabia =
-                  document.getElementById("playerskynewsarabia"), var
-                  uriskynewsarabia = new
-                  Audio("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
-                  var playedskynewsarabia =
-                  document.createElement("playedskynewsarabia");
-                  playedskynewsarabia.addEventListener("playedskynewsarabia",function
-                  playskynewsarabia(){ uriskynewsarabia.play(); });
-                  playerskynewsarabia.appendChild("playedskynewsarabia");</script>
-                  </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/skynewsarabia.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickerskynewsarabia" layoutX="35.0" layoutY="123.0" mnemonicParsing="false" onAction="#buttonskynewsarabia" style="-fx-background-radius: 100;" text="skynewsarabia" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/skynewsarabia.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringskynewsarabia" layoutX="35.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="skynewsarabia" />
 
 
          </children>
@@ -650,31 +287,12 @@
       <AnchorPane layoutX="803.0" layoutY="519.0" prefHeight="173.0" prefWidth="163.0">
          <children>
             <WebView layoutX="-2.0" prefHeight="173.0" prefWidth="165.0" />
-            <WebEngine fx:id="enginebbcarabic">
-               <MediaView fx:id="mediabbcarabic">
-                  <audio id="playerbbcarabic" controls="bbcarabic">
-                     <source src="http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio" preload="auto" type="audio/mp3" />
-                  </audio>
-               </MediaView>
-               <children>
-                  <!-- <html> <body> <script>var playerbbcarabic =
-                  document.getElementById("playerbbcarabic"), var uribbcarabic =
-                  new
-                  Audio("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
-                  var playedbbcarabic =
-                  document.createElement("playedbbcarabic");
-                  playedbbcarabic.addEventListener("playedbbcarabic",function
-                  playbbcarabic(){ uribbcarabic.play(); });
-                  playerbbcarabic.appendChild("playedbbcarabic");</script>
-                  </body> </html> -->
-               </children>
-               <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="37.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Images/bbcarabic.png" />
-                  </image>
-               </ImageView>
-            </WebEngine>
-            <Button fx:id="clickerbbcarabic" layoutX="50.0" layoutY="124.0" mnemonicParsing="false" onAction="#buttonbbcarabic" style="-fx-background-radius: 100;" text="bbc arabic" />
+            <ImageView fitHeight="97.0" fitWidth="144.0" layoutX="37.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../static//Images/bbcarabic.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="stringbbcarabic" layoutX="50.0" layoutY="124.0" mnemonicParsing="false" onAction="#onPlay" style="-fx-background-radius: 100;" text="bbc arabic" />
 
 
          </children>

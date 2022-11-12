@@ -1,4 +1,4 @@
-package replit.View;
+package replit;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
