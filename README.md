@@ -32,7 +32,7 @@ You can run your application with maven javafx plugin using:
 
 Or with jre/jdk javafx modules:controls,fxml added using:
 ```shell script
-./mvnw exec:java  mainClass -classpath %classpath --module-path  "{project.basedir}/lib/" --add-modules=javafx.fxml,javafx.controls
+./mvnw exec:java  mainClass -classpath %classpath --module-path  "{project.basedir}/lib/jfx/" --add-modules=javafx.fxml,javafx.controls,javafx.media
 ```
 # ------------------------------------------
 
