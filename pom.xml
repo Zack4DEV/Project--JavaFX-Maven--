@@ -17,7 +17,6 @@
     </repository>
   </distributionManagement>
   <modules></modules>
-
   <properties>
     <!-- Build version properties -->
     <java_source.version>11</java_source.version>
@@ -40,6 +39,8 @@
     <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
     <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
     <versions-maven-plugin.version>2.12.0</versions-maven-plugin.version>
+    <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+
     <!-- Dependency version properties-->
     <commons-codec.version>1.15</commons-codec.version>
     <commons-collection4.version>4.4</commons-collection4.version>
@@ -96,7 +97,7 @@
     <attach-version>4.0.16</attach-version>
     <charm-version>6.2.2</charm-version>
     <skipITs>true</skipITs>
-    <mainClass>app.main.Gui</mainClass>
+    <mainClass>${project.basedir}.src.app.main.java.Gui</mainClass>
 
   </properties>
   <dependencies>
@@ -654,7 +655,7 @@
         <groupId>org.openjfx</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
         <configuration>
-          <mainClass>mainClass</mainClass>
+          <mainClass>${project.basedir}.src.app.main.java.Gui</mainClass>
           <stripDebug>true</stripDebug>
           <compress>2</compress>
           <noHeaderFiles>true</noHeaderFiles>
@@ -756,30 +757,7 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>3.1.0</version>
-        <executions>
-          <execution>
-            <id>java</id>
-            <phase>generate-resources</phase>
-            <goals>
-              <goal>java</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>default-cli</id>
-            <goals>
-              <goal>java</goal>
-            </goals>
-            <configuration>
-              <mainClass>${mainClass}</mainClass>
-            </configuration>
-          </execution>
-        </executions>
-
-      </plugin>
+      
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -829,11 +807,11 @@
             <configuration>
               <artifactItems combine.children="append">
                 <artifactItem>
-                  <groupId>org.eclipse.sw360</groupId>
-                  <artifactId>build-configuration</artifactId>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>${project.artifactId}</artifactId>
                   <version>${project.version}</version>
                   <type>jar</type>
-                  <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                  <outputDirectory>${project.basedir}/target/classes</outputDirectory>
                 </artifactItem>
               </artifactItems>
             </configuration>
@@ -847,11 +825,11 @@
             <configuration>
               <artifactItems combine.children="append">
                 <artifactItem>
-                  <groupId>org.eclipse.sw360</groupId>
-                  <artifactId>build-configuration</artifactId>
+                  <groupId>${project.groupId}</groupId>
+                  <artifactId>${project.artifactId}</artifactId>
                   <version>${project.version}</version>
                   <type>test-jar</type>
-                  <outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+                  <outputDirectory>${project.basedir}/target/test-classes</outputDirectory>
                 </artifactItem>
               </artifactItems>
             </configuration>
@@ -879,7 +857,7 @@
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifest>
-              <mainClass>${mainClass}</mainClass>
+                  <mainClass>${project.basedir}.src.app.main.java.Gui</mainClass>
             </manifest>
           </archive>
         </configuration>
@@ -911,7 +889,7 @@
                 <resourcesList>
                   <item></item>
                 </resourcesList>
-                <mainClass>${main.class}</mainClass>
+               <mainClass>${project.basedir}.src.app.main.java.Gui</mainClass>
                 <appIdentifier>${app.identifier}</appIdentifier>
                 <releaseConfiguration>
                   <vendor>Gluon</vendor>
