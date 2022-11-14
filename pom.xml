@@ -2,32 +2,102 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
+  <scm>
+    <connection>scm:git:https://github.com/Zack4DEV/Project-JavaFX-RadioApp/</connection>
+  </scm>
   <groupId>app</groupId>
   <artifactId>main</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <name>Project-JavaFX-RadioApp</name>
   <description>Demo project</description>
+  <distributionManagement>
+    <repository>
+      <id>artifact-repository</id>
+      <url>https://github.com/Zack4DEV/Project-JavaFX-RadioApp/</url>
+    </repository>
+  </distributionManagement>
+  <modules></modules>
+
   <properties>
-    <java.version>19</java.version>
+    <!-- Build version properties -->
+    <java_source.version>11</java_source.version>
+    <java_target.version>11</java_target.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <asciidoctor-maven-plugin.version>2.2.2</asciidoctor-maven-plugin.version>
+    <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
+    <buildnumber-maven-plugin.version>3.0.0</buildnumber-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
+    <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
+    <maven-bundle-plugin.version>5.1.8</maven-bundle-plugin.version>
+    <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+    <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
+    <maven-enforcer-plugin.version>3.1.0</maven-enforcer-plugin.version>
+    <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
+    <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
+    <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
+    <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
+    <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+    <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+    <versions-maven-plugin.version>2.12.0</versions-maven-plugin.version>
+    <!-- Dependency version properties-->
+    <commons-codec.version>1.15</commons-codec.version>
+    <commons-collection4.version>4.4</commons-collection4.version>
+ <commons-compress.version>1.21</commons-compress.version>
+    <commons-csv.version>1.9.0</commons-csv.version>
+    <commons-io.version>2.11.0</commons-io.version>
+    <commons-lang3.version>3.12.0</commons-lang3.version>
+    <commons-codec.version>1.15</commons-codec.version>
+    <commons-collection4.version>4.4</commons-collection4.version>
+    <commons-compress.version>1.21</commons-compress.version>
+    <commons-csv.version>1.9.0</commons-csv.version>
+    <commons-io.version>2.11.0</commons-io.version>
+    <commons-lang3.version>3.12.0</commons-lang3.version>
+    <dom4j.version>2.1.3</dom4j.version>
+    <ektorp.version>1.5.0</ektorp.version>
+    <ektorplucene.version>0.2.0</ektorplucene.version>
+    <failureaccess.version>1.0.1</failureaccess.version>
+    <findbugs-annotations.version>1.3.9-1</findbugs-annotations.version>
+    <glassfish-jaxb.version>2.3.2</glassfish-jaxb.version>
+    <mockito.version>4.7.0</mockito.version>
+    <gson.version>2.8.9</gson.version>
+    <guava.version>31.1-jre</guava.version>
+    <hamcrest.version>1.3</hamcrest.version>
+    <jakarta-xml-bind.version>2.3.2</jakarta-xml-bind.version>
+    <jackson.core.version>2.13.4</jackson.core.version>
+    <jackson.databind.version>2.13.4.2</jackson.databind.version>
+    <jackson.annotations.version>2.13.4</jackson.annotations.version>
+    <javax-annotation.version>1.3.2</javax-annotation.version>
+    <jcraft.version>0.1.54</jcraft.version>
+    <jgiven.version>0.17.0</jgiven.version>
+
+    <log4j2.version>2.17.1</log4j2.version>
+    <slf4j.version>1.7.30</slf4j.version>
+    <junit-dataprovider.version>1.13.1</junit-dataprovider.version>
+    <junit.version>4.13.2</junit.version>
+    <thrift.version>0.16.0</thrift.version>
+
+    <require.js.version>2.3.6</require.js.version>
+    <resumable.js.version>1.1.0</resumable.js.version>
+    <okhttp.version>4.3.1</okhttp.version>
+    <package-url.version>1.1.1</package-url.version>
+
+
+    <!-- Plugin version properties -->
     <spring-cloud.version>2022.0.0-RC1</spring-cloud.version>
     <spring-shell.version>3.0.0-M2</spring-shell.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.release>11</maven.compiler.release>
     <javafx-version>20-ea+4</javafx-version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <!--
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
-        <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
-        <quarkus.platform.version>2.13.1.Final</quarkus.platform.version>
-        <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
-        <attach-version>4.0.16</attach-version>
-        <charm-version>6.2.2</charm-version>
-
-    -->
+    <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
+    <quarkus.platform.version>2.13.1.Final</quarkus.platform.version>
+    <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+    <attach-version>4.0.16</attach-version>
+    <charm-version>6.2.2</charm-version>
     <skipITs>true</skipITs>
     <mainClass>app.main.Gui</mainClass>
+
   </properties>
   <dependencies>
     <!--
@@ -57,7 +127,18 @@
       <artifactId>hibernate-enhance-maven-plugin</artifactId>
       <version>6.1.5.Final</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <version>2.17.2</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.36</version>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>uk.co.caprica</groupId>
       <artifactId>vlcj-javafx</artifactId>
@@ -116,14 +197,6 @@
       <type>pom</type>
     </dependency>
 
-
-    <!--
-        <dependency>
-          <groupId>uk.co.caprica</groupId>
-          <artifactId>vlcj</artifactId>
-          <version>4.8.0</version>
-        </dependency>
-        -->
     <!--
           <dependency>
             <groupId>org.openjfx</groupId>
@@ -133,13 +206,210 @@
           </dependency>
 
         -->
+
+    <dependency>
+      <groupId>org.glassfish.jaxb</groupId>
+      <artifactId>jaxb-runtime</artifactId>
+      <version>${glassfish-jaxb.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+      <version>${javax-annotation.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j2.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j2.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-jcl</artifactId>
+      <version>${log4j2.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-1.2-api</artifactId>
+      <version>${log4j2.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-csv</artifactId>
+      <version>${commons-csv.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons-lang3.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>failureaccess</artifactId>
+      <version>${failureaccess.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-cli</groupId>
+      <artifactId>commons-cli</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.thrift</groupId>
+      <artifactId>libthrift</artifactId>
+      <version>${thrift.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>commons-logging</artifactId>
+          <groupId>commons-logging</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!-- API, java.xml.bind module: java 11 compatibility -->
+    <dependency>
+      <groupId>jakarta.xml.bind</groupId>
+      <artifactId>jakarta.xml.bind-api</artifactId>
+      <version>${jakarta-xml-bind.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>${commons-io.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.databind.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.core.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson.annotations.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.httpcomponents</groupId>
+      <artifactId>httpcore</artifactId>
+      <version>4.4.8</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.code.gson</groupId>
+      <artifactId>gson</artifactId>
+      <version>${gson.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.jcraft</groupId>
+      <artifactId>jsch</artifactId>
+      <version>${jcraft.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.spdx</groupId>
+      <artifactId>spdx-tools</artifactId>
+      <version>2.2.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.spdx</groupId>
+      <artifactId>tools-java</artifactId>
+      <version>1.0.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity-engine-core</artifactId>
+      <version>2.3</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-lang3</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>15.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-compress</artifactId>
+      <version>${commons-compress.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <version>${dom4j.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+      <version>1.1.6</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.tngtech.java</groupId>
+      <artifactId>junit-dataprovider</artifactId>
+      <version>${junit-dataprovider.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <version>${hamcrest.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.tngtech.jgiven</groupId>
+      <artifactId>jgiven-junit</artifactId>
+      <version>${jgiven.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- Runtime, com.sun.xml.bind module: java 11 compatibility  -->
+
+
     <!--
         <dependency>
-         <groupId>org.eclipse.equinox</groupId>
-          <artifactId>event</artifactId>
-          <version>1.0.100-v20070516</version>
+          <groupId>uk.co.caprica</groupId>
+          <artifactId>vlcj</artifactId>
+          <version>4.8.0</version>
         </dependency>
-      -->
+        -->
+
+
 
     <!---
         <dependency>
@@ -407,8 +677,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-resources-plugin</artifactId>
-        <version>3.0.2</version>
-
+        <version>${maven-resources-plugin.version}</version>
+        <configuration>
+          <overwrite>true</overwrite>
+        </configuration>
       </plugin>
       <!--
             <plugin>
@@ -446,6 +718,46 @@
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>create</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <shortRevisionLength>7</shortRevisionLength>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>flatten-maven-plugin</artifactId>
+        <version>1.0.0</version>
+        <configuration>
+          <updatePomFile>true</updatePomFile>
+        </configuration>
+        <executions>
+          <execution>
+            <id>flatten</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>flatten</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>flatten.clean</id>
+            <phase>clean</phase>
+            <goals>
+              <goal>clean</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.0</version>
         <executions>
@@ -468,12 +780,7 @@
         </executions>
 
       </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-plugin-plugin</artifactId>
-        <version>3.6.0</version>
 
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
@@ -504,17 +811,56 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.2</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>${mainClass}</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
+        <artifactId>maven-plugin-plugin</artifactId>
+        <version>3.6.0</version>
+
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${maven-dependency-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>add-build-configuration-resources</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems combine.children="append">
+                <artifactItem>
+                  <groupId>org.eclipse.sw360</groupId>
+                  <artifactId>build-configuration</artifactId>
+                  <version>${project.version}</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+          <execution>
+            <id>add-build-configuration-test-resources</id>
+            <phase>generate-test-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems combine.children="append">
+                <artifactItem>
+                  <groupId>org.eclipse.sw360</groupId>
+                  <artifactId>build-configuration</artifactId>
+                  <version>${project.version}</version>
+                  <type>test-jar</type>
+                  <outputDirectory>${project.build.testOutputDirectory}</outputDirectory>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+
+
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -585,6 +931,60 @@
               </configuration>
             </plugin>
             -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>${maven-surefire-plugin.version}</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>${maven-war-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>default-war</id>
+            <phase>package</phase>
+            <goals>
+              <goal>war</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven-compiler-plugin.version}</version>
+        <configuration>
+          <source>${java_source.version}</source>
+          <target>${java_target.version}</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.tngtech.jgiven</groupId>
+        <artifactId>jgiven-maven-plugin</artifactId>
+        <version>0.9.4</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>report</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <format>html</format>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-scm-plugin</artifactId>
+        <version>1.9.4</version>
+        <configuration>
+          <tag>${project.artifactId}-${project.version}</tag>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
