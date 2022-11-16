@@ -522,6 +522,11 @@
         <scope>runtime</scope>
       </dependency>
       <dependency>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>exec-maven-plugin</artifactId>
+    <version>3.1.0</version>
+</dependency>
+      <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-configuration-processor</artifactId>
         <optional>true</optional>
@@ -757,7 +762,7 @@
           </execution>
         </executions>
       </plugin>
-      
+
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -793,6 +798,7 @@
         <version>3.6.0</version>
 
       </plugin>
+      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
@@ -836,7 +842,7 @@
           </execution>
         </executions>
       </plugin>
-
+-->
 
 
 
@@ -928,6 +934,9 @@
             </goals>
           </execution>
         </executions>
+        <configuration>
+        <failOnMissingWebXml>false</failOnMissingWebXml>
+    </configuration>
       </plugin>
 
 
