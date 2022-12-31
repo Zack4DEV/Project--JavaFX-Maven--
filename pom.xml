@@ -19,14 +19,17 @@
   <modules></modules>
   <properties>
     <!-- Build version properties -->
-    <java_source.version>11</java_source.version>
-    <java_target.version>11</java_target.version>
+
+    <java.source.version>11</java.source.version>
+    <java.target.version>11</java.target.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <asciidoctor-maven-plugin.version>2.2.2</asciidoctor-maven-plugin.version>
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.0.0</buildnumber-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
     <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
     <maven-bundle-plugin.version>5.1.8</maven-bundle-plugin.version>
     <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
@@ -44,7 +47,7 @@
     <!-- Dependency version properties-->
     <commons-codec.version>1.15</commons-codec.version>
     <commons-collection4.version>4.4</commons-collection4.version>
- <commons-compress.version>1.21</commons-compress.version>
+    <commons-compress.version>1.21</commons-compress.version>
     <commons-csv.version>1.9.0</commons-csv.version>
     <commons-io.version>2.11.0</commons-io.version>
     <commons-lang3.version>3.12.0</commons-lang3.version>
@@ -89,7 +92,7 @@
     <spring-shell.version>3.0.0-M2</spring-shell.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.release>11</maven.compiler.release>
-    <javafx-version>17-ea+5</javafx-version>
+    <javafx-version>17.0.5</javafx-version>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>2.13.1.Final</quarkus.platform.version>
@@ -148,53 +151,53 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-media</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-graphics</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-web</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-swing</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-media</artifactId>
-      <version>17-ea+5</version>
+      <version>17.0.5</version>
       <type>pom</type>
     </dependency>
 
