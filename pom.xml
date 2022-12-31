@@ -89,7 +89,7 @@
     <spring-shell.version>3.0.0-M2</spring-shell.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.release>11</maven.compiler.release>
-    <javafx-version>20-ea+4</javafx-version>
+    <javafx-version>17-ea+5</javafx-version>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>2.13.1.Final</quarkus.platform.version>
@@ -148,53 +148,53 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-media</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-graphics</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-web</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-swing</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-media</artifactId>
-      <version>20-ea+4</version>
+      <version>17-ea+5</version>
       <type>pom</type>
     </dependency>
 
