@@ -1,4 +1,4 @@
-module replit {
+module main {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.media;

@@ -1,4 +1,4 @@
-package replit;
+package class;
 
 import java.net.URI;
 import java.net.URISyntaxException;
