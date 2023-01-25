@@ -20,16 +20,16 @@
   <properties>
     <!-- Build version properties -->
 
-    <java.source.version>16</java.source.version>
-    <java.target.version>16</java.target.version>
+    <java.source.version>17</java.source.version>
+    <java.target.version>17</java.target.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <asciidoctor-maven-plugin.version>2.2.2</asciidoctor-maven-plugin.version>
     <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
     <buildnumber-maven-plugin.version>3.0.0</buildnumber-maven-plugin.version>
     <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
+    <maven.compiler.source>16</maven.compiler.source>
+    <maven.compiler.target>16</maven.compiler.target>
     <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
     <maven-bundle-plugin.version>5.1.8</maven-bundle-plugin.version>
     <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
@@ -92,7 +92,7 @@
     <spring-shell.version>3.0.0-M2</spring-shell.version>
     <compiler-plugin.version>3.8.1</compiler-plugin.version>
     <maven.compiler.release>11</maven.compiler.release>
-    <javafx-version>19.0.2.1</javafx-version>
+    <javafx.version>21-ea+1</javafx.version>
     <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
     <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
     <quarkus.platform.version>2.13.1.Final</quarkus.platform.version>
@@ -156,53 +156,64 @@
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx</artifactId>
-      <version>19.0.2.1</version>
+      <version>20-ea+9</version>
       <type>pom</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
-      <artifactId>javafx-media</artifactId>
-      <version>19.0.2.1</version>
-      <type>pom</type>
+      <artifactId>javafx-archetype-simple</artifactId>
+      <version>0.0.6</version>
     </dependency>
     <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-graphics</artifactId>
-      <version>19.0.2.1</version>
-    </dependency>
-    <dependency>
+  <groupId>org.openjfx</groupId>
+  <artifactId>javafx-archetype-fxml</artifactId>
+  <version>0.0.6</version>
+</dependency>
+<dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-fxml</artifactId>
-      <version>19.0.2.1</version>
+      <version>20-ea+9</version>
       <type>jar</type>
     </dependency>
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-web</artifactId>
-      <version>19.0.2.1</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>org.openjfx</groupId>
-      <artifactId>javafx-swing</artifactId>
-      <version>19.0.2.1</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
+     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-base</artifactId>
-      <version>19.0.2.1</version>
+      <version>20-ea+9</version>
       <type>jar</type>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-controls</artifactId>
-      <version>19.0.2.1</version>
+      <version>20-ea+9</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-graphics</artifactId>
+      <version>20-ea+9</version>
     </dependency>
     <dependency>
       <groupId>org.openjfx</groupId>
       <artifactId>javafx-media</artifactId>
-      <version>19.0.2.1</version>
+      <version>20-ea+9</version>
+      <type>pom</type>
+    </dependency>
+   <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-swing</artifactId>
+      <version>20-ea+9</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-web</artifactId>
+      <version>20-ea+9</version>
+      <type>jar</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-media</artifactId>
+      <version>20-ea+9</version>
       <type>pom</type>
     </dependency>
 
@@ -566,6 +577,11 @@
         <artifactId>spring-security-test</artifactId>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>com.gluonhq.scenebuilder</groupId>
+        <artifactId>kit</artifactId>
+        <version>19.0.0</version>
+      </dependency>
       <!--
            <dependency>
               <groupId>${quarkus.platform.group-id}</groupId>
@@ -832,7 +848,7 @@
           <tag>${project.artifactId}-${project.version}</tag>
         </configuration>
       </plugin>
-<!--
+      <!--
          <plugin>
               <groupId>${quarkus.platform.group-id}</groupId>
               <artifactId>quarkus-maven-plugin</artifactId>
@@ -851,7 +867,7 @@
       -->
 
 
-<!--
+      <!--
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
@@ -938,7 +954,7 @@
               </configuration>
             </plugin>
             -->
-            <!--
+      <!--
 <plugin>
   <groupId>org.codehaus.mojo</groupId>
   <artifactId>flatten-maven-plugin</artifactId>
@@ -964,7 +980,7 @@
   </executions>
 </plugin>
             -->
-  </plugins>
+    </plugins>
   </build>
 
   <profiles>
