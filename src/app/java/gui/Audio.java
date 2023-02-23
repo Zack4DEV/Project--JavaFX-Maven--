@@ -1,16 +1,16 @@
-package class;
-
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.HashMap;
+package gui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.media.MediaView;
 import javafx.scene.web.WebView;
 
-public class Audio {
-    class onPreAudio {
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.HashMap;
+
+public gui Audio {
+    gui onPreAudio {
         String stringname = new URI("");
 
         String stringmfm = new URI("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString();
@@ -44,7 +44,7 @@ public class Audio {
                 stringtarab, stringwatania, stringmoroccoenglish, stringtamazgha, stringizlan, stringcoran,
                 stringmontecarlo, stringaljazeera, stringskynewsarabia, stringbbcarabic);
 
-        String medianame = new String("");
+        String medianame = "";
 
         void onPre() {
             for (int i = 0; i <= hashname.size(); i++) {
@@ -55,18 +55,18 @@ public class Audio {
         Button buttonuriname = new Button(medianame);
 
         /**
-        ArrayList<Button> arraybuttonuri = new ArrayList<Button>(buttonuriname);
-
-        String[] string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
-        ArrayList<String> name = new ArrayList<String>(string);
-
-        for(int j = 0; j<=name.size(); j++){
-        String TmpText = name[j].getText();
-        buttonuriname.setLabel(TmpText);
-        }
-        }
-        */
-        class OnPlayAudio implements onPreAudio {
+         * ArrayList<Button> arraybuttonuri = new ArrayList<Button>(buttonuriname);
+         * <p>
+         * String[] string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
+         * ArrayList<String> name = new ArrayList<String>(string);
+         * <p>
+         * for(int j = 0; j<=name.size(); j++){
+         * String TmpText = name[j].getText();
+         * buttonuriname.setLabel(TmpText);
+         * }
+         * }
+         */
+        gui OnPlayAudio implements onPreAudio {
 
             @FXML
             WebView webView = new WebView();
