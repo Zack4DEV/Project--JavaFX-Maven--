@@ -211,13 +211,7 @@
             <version>20-ea+9</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-media</artifactId>
-            <version>20-ea+9</version>
-            <type>pom</type>
-        </dependency>
-
+        
         <!--
               <dependency>
                 <groupId>org.openjfx</groupId>
