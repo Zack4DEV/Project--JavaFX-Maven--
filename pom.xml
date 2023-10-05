@@ -18,6 +18,13 @@
         </repository>
     </distributionManagement>
     <modules></modules>
+    <servers>
+    <server>
+        <id>github</id>
+        <username>Zack4DEV</username>
+        <password>${{ secrets.GITHUB_TOKEN }}</password>
+    </server>
+    </servers>
     <properties>
         <!-- Build version properties -->
 
@@ -617,12 +624,10 @@
             </snapshots>
         </repository>
          <repository>
-         <id>maven</id>
+         <id>github-repo</id>
          <url>https://maven.pkg.github.com/Zack4DEV/Project--JavaFX-Maven--Radio</url>
-         <credentials>
          <username>Zack4DEV</username>
          <password>${{ secrets.GITHUB_TOKEN}}</password>
-         </credentials>
          </repository>
         <!--     
         <repository>
