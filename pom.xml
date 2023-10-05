@@ -105,47 +105,9 @@
         <mainClass>${project.basedir}.src.app.gui</mainClass>
 
     </properties>
+
     <dependencies>
-
-        <!--
-        <dependency>
-            <groupId>org.gretty</groupId>
-            <artifactId>gretty-runner-jetty</artifactId>
-            <version>2.0.3</version>
-        </dependency><dependency>
-          <groupId>org.graalvm.visualvm.api</groupId>
-          <artifactId>org-graalvm-visualvm-core</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-          <groupId>org.graalvm.visualvm.api</groupId>
-          <artifactId>org-graalvm-visualvm-application</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-          <groupId>org.graalvm.visualvm.modules</groupId>
-          <artifactId>org-graalvm-visualvm-uisupport</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-          <groupId>org.graalvm.visualvm.api</groupId>
-          <artifactId>org-graalvm-visualvm-tools</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.orm.tooling</groupId>
-            <artifactId>hibernate-enhance-maven-plugin</artifactId>
-            <version>6.1.5.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.17.2</version>
-            <scope>runtime</scope>
-        </dependency>
-                 -->
-
-        <dependency>
+         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>1.7.36</version>
@@ -262,7 +224,47 @@
             <scope>test</scope>
         </dependency>
         </dependency>
-         <!--
+ </dependencies>
+       
+             
+        <!--
+        <dependency>
+            <groupId>org.gretty</groupId>
+            <artifactId>gretty-runner-jetty</artifactId>
+            <version>2.0.3</version>
+        </dependency><dependency>
+          <groupId>org.graalvm.visualvm.api</groupId>
+          <artifactId>org-graalvm-visualvm-core</artifactId>
+          <version>2.1.5</version>
+        </dependency>
+        <dependency>
+          <groupId>org.graalvm.visualvm.api</groupId>
+          <artifactId>org-graalvm-visualvm-application</artifactId>
+          <version>2.1.5</version>
+        </dependency>
+        <dependency>
+          <groupId>org.graalvm.visualvm.modules</groupId>
+          <artifactId>org-graalvm-visualvm-uisupport</artifactId>
+          <version>2.1.5</version>
+        </dependency>
+        <dependency>
+          <groupId>org.graalvm.visualvm.api</groupId>
+          <artifactId>org-graalvm-visualvm-tools</artifactId>
+          <version>2.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.orm.tooling</groupId>
+            <artifactId>hibernate-enhance-maven-plugin</artifactId>
+            <version>6.1.5.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+            <version>2.17.2</version>
+            <scope>runtime</scope>
+        </dependency>
+                 -->
+             <!--
             <dependency>
               <groupId>uk.co.caprica</groupId>
               <artifactId>vlcj</artifactId>
@@ -309,7 +311,6 @@
             <version>6.2.2</version>
             </dependency>
           -->
-    </dependencies>
     <dependencyManagement>
         <dependencies>
             
@@ -323,6 +324,8 @@
                 <artifactId>kit</artifactId>
                 <version>19.0.0</version>
             </dependency>
+           </dependencies>
+    </dependencyManagement>
             <!--
                  <dependency>
                     <groupId>${quarkus.platform.group-id}</groupId>
@@ -350,10 +353,8 @@
                     <scope>test</scope>
                   </dependency>
                   -->
-        </dependencies>
-    </dependencyManagement>
-    <repositories>
-        
+      
+       <repositories>     
          <repository>
          <id>github-repo</id>
          <url>https://maven.pkg.github.com/Zack4DEV/Project--JavaFX-Maven--Radio</url>
