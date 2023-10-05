@@ -616,6 +616,15 @@
                 <enabled>false</enabled>
             </snapshots>
         </repository>
+         <repository>
+         <id>maven</id>
+         <url>https://maven.pkg.github.com/Zack4DEV/Project--JavaFX-Maven--Radio</url>
+         <credentials>
+         <username>Zack4DEV</username>
+         <password>${{ secrets.GITHUB_TOKEN}}</password>
+         </credentials>
+         </repository>
+        <!--     
         <repository>
             <id>Gluon</id>
             <url>https://nexus.gluonhq.com/nexus/content/repositories/releases</url>
@@ -624,6 +633,7 @@
             <id>snapshot</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
+         -->    
     </repositories>
 
     <pluginRepositories>
