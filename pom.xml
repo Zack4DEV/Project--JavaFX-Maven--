@@ -101,7 +101,7 @@
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
-        <mainClass>${project.basedir}.src.gui.java.Main</mainClass>
+        <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
 
     </properties>
 
@@ -407,7 +407,7 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>${project.basedir}.src.gui.java.Main</mainClass>
+                    <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
                     <stripDebug>true</stripDebug>
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
@@ -513,7 +513,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>${project.basedir}.src.gui.java.Main</mainClass>
+                            <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -668,7 +668,7 @@
                       <resourcesList>
                         <item></item>
                       </resourcesList>
-                     <mainClass>${project.basedir}.src.gui.java.Main</mainClass>
+                     <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
                       <appIdentifier>${app.identifier}</appIdentifier>
                       <releaseConfiguration>
                         <vendor>Gluon</vendor>
