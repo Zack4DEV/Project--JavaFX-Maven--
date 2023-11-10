@@ -10,7 +10,7 @@
 Name: RadioApp.<br/>
 Description: Moroccan Radio Stations JavaFx-App.<br/>
 @Version: 1.0.0-SNAPSHOT.<br/>
-@Author: Zack4Dev.<br/>
+@Author: Zack4DEV.<br/>
 
 # ====================================
 

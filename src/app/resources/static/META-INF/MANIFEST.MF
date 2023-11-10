@@ -1,2 +1,2 @@
 Manifest-Version: 1.0
-Main-Class: app.class;
+Main-Class: app.java.gui.Main;
