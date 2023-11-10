@@ -101,7 +101,7 @@
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
-        <mainClass>${project.basedir}.src.app.java.gui</mainClass>
+        <mainClass>${project.basedir}.src.app.java.gui.Main</mainClass>
 
     </properties>
 
@@ -513,7 +513,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>${project.basedir}.src.app.java.gui</mainClass>
+                            <mainClass>${project.basedir}.src.app.java.gui.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -668,7 +668,7 @@
                       <resourcesList>
                         <item></item>
                       </resourcesList>
-                     <mainClass>${project.basedir}.src.app.java.gui</mainClass>
+                     <mainClass>${project.basedir}.src.app.java.gui.Main</mainClass>
                       <appIdentifier>${app.identifier}</appIdentifier>
                       <releaseConfiguration>
                         <vendor>Gluon</vendor>
