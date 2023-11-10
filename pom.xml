@@ -101,7 +101,7 @@
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
-        <mainClass>${project.basedir}.src.app.gui</mainClass>
+        <mainClass>${project.basedir}.src.app.java.gui</mainClass>
 
     </properties>
 
@@ -407,7 +407,7 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>${project.basedir}.src.app.gui</mainClass>
+                    <mainClass>${project.basedir}.src.app.java.gui.Main</mainClass>
                     <stripDebug>true</stripDebug>
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
@@ -513,7 +513,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>${project.basedir}.src.app.gui</mainClass>
+                            <mainClass>${project.basedir}.src.app.java.gui</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -622,7 +622,7 @@
                         <artifactId>${project.artifactId}</artifactId>
                         <version>${project.version}</version>
                         <type>jar</type>
-                        <outputDirectory>${project.basedir}/target/classes</outputDirectory>
+                        <outputDirectory>${project.basedir}.target.classes</outputDirectory>
                       </artifactItem>
                     </artifactItems>
                   </configuration>
@@ -640,7 +640,7 @@
                         <artifactId>${project.artifactId}</artifactId>
                         <version>${project.version}</version>
                         <type>test-jar</type>
-                        <outputDirectory>${project.basedir}/target/test-classes</outputDirectory>
+                        <outputDirectory>${project.basedir}.target.test-classes</outputDirectory>
                       </artifactItem>
                     </artifactItems>
                   </configuration>
@@ -668,7 +668,7 @@
                       <resourcesList>
                         <item></item>
                       </resourcesList>
-                     <mainClass>${project.basedir}.src.app.gui</mainClass>
+                     <mainClass>${project.basedir}.src.app.java.gui</mainClass>
                       <appIdentifier>${app.identifier}</appIdentifier>
                       <releaseConfiguration>
                         <vendor>Gluon</vendor>
