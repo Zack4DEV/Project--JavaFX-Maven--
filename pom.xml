@@ -105,33 +105,33 @@
     </properties>
     <dependencies>
         <dependency>
-           <groupId>net.java.dev.jna</groupId>
+            <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <version>5.12.1</version>
             <type>jar</type>
         </dependency>
         <dependency>
-           <groupId>net.java.dev.jna</groupId>
+            <groupId>net.java.dev.jna</groupId>
             <artifactId>jna-platform</artifactId>
             <version>5.12.1</version>
             <type>jar</type>
         </dependency>
-         <dependency>
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
             <type>jar</type>
         </dependency>
         <dependency>
@@ -171,11 +171,11 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-        <!--
+    <!--
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
             <type>pom</type>
         </dependency>
         <dependency>
@@ -191,24 +191,24 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-graphics</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
             <type>pom</type>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-swing</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
             <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-web</artifactId>
-            <version>20-ea+9</version>
+            <version>22-ea+16</version>
             <type>jar</type>
         </dependency>
         <dependency>
@@ -344,7 +344,7 @@
             <version>6.2.2</version>
             </dependency>
           -->
-        <!--
+    <!--
         <repository>
             <id>central</id>
             <name>Central Repository</name>
@@ -363,7 +363,7 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
          -->
-        <!--
+    <!--
         <pluginRepository>
           <id>graalvm-native-build-tools-snapshots</id>
           <name>GraalVM native-build-tools Snapshots</name>
@@ -393,7 +393,7 @@
     </pluginRepositories>
     <build>
         <plugins>
-       <plugin>
+            <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
@@ -709,13 +709,24 @@
 
     <profiles>
         <profile>
-            <id>native</id>
-            <build>
-                <plugins>
-                </plugins>
-            </build>
+            <id>linux</id>
+            <activation>
+                <os>
+                    <name>linux</name>
+                </os>
+            </activation>
+            <properties>
+                <javafx.platform>linux</javafx.platform>
+            </properties>
         </profile>
         <!--
+            <profile>
+                <id>native</id>
+                <build>
+                    <plugins>
+                    </plugins>
+                </build>
+            </profile>
             <profile>
                 <id>desktop</id>
                 <activation>
