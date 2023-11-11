@@ -16,7 +16,6 @@
             <url>https://github.com/Zack4DEV/Project-JavaFX-RadioApp/</url>
         </repository>
     </distributionManagement>
-    <modules></modules>
 
     <properties>
         <!-- Build version properties -->
