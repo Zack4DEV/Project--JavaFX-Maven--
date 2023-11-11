@@ -1,7 +1,7 @@
 
 # RadioApp
 
-![RadioApp](/src/app/resources/static/Images/MarkDown.png)
+![RadioApp](/app/gui/resources/static/Images/MarkDown.png)
 
 # ====================================
 
@@ -35,14 +35,12 @@ Or with  Maven/NonMaven [jre/jdk javafx modules:controls,fxml] added using:
 
 ```shell script
 java "
---module-path  "{project.basedir}/lib/jfx/" \
 --add-modules=javafx.fxml,javafx.controls,javafx.media \
 --add-opens=javafx.fxml/javafx.fxml=ALL-UNNAMED \
--cp /lib/scenebuilder/scenebuilder-kit-19.0.0.jar \
 com.oracle.javafx.scenebuilder.app.SceneBuilderApp
 "
 
-./mvnw exec:java {mainClass} "-classpath %classpath --module-path  "{project.basedir}/lib/jfx/" --add-modules=javafx.fxml,javafx.controls,javafx.media"
+./mvnw exec:java {mainClass} "-classpath %classpath  --add-modules=javafx.fxml,javafx.controls,javafx.media"
 ```
 
 # ------------------------------------------

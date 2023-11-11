@@ -3,7 +3,7 @@
     xmlns="https://maven.apache.org/POM/4.0.0" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <scm>
-        <connection>scm:git:https://github.com/Zack4DEV/Project-JavaFX-RadioApp/</connection>
+        <connection>scm:git:https://github.com/Zack4DEV/Project--JavaFX-Maven--/</connection>
     </scm>
     <groupId>app</groupId>
     <artifactId>gui</artifactId>
@@ -13,7 +13,7 @@
     <distributionManagement>
         <repository>
             <id>artifact-repository</id>
-            <url>https://github.com/Zack4DEV/Project-JavaFX-RadioApp/</url>
+            <url>https://github.com/Zack4DEV/Project--JavaFX-Maven--</url>
         </repository>
     </distributionManagement>
 
@@ -103,36 +103,20 @@
         <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
 
     </properties>
-
     <dependencies>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.36</version>
-            <scope>test</scope>
+           <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>5.12.1</version>
+            <type>jar</type>
         </dependency>
         <dependency>
-            <groupId>uk.co.caprica</groupId>
-            <artifactId>vlcj-javafx</artifactId>
-            <version>1.2.0</version>
+           <groupId>net.java.dev.jna</groupId>
+            <artifactId>jna-platform</artifactId>
+            <version>5.12.1</version>
+            <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx</artifactId>
-            <version>20-ea+9</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-archetype-simple</artifactId>
-            <version>0.0.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-archetype-fxml</artifactId>
-            <version>0.0.6</version>
-        </dependency>
-        <dependency>
+         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
             <version>20-ea+9</version>
@@ -149,6 +133,60 @@
             <artifactId>javafx-controls</artifactId>
             <version>20-ea+9</version>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>uk.co.caprica</groupId>
+            <artifactId>vlcj-javafx</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tngtech.java</groupId>
+            <artifactId>junit-dataprovider</artifactId>
+            <version>${junit-dataprovider.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.gluonhq.scenebuilder</groupId>
+                <artifactId>kit</artifactId>
+                <version>19.0.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+        <!--
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx</artifactId>
+            <version>20-ea+9</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-archetype-simple</artifactId>
+            <version>0.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-archetype-fxml</artifactId>
+            <version>0.0.6</version>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -173,21 +211,14 @@
             <version>20-ea+9</version>
             <type>jar</type>
         </dependency>
-        <!--
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>${guava.version}</version>
         </dependency>
-        -->
-        <dependency>
+         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
-            <version>${log4j2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
             <version>${log4j2.version}</version>
         </dependency>
         <dependency>
@@ -211,26 +242,42 @@
             <version>${jackson.annotations.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.tngtech.java</groupId>
-            <artifactId>junit-dataprovider</artifactId>
-            <version>${junit-dataprovider.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>${mockito.version}</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
-
-
-    <!--
         <dependency>
             <groupId>org.gretty</groupId>
             <artifactId>gretty-runner-jetty</artifactId>
             <version>2.0.3</version>
-        </dependency><dependency>
+        </dependency>
+        <dependency>
+                    <groupId>${quarkus.platform.group-id}</groupId>
+                    <artifactId>${quarkus.platform.artifact-id}</artifactId>
+                    <version>${quarkus.platform.version}</version>
+                    <type>pom</type>
+                    <scope>import</scope>
+                  </dependency>
+                  <dependency>
+                    <groupId>io.rest-assured</groupId>
+                    <artifactId>rest-assured</artifactId>
+                    <scope>test</scope>
+                  </dependency>
+                <dependency>
+                    <groupId>io.quarkus</groupId>
+                    <artifactId>quarkus-arc</artifactId>
+                  </dependency>
+                  <dependency>
+                    <groupId>io.quarkus</groupId>
+                    <artifactId>quarkus-resteasy-reactive</artifactId>
+                  </dependency>
+                  <dependency>
+                    <groupId>io.quarkus</groupId>
+                    <artifactId>quarkus-junit5</artifactId>
+                    <scope>test</scope>
+                  </dependency>
+        <dependency>
           <groupId>org.graalvm.visualvm.api</groupId>
           <artifactId>org-graalvm-visualvm-core</artifactId>
           <version>2.1.5</version>
@@ -261,18 +308,7 @@
             <version>2.17.2</version>
             <scope>runtime</scope>
         </dependency>
-                 -->
-    <!--
-            <dependency>
-              <groupId>uk.co.caprica</groupId>
-              <artifactId>vlcj</artifactId>
-              <version>4.8.0</version>
-            </dependency>
-            -->
-
-
-    <!---
-            <dependency>
+        <dependency>
               <groupId>com.gluonhq.attach</groupId>
               <artifactId>util</artifactId>
               <version>4.0.16</version>
@@ -302,57 +338,13 @@
               <artifactId>storage</artifactId>
               <version>4.0.16</version>
             </dependency>
-
             <dependency>
               <groupId>com.gluonhq</groupId>
               <artifactId>charm-glisten</artifactId>
             <version>6.2.2</version>
             </dependency>
           -->
-    <dependencyManagement>
-        <dependencies>
-
-            <dependency>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>exec-maven-plugin</artifactId>
-                <version>3.1.0</version>
-            </dependency>
-            <dependency>
-                <groupId>com.gluonhq.scenebuilder</groupId>
-                <artifactId>kit</artifactId>
-                <version>19.0.0</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-    <!--
-                 <dependency>
-                    <groupId>${quarkus.platform.group-id}</groupId>
-                    <artifactId>${quarkus.platform.artifact-id}</artifactId>
-                    <version>${quarkus.platform.version}</version>
-                    <type>pom</type>
-                    <scope>import</scope>
-                  </dependency>
-                  <dependency>
-                    <groupId>io.rest-assured</groupId>
-                    <artifactId>rest-assured</artifactId>
-                    <scope>test</scope>
-                  </dependency>
-                <dependency>
-                    <groupId>io.quarkus</groupId>
-                    <artifactId>quarkus-arc</artifactId>
-                  </dependency>
-                  <dependency>
-                    <groupId>io.quarkus</groupId>
-                    <artifactId>quarkus-resteasy-reactive</artifactId>
-                  </dependency>
-                  <dependency>
-                    <groupId>io.quarkus</groupId>
-                    <artifactId>quarkus-junit5</artifactId>
-                    <scope>test</scope>
-                  </dependency>
-                  -->
-
-    <!--
+        <!--
         <repository>
             <id>central</id>
             <name>Central Repository</name>
@@ -371,8 +363,7 @@
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </repository>
          -->
-
-    <!--
+        <!--
         <pluginRepository>
           <id>graalvm-native-build-tools-snapshots</id>
           <name>GraalVM native-build-tools Snapshots</name>
