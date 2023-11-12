@@ -132,7 +132,6 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>22-ea+16</version>
-            <type>jar</type>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -344,17 +343,19 @@
             <version>6.2.2</version>
             </dependency>
           -->
-    <!--
+    <repositories>
         <repository>
             <id>central</id>
             <name>Central Repository</name>
             <url>https://repo.maven.apache.org/maven2</url>
             <layout>default</layout>
             <snapshots>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
             </snapshots>
         </repository>
-             <repository>
+    </repositories>
+    <!--
+        <repository>
             <id>Gluon</id>
             <url>https://nexus.gluonhq.com/nexus/content/repositories/releases</url>
         </repository>
@@ -364,6 +365,7 @@
         </repository>
          -->
     <!--
+    <pluginRepositories>
         <pluginRepository>
           <id>graalvm-native-build-tools-snapshots</id>
           <name>GraalVM native-build-tools Snapshots</name>
@@ -379,8 +381,6 @@
             <id>snapshot</id>
             <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </pluginRepository>
-             -->
-    <pluginRepositories>
         <pluginRepository>
             <id>central</id>
             <name>Central Repository</name>
@@ -391,6 +391,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+    -->
     <build>
         <plugins>
             <plugin>
