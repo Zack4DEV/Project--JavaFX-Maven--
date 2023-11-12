@@ -1,4 +1,4 @@
-name: Install-Test with Maven
+name:  Maven Verify (Validate,Compile,Package,...)
 
 on:
   push:
@@ -22,8 +22,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     #    cache: 'maven'
-    - name: Install-Test with Maven
-      run: 'mvn package | mvn verify'
+    - name: Verify with Maven (Validate,Compile,Package,...)
+      run: 'mvn verify'
       shell: bash
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
