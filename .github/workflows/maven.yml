@@ -23,10 +23,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    #    cache: 'maven'
+        cache: 'maven'
     - name: Verify with Maven (Validate,Compile,Package,...)
       run: 'mvn verify'
       shell: bash
   # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
-    - name: Update dependency graph
-      uses: advanced-security/maven-dependency-submission-action@v3
+  #  - name: Update dependency graph
+  #    uses: advanced-security/maven-dependency-submission-action@v3
