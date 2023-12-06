@@ -1,7 +1,7 @@
 
 # RadioApp
 
-![RadioApp](/app/gui/resources/static/Images/MarkDown.png)
+![RadioApp](/src/gui/radio/resources/static/Images/MarkDown.png)
 
 # ====================================
 
