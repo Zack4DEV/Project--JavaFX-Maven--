@@ -7,6 +7,9 @@
     <version>1.0.0-SNAPSHOT</version>
     <name>Project-JavaFX-RadioApp</name>
     <description>Demo project</description>
+    <scm>
+        <connection>scm:git:https://github.com/Zack4DEV/Project--JavaFX-Maven--/</connection>
+    </scm>
     <distributionManagement>
         <repository>
             <id>artifact-repository</id>
