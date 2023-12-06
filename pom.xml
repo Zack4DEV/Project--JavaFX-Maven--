@@ -97,13 +97,7 @@
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
-        <configuration>
-        <arguments>
-            <argument>"-"classpath</argument>
-            <classpath/>
-            <argument>gui.java.MainApp</argument>
-          </arguments>
-        </configuration>
+        
     </properties>
     <dependencies>
         <dependency>
@@ -400,7 +394,11 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>gui.java.Main</mainClass>
+                 <arguments>
+                 <argument>-classpath</argument>
+                 <classpath/>
+                 <argument>gui.java.MainApp</argument>
+                 </arguments>
                     <stripDebug>true</stripDebug>
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
@@ -660,9 +658,8 @@
                       </attachList>
                       <resourcesList>
                         <item></item>
-                      </resourcesList>
-                     <mainClass>gui.java.Main</mainClass>
-                      <appIdentifier>${app.identifier}</appIdentifier>
+                      </resourcesList>                   
+                     <appIdentifier>${app.identifier}</appIdentifier>
                       <releaseConfiguration>
                         <vendor>Gluon</vendor>
                         <description>${app.description}</description>
