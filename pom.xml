@@ -97,7 +97,7 @@
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
-        <configuartion>
+        <configuration>
         <arguments>
             <argument>-classpath</argument>
             <classpath/>
