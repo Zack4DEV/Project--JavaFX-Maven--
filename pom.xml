@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="no"?>
 <project xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
-    xmlns="https://maven.apache.org/POM/4.0.0" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xmlns="https://maven.apache.org/POM/4.0.0" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>app</groupId>
     <artifactId>gui</artifactId>
@@ -16,7 +16,7 @@
 
     <properties>
         <!-- Build version properties -->
-
+        <mainClass>gui.java.MainApp</mainClass>
         <java.source.version>17</java.source.version>
         <java.target.version>17</java.target.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -97,7 +97,7 @@
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
-        
+
     </properties>
     <dependencies>
         <dependency>
@@ -167,178 +167,178 @@
         </dependencies>
     </dependencyManagement>
     <!--
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx</artifactId>
-            <version>22-ea+16</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-archetype-simple</artifactId>
-            <version>0.0.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-archetype-fxml</artifactId>
-            <version>0.0.6</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-graphics</artifactId>
-            <version>22-ea+16</version>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-media</artifactId>
-            <version>22-ea+16</version>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-swing</artifactId>
-            <version>22-ea+16</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-web</artifactId>
-            <version>22-ea+16</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>${guava.version}</version>
-        </dependency>
-         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4j2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-1.2-api</artifactId>
-            <version>${log4j2.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-csv</artifactId>
-            <version>${commons-csv.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons-lang3.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>${jackson.annotations.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.gretty</groupId>
-            <artifactId>gretty-runner-jetty</artifactId>
-            <version>2.0.3</version>
-        </dependency>
-        <dependency>
-                    <groupId>${quarkus.platform.group-id}</groupId>
-                    <artifactId>${quarkus.platform.artifact-id}</artifactId>
-                    <version>${quarkus.platform.version}</version>
-                    <type>pom</type>
-                    <scope>import</scope>
-                  </dependency>
-                  <dependency>
-                    <groupId>io.rest-assured</groupId>
-                    <artifactId>rest-assured</artifactId>
-                    <scope>test</scope>
-                  </dependency>
-                <dependency>
-                    <groupId>io.quarkus</groupId>
-                    <artifactId>quarkus-arc</artifactId>
-                  </dependency>
-                  <dependency>
-                    <groupId>io.quarkus</groupId>
-                    <artifactId>quarkus-resteasy-reactive</artifactId>
-                  </dependency>
-                  <dependency>
-                    <groupId>io.quarkus</groupId>
-                    <artifactId>quarkus-junit5</artifactId>
-                    <scope>test</scope>
-                  </dependency>
-        <dependency>
-          <groupId>org.graalvm.visualvm.api</groupId>
-          <artifactId>org-graalvm-visualvm-core</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-          <groupId>org.graalvm.visualvm.api</groupId>
-          <artifactId>org-graalvm-visualvm-application</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-          <groupId>org.graalvm.visualvm.modules</groupId>
-          <artifactId>org-graalvm-visualvm-uisupport</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-          <groupId>org.graalvm.visualvm.api</groupId>
-          <artifactId>org-graalvm-visualvm-tools</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.orm.tooling</groupId>
-            <artifactId>hibernate-enhance-maven-plugin</artifactId>
-            <version>6.1.5.Final</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>2.17.2</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-              <groupId>com.gluonhq.attach</groupId>
-              <artifactId>util</artifactId>
-              <version>4.0.16</version>
+  <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx</artifactId>
+      <version>22-ea+16</version>
+      <type>pom</type>
+  </dependency>
+  <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-archetype-simple</artifactId>
+      <version>0.0.6</version>
+  </dependency>
+  <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-archetype-fxml</artifactId>
+      <version>0.0.6</version>
+  </dependency>
+  <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-graphics</artifactId>
+      <version>22-ea+16</version>
+  </dependency>
+  <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-media</artifactId>
+      <version>22-ea+16</version>
+      <type>pom</type>
+  </dependency>
+  <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-swing</artifactId>
+      <version>22-ea+16</version>
+      <type>jar</type>
+  </dependency>
+  <dependency>
+      <groupId>org.openjfx</groupId>
+      <artifactId>javafx-web</artifactId>
+      <version>22-ea+16</version>
+      <type>jar</type>
+  </dependency>
+  <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>${guava.version}</version>
+  </dependency>
+   <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j2.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-1.2-api</artifactId>
+      <version>${log4j2.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-csv</artifactId>
+      <version>${commons-csv.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>${commons-lang3.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson.annotations.version}</version>
+  </dependency>
+  <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <version>${mockito.version}</version>
+      <scope>test</scope>
+  </dependency>
+  <dependency>
+      <groupId>org.gretty</groupId>
+      <artifactId>gretty-runner-jetty</artifactId>
+      <version>2.0.3</version>
+  </dependency>
+  <dependency>
+              <groupId>${quarkus.platform.group-id}</groupId>
+              <artifactId>${quarkus.platform.artifact-id}</artifactId>
+              <version>${quarkus.platform.version}</version>
+              <type>pom</type>
+              <scope>import</scope>
             </dependency>
             <dependency>
-              <groupId>com.gluonhq.attach</groupId>
-              <artifactId>audio</artifactId>
-              <version>4.0.16</version>
+              <groupId>io.rest-assured</groupId>
+              <artifactId>rest-assured</artifactId>
+              <scope>test</scope>
+            </dependency>
+          <dependency>
+              <groupId>io.quarkus</groupId>
+              <artifactId>quarkus-arc</artifactId>
             </dependency>
             <dependency>
-              <groupId>com.gluonhq.attach</groupId>
-              <artifactId>display</artifactId>
-              <version>4.0.16</version>
+              <groupId>io.quarkus</groupId>
+              <artifactId>quarkus-resteasy-reactive</artifactId>
             </dependency>
             <dependency>
-              <groupId>com.gluonhq.attach</groupId>
-              <artifactId>lifecycle</artifactId>
-              <version>4.0.16</version>
+              <groupId>io.quarkus</groupId>
+              <artifactId>quarkus-junit5</artifactId>
+              <scope>test</scope>
             </dependency>
-            <dependency>
-              <groupId>com.gluonhq.attach</groupId>
-              <artifactId>statusbar</artifactId>
-              <version>4.0.16</version>
-            </dependency>
-            <dependency>
-              <groupId>com.gluonhq.attach</groupId>
-              <artifactId>storage</artifactId>
-              <version>4.0.16</version>
-            </dependency>
-            <dependency>
-              <groupId>com.gluonhq</groupId>
-              <artifactId>charm-glisten</artifactId>
-            <version>6.2.2</version>
-            </dependency>
-          -->
+  <dependency>
+    <groupId>org.graalvm.visualvm.api</groupId>
+    <artifactId>org-graalvm-visualvm-core</artifactId>
+    <version>2.1.5</version>
+  </dependency>
+  <dependency>
+    <groupId>org.graalvm.visualvm.api</groupId>
+    <artifactId>org-graalvm-visualvm-application</artifactId>
+    <version>2.1.5</version>
+  </dependency>
+  <dependency>
+    <groupId>org.graalvm.visualvm.modules</groupId>
+    <artifactId>org-graalvm-visualvm-uisupport</artifactId>
+    <version>2.1.5</version>
+  </dependency>
+  <dependency>
+    <groupId>org.graalvm.visualvm.api</groupId>
+    <artifactId>org-graalvm-visualvm-tools</artifactId>
+    <version>2.1.5</version>
+  </dependency>
+  <dependency>
+      <groupId>org.hibernate.orm.tooling</groupId>
+      <artifactId>hibernate-enhance-maven-plugin</artifactId>
+      <version>6.1.5.Final</version>
+  </dependency>
+  <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-slf4j-impl</artifactId>
+      <version>2.17.2</version>
+      <scope>runtime</scope>
+  </dependency>
+  <dependency>
+        <groupId>com.gluonhq.attach</groupId>
+        <artifactId>util</artifactId>
+        <version>4.0.16</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gluonhq.attach</groupId>
+        <artifactId>audio</artifactId>
+        <version>4.0.16</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gluonhq.attach</groupId>
+        <artifactId>display</artifactId>
+        <version>4.0.16</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gluonhq.attach</groupId>
+        <artifactId>lifecycle</artifactId>
+        <version>4.0.16</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gluonhq.attach</groupId>
+        <artifactId>statusbar</artifactId>
+        <version>4.0.16</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gluonhq.attach</groupId>
+        <artifactId>storage</artifactId>
+        <version>4.0.16</version>
+      </dependency>
+      <dependency>
+        <groupId>com.gluonhq</groupId>
+        <artifactId>charm-glisten</artifactId>
+      <version>6.2.2</version>
+      </dependency>
+    -->
     <repositories>
         <repository>
             <id>central</id>
@@ -351,15 +351,15 @@
         </repository>
     </repositories>
     <!--
-        <repository>
-            <id>Gluon</id>
-            <url>https://nexus.gluonhq.com/nexus/content/repositories/releases</url>
-        </repository>
-        <repository>
-            <id>snapshot</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-        </repository>
-         -->
+   <repository>
+       <id>Gluon</id>
+       <url>https://nexus.gluonhq.com/nexus/content/repositories/releases</url>
+   </repository>
+   <repository>
+       <id>snapshot</id>
+       <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+   </repository>
+    -->
     <!--
     <pluginRepositories>
         <pluginRepository>
@@ -394,11 +394,11 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                 <arguments>
-                 <argument>-classpath</argument>
-                 <classpath/>
-                 <argument>gui.java.MainApp</argument>
-                 </arguments>
+                    <arguments>
+                        <argument>-classpath</argument>
+                        <classpath/>
+                        <argument>gui.java.MainApp</argument>
+                    </arguments>
                     <stripDebug>true</stripDebug>
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
@@ -595,115 +595,115 @@
 
 
             <!--
-            <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-              <artifactId>maven-dependency-plugin</artifactId>
-              <version>${maven-dependency-plugin.version}</version>
-              <executions>
-                <execution>
-                  <id>add-build-configuration-resources</id>
-                  <phase>generate-resources</phase>
-                  <goals>
-                    <goal>unpack</goal>
-                  </goals>
-                  <configuration>
-                    <artifactItems combine.children="append">
-                      <artifactItem>
-                        <groupId>${project.groupId}</groupId>
-                        <artifactId>${project.artifactId}</artifactId>
-                        <version>${project.version}</version>
-                        <type>jar</type>
-                        <outputDirectory>${project.basedir}.target.classes</outputDirectory>
-                      </artifactItem>
-                    </artifactItems>
-                  </configuration>
-                </execution>
-                <execution>
-                  <id>add-build-configuration-test-resources</id>
-                  <phase>generate-test-resources</phase>
-                  <goals>
-                    <goal>unpack</goal>
-                  </goals>
-                  <configuration>
-                    <artifactItems combine.children="append">
-                      <artifactItem>
-                        <groupId>${project.groupId}</groupId>
-                        <artifactId>${project.artifactId}</artifactId>
-                        <version>${project.version}</version>
-                        <type>test-jar</type>
-                        <outputDirectory>${project.basedir}.target.test-classes</outputDirectory>
-                      </artifactItem>
-                    </artifactItems>
-                  </configuration>
-                </execution>
-              </executions>
-            </plugin>
-      -->
-
-
-            <!--
                   <plugin>
-                    <groupId>com.gluonhq</groupId>
-                    <artifactId>gluonfx-maven-plugin</artifactId>
-                    <version>1.0.15</version>
-                    <configuration>
-                      <verbose>true</verbose>
-                      <target>${gluonfx.target}</target>
-                      <attachList>
-                        <list>display</list>
-                        <list>lifecycle</list>
-                        <list>statusbar</list>
-                        <list>storage</list>
-                        <list>audio</list>
-                      </attachList>
-                      <resourcesList>
-                        <item></item>
-                      </resourcesList>                   
-                     <appIdentifier>${app.identifier}</appIdentifier>
-                      <releaseConfiguration>
-                        <vendor>Gluon</vendor>
-                        <description>${app.description}</description>
-                        <packageType>${package.type}</packageType>
-                        <!-"-"for macOS/iOS
-                        <macAppStore>${mac.app.store}</macAppStore>
-                        <bundleShortVersion>${bundle.short.version}</bundleShortVersion>
-                        <bundleVersion>${bundle.version}</bundleVersion>
-                        <!"-"- for Android
-                        <versionCode>${version.code}</versionCode>
-                        <providedKeyStorePath>${provided.keystore.path}</providedKeyStorePath>
-                        <providedKeyStorePassword>${provided.keystore.password}</providedKeyStorePassword>
-                        <providedKeyAlias>${provided.key.alias}</providedKeyAlias>
-                        <providedKeyAliasPassword>${provided.key.alias.password}</providedKeyAliasPassword>
-                      </releaseConfiguration>
-                    </configuration>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>${maven-dependency-plugin.version}</version>
+                    <executions>
+                      <execution>
+                        <id>add-build-configuration-resources</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                          <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                          <artifactItems combine.children="append">
+                            <artifactItem>
+                              <groupId>${project.groupId}</groupId>
+                              <artifactId>${project.artifactId}</artifactId>
+                              <version>${project.version}</version>
+                              <type>jar</type>
+                              <outputDirectory>${project.basedir}.target.classes</outputDirectory>
+                            </artifactItem>
+                          </artifactItems>
+                        </configuration>
+                      </execution>
+                      <execution>
+                        <id>add-build-configuration-test-resources</id>
+                        <phase>generate-test-resources</phase>
+                        <goals>
+                          <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                          <artifactItems combine.children="append">
+                            <artifactItem>
+                              <groupId>${project.groupId}</groupId>
+                              <artifactId>${project.artifactId}</artifactId>
+                              <version>${project.version}</version>
+                              <type>test-jar</type>
+                              <outputDirectory>${project.basedir}.target.test-classes</outputDirectory>
+                            </artifactItem>
+                          </artifactItems>
+                        </configuration>
+                      </execution>
+                    </executions>
                   </plugin>
-                  -->
+            -->
+
+
             <!--
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>flatten-maven-plugin</artifactId>
-        <version>1.0.0</version>
-        <configuration>
-          <updatePomFile>true</updatePomFile>
-        </configuration>
-        <executions>
-          <execution>
-            <id>flatten</id>
-            <phase>process-resources</phase>
-            <goals>
-              <goal>flatten</goal>
-            </goals>
-          </execution>
-          <execution>
-            <id>flatten.clean</id>
-            <phase>clean</phase>
-            <goals>
-              <goal>clean</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-                  -->
+            <plugin>
+              <groupId>com.gluonhq</groupId>
+              <artifactId>gluonfx-maven-plugin</artifactId>
+              <version>1.0.15</version>
+              <configuration>
+                <verbose>true</verbose>
+                <target>${gluonfx.target}</target>
+                <attachList>
+                  <list>display</list>
+                  <list>lifecycle</list>
+                  <list>statusbar</list>
+                  <list>storage</list>
+                  <list>audio</list>
+                </attachList>
+                <resourcesList>
+                  <item></item>
+                </resourcesList>
+               <appIdentifier>${app.identifier}</appIdentifier>
+                <releaseConfiguration>
+                  <vendor>Gluon</vendor>
+                  <description>${app.description}</description>
+                  <packageType>${package.type}</packageType>
+                  <!-"-"for macOS/iOS
+                  <macAppStore>${mac.app.store}</macAppStore>
+                  <bundleShortVersion>${bundle.short.version}</bundleShortVersion>
+                  <bundleVersion>${bundle.version}</bundleVersion>
+                  <!"-"- for Android
+                  <versionCode>${version.code}</versionCode>
+                  <providedKeyStorePath>${provided.keystore.path}</providedKeyStorePath>
+                  <providedKeyStorePassword>${provided.keystore.password}</providedKeyStorePassword>
+                  <providedKeyAlias>${provided.key.alias}</providedKeyAlias>
+                  <providedKeyAliasPassword>${provided.key.alias.password}</providedKeyAliasPassword>
+                </releaseConfiguration>
+              </configuration>
+            </plugin>
+            -->
+            <!--
+<plugin>
+  <groupId>org.codehaus.mojo</groupId>
+  <artifactId>flatten-maven-plugin</artifactId>
+  <version>1.0.0</version>
+  <configuration>
+    <updatePomFile>true</updatePomFile>
+  </configuration>
+  <executions>
+    <execution>
+      <id>flatten</id>
+      <phase>process-resources</phase>
+      <goals>
+        <goal>flatten</goal>
+      </goals>
+    </execution>
+    <execution>
+      <id>flatten.clean</id>
+      <phase>clean</phase>
+      <goals>
+        <goal>clean</goal>
+      </goals>
+    </execution>
+  </executions>
+</plugin>
+            -->
         </plugins>
     </build>
 
@@ -720,67 +720,67 @@
             </properties>
         </profile>
         <!--
-            <profile>
-                <id>native</id>
-                <build>
-                    <plugins>
-                    </plugins>
-                </build>
-            </profile>
-            <profile>
-                <id>desktop</id>
-                <activation>
-                    <activeByDefault>true</activeByDefault>
-                </activation>
-                <properties>
-                    <gluonfx.target>host</gluonfx.target>
-                </properties>
-            </profile>
-            <profile>
-                <id>mac</id>
-                <properties>
-                    <package.type>pkg</package.type>
-                    <mac.app.store>false</mac.app.store>
-                    <bundle.version>${env.GITHUB_RUN_NUMBER}</bundle.version>
-                    <bundle.short.version>1.0</bundle.short.version>
-                </properties>
-            </profile>
-            <profile>
-                <id>macstore</id>
-                <properties>
-                    <package.type>pkg</package.type>
-                    <mac.app.store>true</mac.app.store>
-                    <bundle.version>1.${env.GITHUB_RUN_NUMBER}</bundle.version>
-                    <bundle.short.version>1.6</bundle.short.version>
-                </properties>
-            </profile>
-            <profile>
-                <id>ios</id>
-                <properties>
-                    <gluonfx.target>ios</gluonfx.target>
-                    <bundle.version>${env.GITHUB_RUN_NUMBER}</bundle.version>
-                    <bundle.short.version>1.0</bundle.short.version>
-                </properties>
-            </profile>
-            <profile>
-                <id>android</id>
-                <properties>
-                    <gluonfx.target>android</gluonfx.target>
-                    <app.identifier>com.audioTest</app.identifier>
-                    <version.code>${env.GITHUB_RUN_NUMBER}</version.code>
-                    <provided.keystore.path>${env.GLUON_ANDROID_KEYSTOREPATH}</provided.keystore.path>
-                    <provided.keystore.password>${env.GLUON_ANDROID_KEYSTORE_PASSWORD}</provided.keystore.password>
-                    <provided.key.alias>${env.GLUON_ANDROID_KEYALIAS}</provided.key.alias>
-                    <provided.key.alias.password>${env.GLUON_ANDROID_KEYALIAS_PASSWORD}</provided.key.alias.password>
-                </properties>
-            </profile>
-            <profile>
-                <id>pi</id>
-                <properties>
-                    <gluonfx.target>linux-aarch64</gluonfx.target>
-                </properties>
-            </profile>
-            -->
+        <profile>
+            <id>native</id>
+            <build>
+                <plugins>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>desktop</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gluonfx.target>host</gluonfx.target>
+            </properties>
+        </profile>
+        <profile>
+            <id>mac</id>
+            <properties>
+                <package.type>pkg</package.type>
+                <mac.app.store>false</mac.app.store>
+                <bundle.version>${env.GITHUB_RUN_NUMBER}</bundle.version>
+                <bundle.short.version>1.0</bundle.short.version>
+            </properties>
+        </profile>
+        <profile>
+            <id>macstore</id>
+            <properties>
+                <package.type>pkg</package.type>
+                <mac.app.store>true</mac.app.store>
+                <bundle.version>1.${env.GITHUB_RUN_NUMBER}</bundle.version>
+                <bundle.short.version>1.6</bundle.short.version>
+            </properties>
+        </profile>
+        <profile>
+            <id>ios</id>
+            <properties>
+                <gluonfx.target>ios</gluonfx.target>
+                <bundle.version>${env.GITHUB_RUN_NUMBER}</bundle.version>
+                <bundle.short.version>1.0</bundle.short.version>
+            </properties>
+        </profile>
+        <profile>
+            <id>android</id>
+            <properties>
+                <gluonfx.target>android</gluonfx.target>
+                <app.identifier>com.audioTest</app.identifier>
+                <version.code>${env.GITHUB_RUN_NUMBER}</version.code>
+                <provided.keystore.path>${env.GLUON_ANDROID_KEYSTOREPATH}</provided.keystore.path>
+                <provided.keystore.password>${env.GLUON_ANDROID_KEYSTORE_PASSWORD}</provided.keystore.password>
+                <provided.key.alias>${env.GLUON_ANDROID_KEYALIAS}</provided.key.alias>
+                <provided.key.alias.password>${env.GLUON_ANDROID_KEYALIAS_PASSWORD}</provided.key.alias.password>
+            </properties>
+        </profile>
+        <profile>
+            <id>pi</id>
+            <properties>
+                <gluonfx.target>linux-aarch64</gluonfx.target>
+            </properties>
+        </profile>
+        -->
 
 
     </profiles>
