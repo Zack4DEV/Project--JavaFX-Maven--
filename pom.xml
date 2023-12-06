@@ -2,9 +2,6 @@
 <project xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
     xmlns="https://maven.apache.org/POM/4.0.0" xsi:schemaLocation="https://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <scm>
-        <connection>scm:git:https://github.com/Zack4DEV/Project--JavaFX-Maven--/</connection>
-    </scm>
     <groupId>app</groupId>
     <artifactId>gui</artifactId>
     <version>1.0.0-SNAPSHOT</version>
@@ -100,8 +97,13 @@
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
-        <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
-
+        <configuartion>
+        <arguments>
+            <argument>-classpath</argument>
+            <classpath/>
+            <argument>gui.java.MainApp</argument>
+          </arguments>
+        </configuration>
     </properties>
     <dependencies>
         <dependency>
@@ -398,7 +400,7 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
+                    <mainClass>gui.java.Main</mainClass>
                     <stripDebug>true</stripDebug>
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
@@ -504,7 +506,7 @@
                     <appendAssemblyId>false</appendAssemblyId>
                     <archive>
                         <manifest>
-                            <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
+                            <mainClass>gui.java.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -659,7 +661,7 @@
                       <resourcesList>
                         <item></item>
                       </resourcesList>
-                     <mainClass>${project.basedir}.app.gui.java.Main</mainClass>
+                     <mainClass>gui.java.Main</mainClass>
                       <appIdentifier>${app.identifier}</appIdentifier>
                       <releaseConfiguration>
                         <vendor>Gluon</vendor>
