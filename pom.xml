@@ -99,7 +99,7 @@
         <skipITs>true</skipITs>
         <configuration>
         <arguments>
-            <argument>-classpath</argument>
+            <argument>"-"classpath</argument>
             <classpath/>
             <argument>gui.java.MainApp</argument>
           </arguments>
