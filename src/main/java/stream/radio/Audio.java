@@ -42,12 +42,12 @@ public class Audio {
         List<String[]> listname =  List.of(stringname);
 
         for (int i = 0; i <= listname.size(); i++) {
-             String  medianame = (String) listname[i];
+             String[]  medianame =  listname[i];
             }
      }
 
     private void onAfterAudio(){
-         ArrayList<Button> arraybuttonuri = new ArrayList<Button>();
+         ArrayList<> arraybuttonuri = new ArrayList<>();
          String[] string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
         
          for(int i = 0 ; i <= listname.size() ; i++){        
