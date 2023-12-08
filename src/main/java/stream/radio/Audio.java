@@ -7,7 +7,7 @@ import javafx.scene.web.WebView;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import static java.util.Map.entry;    
+import java.util.List;
 
 public class Audio {
     private void onPreloadAudio() {
@@ -39,15 +39,11 @@ public class Audio {
         String stringskynewsarabia = URI.create("http://radio.skynewsarabia.com/stream/radio/skynewsarabia").toString();
         String stringbbcarabic = URI.create("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio").toString();
 
-        Map<String> mapname =  Map.ofEntries(
-        entry(stringmfm), entry(stringaswat), entry(stringchada), entry(stringmars), entry(stringmedradio),
-        entry(stringtania), entry(stringatlantic), entry(stringyabiladi), entry(stringmedi), entry(stringness), entry(stringhitradio), entry(stringhitmaroc),
-        entry(stringtarab), entry(stringwatania), entry(stringmoroccoenglish), entry(stringtamazgha), entry(stringizlan), entry(stringcoran),
-        entry(stringmontecarlo), entry(stringaljazeera), entry(stringskynewsarabia), entry(stringbbcarabic)
-        );
+        String[] stringname = new String[]{stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic};
+        List<String> listname =  List.of(stringname);
 
-        for (int i = 0; i <= mapname.size(); i++) {
-             String  medianame = mapname[i];
+        for (int i = 0; i <= listname.size(); i++) {
+             String  medianame = listname[i];
             }
      }
 
@@ -55,7 +51,7 @@ public class Audio {
          ArrayList<Button> arraybuttonuri = new ArrayList<Button>();
          String[] string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
         
-         for(int i = 0 ; i <= mapname.size() ; i++){        
+         for(int i = 0 ; i <= listname.size() ; i++){        
          for(int j = i ; j <= string.size() ; j++ ){
          arraybuttonuri.put(string[j]);
          String TmpText = (String) arraybuttonuri.getText();
