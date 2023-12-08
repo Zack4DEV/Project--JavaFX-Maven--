@@ -419,6 +419,8 @@
                         <classpath/>
                         <argument>gui.radio.java.MainApp</argument>
                     </arguments>
+		   <mainClass>gui.radio.java.MainApp</mainClass>
+                    <outputDirectory>${project.build.directory}/target/</outputDirectory>
                     <stripDebug>true</stripDebug>
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
@@ -432,6 +434,15 @@
                 </configuration>
                 <version>0.0.8</version>
             </plugin>
+		<plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.11.0</version>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
