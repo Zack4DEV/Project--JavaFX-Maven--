@@ -73,11 +73,7 @@
         <javax-annotation.version>1.3.2</javax-annotation.version>
         <jcraft.version>0.1.54</jcraft.version>
         <jgiven.version>0.1.8.0</jgiven.version>
-
-        <log4j2.version>2.1.8.1</log4j2.version>
         <slf4j.version>1.7.30</slf4j.version>
-        <junit-dataprovider.version>1.13.1</junit-dataprovider.version>
-        <junit.version>4.13.2</junit.version>
         <thrift.version>0.16.0</thrift.version>
 
         <require.js.version>2.3.6</require.js.version>
@@ -145,14 +141,26 @@
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
-            <version>${log4j2.version}</version>
+            <version>3.0.0-alpha1</version>
         </dependency>
-        <dependency>
-            <groupId>com.tngtech.java</groupId>
-            <artifactId>junit-dataprovider</artifactId>
-            <version>${junit-dataprovider.version}</version>
-            <scope>test</scope>
-        </dependency>
+      <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+       <artifactId>log4j-api</artifactId>
+       <version>3.0.0-alpha1</version>
+      </dependency>
+       <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.13.2</version>
+    <scope>test</scope>
+	</dependency>
+	<dependency>
+    	<groupId>org.junit.jupiter</groupId>
+    	<artifactId>junit-jupiter-api</artifactId>
+    	<version>5.10.1</version>
+    	<scope>test</scope>
+	</dependency>
+
     </dependencies>
     <!--
     <dependencyManagement>
@@ -214,16 +222,7 @@
       <artifactId>guava</artifactId>
       <version>${guava.version}</version>
   </dependency>
-   <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>${log4j2.version}</version>
-  </dependency>
-  <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-1.2-api</artifactId>
-      <version>${log4j2.version}</version>
-  </dependency>
+   
   <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-csv</artifactId>
