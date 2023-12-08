@@ -11,33 +11,33 @@ import java.util.HashMap;
 
 public class Audio {
     private void onPreloadAudio() {
-        String stringname = new URI("");
+        String stringname = URI.create("").toString();
 
-        String stringmfm = new URI("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString();
-        String stringaswat = new URI("http://broadcast.ice.infomaniak.ch/aswat-high.mp3").toString();
-        String stringchada = new URI("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3").toString();
-        String stringmars = new URI("http://streamer.eagrpservices.com/audio/radiomars.mp3").toString();
-        String stringmedradio = new URI("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3").toString();
-        String stringtania = new URI(
+        String stringmfm = URI.create("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString();
+        String stringaswat = URI.create("http://broadcast.ice.infomaniak.ch/aswat-high.mp3").toString();
+        String stringchada = URI.create("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3").toString();
+        String stringmars = URI.create("http://streamer.eagrpservices.com/audio/radiomars.mp3").toString();
+        String stringmedradio = URI.create("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3").toString();
+        String stringtania = URI.create(
                 "http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8").toString();
-        String stringatlantic = new URI("http://atlanticradio.ma:8000/stream/1/").toString();
-        String stringyabiladi = new URI("http://snassen.yabiladi.com:8000/stream/1").toString();
-        String stringmedi = new URI("http://51.222.88.199:80/medi1").toString();
-        String stringness = new URI("http://radio.nessradio.net:8000/nessradio.mp3").toString();
-        String stringhitradio = new URI("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3").toString();
-        String stringhitmaroc = new URI("http://api.webrad.io/data/streams/68/hits1-maroc").toString();
-        String stringtarab = new URI("http://streaming2.rimradio.ma/livetarab").toString();
-        String stringwatania = new URI(
+        String stringatlantic = URI.create("http://atlanticradio.ma:8000/stream/1/").toString();
+        String stringyabiladi = URI.create("http://snassen.yabiladi.com:8000/stream/1").toString();
+        String stringmedi = URI.create("http://51.222.88.199:80/medi1").toString();
+        String stringness = URI.create("http://radio.nessradio.net:8000/nessradio.mp3").toString();
+        String stringhitradio = URI.create("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3").toString();
+        String stringhitmaroc = URI.create("http://api.webrad.io/data/streams/68/hits1-maroc").toString();
+        String stringtarab = URI.create("http://streaming2.rimradio.ma/livetarab").toString();
+        String stringwatania = URI.create(
                 "http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8")
                 .toString();
-        String stringmoroccoenglish = new URI("http://streamer.radio.co/s6cba51492/listen").toString();
-        String stringtamazgha = new URI("http://streaming2.rimradio.ma/liveamazighe").toString();
-        String stringizlan = new URI("http://izlan.fr/radios/atlas/stream").toString();
-        String stringcoran = new URI("http://dedi.radio-coran.net:8000/livehq.mp3").toString();
-        String stringmontecarlo = new URI("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3").toString();
-        String stringaljazeera = new URI("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8").toString();
-        String stringskynewsarabia = new URI("http://radio.skynewsarabia.com/stream/radio/skynewsarabia").toString();
-        String stringbbcarabic = new URI("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio").toString();
+        String stringmoroccoenglish = URI.create("http://streamer.radio.co/s6cba51492/listen").toString();
+        String stringtamazgha = URI.create("http://streaming2.rimradio.ma/liveamazighe").toString();
+        String stringizlan = URI.create("http://izlan.fr/radios/atlas/stream").toString();
+        String stringcoran = URI.create("http://dedi.radio-coran.net:8000/livehq.mp3").toString();
+        String stringmontecarlo = URI.create("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3").toString();
+        String stringaljazeera = URI.create("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8").toString();
+        String stringskynewsarabia = URI.create("http://radio.skynewsarabia.com/stream/radio/skynewsarabia").toString();
+        String stringbbcarabic = URI.create("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio").toString();
 
         HashMap<String> hashname = new HashMap<>(stringmfm, stringaswat, stringchada, stringmars, stringmedradio,
                 stringtania, stringatlantic, stringyabiladi, stringmedi, stringness, stringhitradio, stringhitmaroc,
