@@ -277,18 +277,14 @@
             </plugin>
       </plugins>
     </pluginManagement>
-   <dependencyManagement>
     <dependencies>
-      <dependency>
+	<dependency>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-bom</artifactId>
         <version>${quarkus.version}</version>
         <type>pom</type>
         <scope>import</scope>
-      </dependency>
-    </dependencies>
-    </dependencyManagement>
-    <dependencies>
+      	</dependency>
 	<dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
