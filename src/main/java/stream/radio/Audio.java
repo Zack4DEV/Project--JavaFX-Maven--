@@ -38,17 +38,17 @@ public class Audio {
         String stringskynewsarabia = URI.create("http://radio.skynewsarabia.com/stream/radio/skynewsarabia").toString();
         String stringbbcarabic = URI.create("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio").toString();
 
-        String stringname = new String[]{stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic};
-        List<String> listname =  List.of(stringname);
+        String[] stringname = new String[]{stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic};
+        List<String[]> listname =  List.of(stringname);
 
         for (int i = 0; i <= listname.size(); i++) {
-             String  medianame = listname[i];
+             String  medianame = (String) listname[i];
             }
      }
 
     private void onAfterAudio(){
          ArrayList<Button> arraybuttonuri = new ArrayList<Button>();
-         String string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
+         String[] string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
         
          for(int i = 0 ; i <= listname.size() ; i++){        
          for(int j = i ; j <= string.size() ; j++ ){
