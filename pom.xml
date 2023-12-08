@@ -110,23 +110,7 @@
             <version>5.12.1</version>
             <type>jar</type>
         </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-fxml</artifactId>
-            <version>22-ea+16</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-base</artifactId>
-            <version>22-ea+16</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>org.openjfx</groupId>
-            <artifactId>javafx-controls</artifactId>
-            <version>22-ea+16</version>
-        </dependency>
+        
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
@@ -164,7 +148,23 @@
     </dependencies>
     <!--
     <dependencyManagement>
-        
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>22-ea+16</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>22-ea+16</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>22-ea+16</version>
+        </dependency>
             <dependency>
                 <groupId>com.gluonhq.scenebuilder</groupId>
                 <artifactId>kit</artifactId>
@@ -427,7 +427,7 @@
                     <jlinkImageName>Project-JavaFX</jlinkImageName>
                     <jlinkZipName>Project-JavaFX-zip</jlinkZipName>
                     <options>
-                        <option>--add-modules javafx.controls,javafx.fxml</option>
+                        <option>--add-modules lib/*</option>
                     </options>
                 </configuration>
                 <version>0.0.8</version>
