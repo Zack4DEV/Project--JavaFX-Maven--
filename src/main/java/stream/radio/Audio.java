@@ -8,6 +8,7 @@ import javafx.scene.web.WebView;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.ArrayList; 
 
 public class Audio {
     private void onPreloadAudio() {
@@ -47,7 +48,7 @@ public class Audio {
      }
 
     private void onAfterAudio(){
-         ArrayList<> arraybuttonuri = new ArrayList<>();
+         ArrayList<String> arraybuttonuri = new ArrayList<String>();
          String[] string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
         
          for(int i = 0 ; i <= listname.size() ; i++){        
