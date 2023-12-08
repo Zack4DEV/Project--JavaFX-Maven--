@@ -309,6 +309,7 @@
  	<version>10.0.0</version>
 	</dependency>
 	-->
+    </dependencyManagement>
    </dependencies>
 	</build>
 	<profiles>
