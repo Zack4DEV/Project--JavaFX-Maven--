@@ -286,7 +286,9 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <dependency>
+    </dependencyManagement>
+	<dependencies>
+	<dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
             <version>22-ea+16</version>
@@ -309,8 +311,7 @@
  	<version>10.0.0</version>
 	</dependency>
 	-->
-    </dependencyManagement>
-   </dependencies>
+   	</dependencies>
 	</build>
 	<profiles>
         <profile>
