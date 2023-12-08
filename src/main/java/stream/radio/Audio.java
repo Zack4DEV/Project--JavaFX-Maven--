@@ -39,12 +39,12 @@ public class Audio {
         String stringskynewsarabia = URI.create("http://radio.skynewsarabia.com/stream/radio/skynewsarabia").toString();
         String stringbbcarabic = URI.create("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio").toString();
 
-        Map<> mapname =  Map.ofEntries(
-        entry( stringmfm, stringaswat, stringchada, stringmars, stringmedradio,
-        stringtania, stringatlantic, stringyabiladi, stringmedi, stringness, stringhitradio, stringhitmaroc,
-        stringtarab, stringwatania, stringmoroccoenglish, stringtamazgha, stringizlan, stringcoran,
-        stringmontecarlo, stringaljazeera, stringskynewsarabia, stringbbcarabic
-        ));
+        Map<String> mapname =  Map.ofEntries(
+        entry(stringmfm), entry(stringaswat), entry(stringchada), entry(stringmars), entry(stringmedradio),
+        entry(stringtania), entry(stringatlantic), entry(stringyabiladi), entry(stringmedi), entry(stringness), entry(stringhitradio), entry(stringhitmaroc),
+        entry(stringtarab), entry(stringwatania), entry(stringmoroccoenglish), entry(stringtamazgha), entry(stringizlan), entry(stringcoran),
+        entry(stringmontecarlo), entry(stringaljazeera), entry(stringskynewsarabia), entry(stringbbcarabic)
+        );
 
         for (int i = 0; i <= mapname.size(); i++) {
              String  medianame = mapname[i];
