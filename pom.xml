@@ -28,21 +28,20 @@
         <build-helper-maven-plugin.version>3.3.0</build-helper-maven-plugin.version>
         <buildnumber-maven-plugin.version>3.0.0</buildnumber-maven-plugin.version>
         <jacoco-maven-plugin.version>0.8.8</jacoco-maven-plugin.version>
-        <maven.compiler.source>16</maven.compiler.source>
-        <maven.compiler.target>16</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <maven-assembly-plugin.version>3.4.2</maven-assembly-plugin.version>
         <maven-bundle-plugin.version>5.1.8</maven-bundle-plugin.version>
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
+        <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-dependency-plugin.version>3.3.0</maven-dependency-plugin.version>
         <maven-enforcer-plugin.version>3.1.0</maven-enforcer-plugin.version>
         <maven-failsafe-plugin.version>3.0.0-M7</maven-failsafe-plugin.version>
         <maven-jar-plugin.version>3.2.2</maven-jar-plugin.version>
-        <maven-resources-plugin.version>3.3.0</maven-resources-plugin.version>
+        <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
         <maven-source-plugin.version>3.2.1</maven-source-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
-        <maven-war-plugin.version>3.3.2</maven-war-plugin.version>
+        <maven-surefire-plugin.version>3.2.2</maven-surefire-plugin.version>
+        <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
         <versions-maven-plugin.version>2.12.0</versions-maven-plugin.version>
-        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
 
         <!-- Dependency version properties-->
         <commons-codec.version>1.15</commons-codec.version>
@@ -96,7 +95,7 @@
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus.platform</quarkus.platform.group-id>
         <quarkus.platform.version>2.13.1.Final</quarkus.platform.version>
-        <surefire-plugin.version>3.0.0-M7</surefire-plugin.version>
+        <surefire-plugin.version>3.2.2</surefire-plugin.version>
         <attach-version>4.0.16</attach-version>
         <charm-version>6.2.2</charm-version>
         <skipITs>true</skipITs>
@@ -424,10 +423,26 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
-                <version>${maven-resources-plugin.version}</version>
-                <configuration>
-                    <overwrite>true</overwrite>
-                </configuration>
+                <version>3.3.1</version>
+                <executions>
+                        <execution>
+                            <id>copy-testclasses</id>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>testResources</goal>
+                            </goals>
+                            <configuration>
+                                <outputDirectory>${project.build.directory}/target/test-classes</outputDirectory>
+                                <resources>
+                                    <resource>
+                                        <directory>
+                                            ${project.build.testOutputDirectory}
+                                        </directory>
+                                    </resource>
+                                </resources>
+                            </configuration>
+                        </execution>
+                    </executions>
             </plugin>
 
             <plugin>
@@ -478,12 +493,7 @@
                 <version>3.0.0</version>
 
             </plugin>
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.7</version>
-
-            </plugin>
+           
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-plugin-plugin</artifactId>
@@ -496,7 +506,50 @@
                 <version>2.5.2</version>
 
             </plugin>
-            <plugin>
+                   <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-dependency-plugin</artifactId>
+                    <version>3.3.0</version>
+                    <executions>
+                      <execution>
+                        <id>add-build-configuration-resources</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                          <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                          <artifactItems combine.children="append">
+                            <artifactItem>
+                              <groupId>${project.groupId}</groupId>
+                              <artifactId>${project.artifactId}</artifactId>
+                              <version>${project.version}</version>
+                              <type>jar</type>
+                              <outputDirectory>${project.basedir}/target/classes</outputDirectory>
+                            </artifactItem>
+                          </artifactItems>
+                        </configuration>
+                      </execution>
+                      <execution>
+                        <id>add-build-configuration-test-resources</id>
+                        <phase>generate-test-resources</phase>
+                        <goals>
+                          <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                          <artifactItems combine.children="append">
+                            <artifactItem>
+                              <groupId>${project.groupId}</groupId>
+                              <artifactId>${project.artifactId}</artifactId>
+                              <version>${project.version}</version>
+                              <type>test-jar</type>
+                              <outputDirectory>${project.basedir}.target.test-classes</outputDirectory>
+                            </artifactItem>
+                          </artifactItems>
+                        </configuration>
+                      </execution>
+                    </executions>
+                  </plugin>
+                 <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
@@ -524,13 +577,37 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven-surefire-plugin.version}</version>
+                <version>3.2.2</version>
+                  <configuration>
+		<includes>
+		<include>MainApp.java</include>
+		<include>Audio.java</include>
+		</includes>
+		</configuration>           
             </plugin>
-
+            <plugin>
+             <groupId>org.apache.maven.plugins</groupId>
+             <artifactId>maven-jar-plugin</artifactId>
+             <version>3.3.0</version>     
+             <configuration>
+                 <archive>
+                     <manifest>
+                     <addClasspath>true</addClasspath>
+                     <classpathPrefix>lib/</classpathPrefix>
+                     <mainClass>
+                           gui.radio.java.MainApp
+                     </mainClass>
+                     </manifest>
+                 </archive>
+                  <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                  </descriptorRefs>
+             </configuration>
+         </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>${maven-war-plugin.version}</version>
+                <version>3.4.0</version>
                 <executions>
                     <execution>
                         <id>default-war</id>
@@ -549,10 +626,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
+                <version>3.11.0</version>
                 <configuration>
-                    <source>${java_source.version}</source>
-                    <target>${java_target.version}</target>
+                    <source>17</source>
+                    <target>17</target>
                 </configuration>
             </plugin>
 
@@ -591,53 +668,6 @@
                           <goal>generate-code</goal>
                           <goal>generate-code-tests</goal>
                         </goals>
-                      </execution>
-                    </executions>
-                  </plugin>
-            -->
-
-
-            <!--
-                  <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <version>${maven-dependency-plugin.version}</version>
-                    <executions>
-                      <execution>
-                        <id>add-build-configuration-resources</id>
-                        <phase>generate-resources</phase>
-                        <goals>
-                          <goal>unpack</goal>
-                        </goals>
-                        <configuration>
-                          <artifactItems combine.children="append">
-                            <artifactItem>
-                              <groupId>${project.groupId}</groupId>
-                              <artifactId>${project.artifactId}</artifactId>
-                              <version>${project.version}</version>
-                              <type>jar</type>
-                              <outputDirectory>${project.basedir}.target.classes</outputDirectory>
-                            </artifactItem>
-                          </artifactItems>
-                        </configuration>
-                      </execution>
-                      <execution>
-                        <id>add-build-configuration-test-resources</id>
-                        <phase>generate-test-resources</phase>
-                        <goals>
-                          <goal>unpack</goal>
-                        </goals>
-                        <configuration>
-                          <artifactItems combine.children="append">
-                            <artifactItem>
-                              <groupId>${project.groupId}</groupId>
-                              <artifactId>${project.artifactId}</artifactId>
-                              <version>${project.version}</version>
-                              <type>test-jar</type>
-                              <outputDirectory>${project.basedir}.target.test-classes</outputDirectory>
-                            </artifactItem>
-                          </artifactItems>
-                        </configuration>
                       </execution>
                     </executions>
                   </plugin>
