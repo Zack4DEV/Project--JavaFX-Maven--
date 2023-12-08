@@ -1,7 +1,7 @@
 
 # RadioApp
 
-![RadioApp](/src/gui/radio/resources/static/Images/MarkDown.png)
+![RadioApp](/src/main/resources/static/Images/MarkDown.png)
 
 # ====================================
 
@@ -28,32 +28,20 @@ You can run your application with maven javafx plugin using:
 
 ```shell script
 
-./mvnw javafx:run
+mvn clean javafx:run
 ```
 
-Or with  Maven/NonMaven [jre/jdk javafx modules:controls,fxml] added using:
+Or with modules javafx-fxml,javafx-controls,javafx-media added using:
 
 ```shell script
+mvn clean install -f kit
 java "
---add-modules=javafx.fxml,javafx.controls,javafx.media \
---add-opens=javafx.fxml/javafx.fxml=ALL-UNNAMED \
+--module-path lib/
+--add-modules=javafx-controls,javafx-fxml,javafx-media \
+--add-opens=javafx-fxml/javafx.fxml=ALL-UNNAMED \
 com.oracle.javafx.scenebuilder.app.SceneBuilderApp
 "
-
-./mvnw exec:java {mainClass} "-classpath %classpath  --add-modules=javafx.fxml,javafx.controls,javafx.media"
 ```
-
-# ------------------------------------------
-
-#### Packaging the application
-
-The application can be packaged using:
-
-```shell script
-./mvnw jar:jar target/*.jar
-```
-
-# ------------------------------------------
 
 #### Creating a native executable
 
@@ -64,3 +52,6 @@ mvn -Pnative -Dagent=true -DskipTests=true -DskipNativeBuild=true package exec:e
 ```
 
 # ------------------------------------------
+
+### License:
+MIT: [http://z4dev.mit-license.org](http://z4dev.mit-license.org)
