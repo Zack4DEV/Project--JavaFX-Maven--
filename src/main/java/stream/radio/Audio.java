@@ -7,7 +7,7 @@ import javafx.scene.web.WebView;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.HashMap;
+import static java.util.Map.entry;    
 
 public class Audio {
     private void onPreloadAudio() {
@@ -39,36 +39,30 @@ public class Audio {
         String stringskynewsarabia = URI.create("http://radio.skynewsarabia.com/stream/radio/skynewsarabia").toString();
         String stringbbcarabic = URI.create("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio").toString();
 
-        HashMap<String> hashname = new HashMap<>(stringmfm, stringaswat, stringchada, stringmars, stringmedradio,
-                stringtania, stringatlantic, stringyabiladi, stringmedi, stringness, stringhitradio, stringhitmaroc,
-                stringtarab, stringwatania, stringmoroccoenglish, stringtamazgha, stringizlan, stringcoran,
-                stringmontecarlo, stringaljazeera, stringskynewsarabia, stringbbcarabic);
+        Map<> mapname =  Map.ofEntries(
+        entry( stringmfm, stringaswat, stringchada, stringmars, stringmedradio,
+        stringtania, stringatlantic, stringyabiladi, stringmedi, stringness, stringhitradio, stringhitmaroc,
+        stringtarab, stringwatania, stringmoroccoenglish, stringtamazgha, stringizlan, stringcoran,
+        stringmontecarlo, stringaljazeera, stringskynewsarabia, stringbbcarabic
+        ));
 
-        //String medianame = "";
-
-
-        for (int i = 0; i <= hashname.size(); i++) {
-                medianame = hashname[i];
+        for (int i = 0; i <= mapname.size(); i++) {
+             String  medianame = mapname[i];
             }
-
-    }
+     }
 
     private void onAfterAudio(){
-
-
-          ArrayList<Button> arraybuttonuri = new ArrayList<Button>(buttonuriname);
+         ArrayList<Button> arraybuttonuri = new ArrayList<Button>();
          String[] string = new String[]{"mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic"};
-         ArrayList<String> name = new ArrayList<String>(string);
-
-         for(int j = 0; j<=name.size(); j++){
-
-         String TmpText = name[j].getText();
-
-         medianame.setLabel(TmpText);
+        
+         for(int i = 0 ; i <= mapname.size() ; i++){        
+         for(int j = i ; j <= string.size() ; j++ ){
+         arraybuttonuri.put(string[j]);
+         String TmpText = (String) arraybuttonuri.getText();
+         medianame[i].setLabel(TmpText);
          }
-    }
-
-
+     }    
+   }
 
     @FXML
     WebView webView = new WebView();
@@ -93,4 +87,3 @@ public class Audio {
     }
 
 }
-
