@@ -506,10 +506,13 @@
                 <version>2.5.2</version>
 
             </plugin>
+		<!-- Settings.xml; <proxies></proxies> -->
+		<!--
                    <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>3.3.0</version>
+		   <type>jar</type>
                     <executions>
                       <execution>
                         <id>add-build-configuration-resources</id>
@@ -548,6 +551,7 @@
                       </execution>
                     </executions>
                   </plugin>
+		-->
                  <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
