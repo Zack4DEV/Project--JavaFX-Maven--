@@ -286,8 +286,9 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+    </dependencies>
     </dependencyManagement>
-	<dependencies>
+    <dependencies>
 	<dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
@@ -303,15 +304,14 @@
             <artifactId>javafx-fxml</artifactId>
             <version>22-ea+16</version>
         </dependency>
-
-        <!--
+ 	<!--
 	<dependency>
   	<groupId>com.gluonhq.scenebuilder</groupId>
   	<artifactId>kit</artifactId>
  	<version>10.0.0</version>
 	</dependency>
 	-->
-   	</dependencies>
+    </dependencies>
 	</build>
 	<profiles>
         <profile>
