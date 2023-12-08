@@ -277,14 +277,19 @@
             </plugin>
       </plugins>
     </pluginManagement>
+	</build>
+	<dependencyManagement>
     <dependencies>
-	<dependency>
+      <dependency>
         <groupId>io.quarkus</groupId>
         <artifactId>quarkus-bom</artifactId>
         <version>${quarkus.version}</version>
         <type>pom</type>
         <scope>import</scope>
-      	</dependency>
+      </dependency>
+    </dependencies>
+    </dependencyManagement>
+    <dependencies>
 	<dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-media</artifactId>
@@ -308,7 +313,6 @@
 	</dependency>
 	-->
     </dependencies>
-	</build>
 	<profiles>
         <profile>
             <id>windows</id>
