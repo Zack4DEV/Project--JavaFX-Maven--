@@ -11,8 +11,7 @@ import java.util.List;
 
 public class Audio {
     private void onPreloadAudio() {
-        String stringname = URI.create("").toString();
-
+        
         String stringmfm = URI.create("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString();
         String stringaswat = URI.create("http://broadcast.ice.infomaniak.ch/aswat-high.mp3").toString();
         String stringchada = URI.create("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3").toString();
@@ -43,7 +42,7 @@ public class Audio {
         List<String> listname =  List.of(stringname);
 
         for (int i = 0; i <= listname.size(); i++) {
-             String  medianame = listname[i];
+             String[]  medianame = listname[i];
             }
      }
 
