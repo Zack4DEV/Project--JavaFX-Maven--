@@ -39,16 +39,16 @@ public class Radio {
      MediaView mediaView = new MediaView();
      ImageView imageView = new ImageView();
      button = new Button();
-     
+
+     anchorPane.getChildren().addAll(mediaView,imageView,button);
+         
      button.setPrefWidth(57);   
      button.setPrefHeight(121);    
 
      name = nameButton.getText();
      button.setText("name");
     
-  
      button.setOnMouseClicked(new EventHandler<MouseEvent>({
-
      public void handle(MouseEvent mouseEvent){
      if(!name.getText().equals("")){
          url.setUrl((mediaURL.getText()).toURL());
@@ -57,10 +57,9 @@ public class Radio {
      }
      }
      });  
-    anchorPane.getChildren().addAll(button,mediaView);
     }
 
-     private void onPreloadName(){
+     private onPreloadName(){
         List<String> arrayButton = Arrays.asList("mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic");
         List<List<String>> listName =  arrayButton.stream().map(b -> new Scanner(x).findAll("http://").map(b -> b.group()).collect(Collectors.toList())).flatMap(List::stream).collect(Collectors.toList());
 
@@ -69,7 +68,7 @@ public class Radio {
         collect.forEach(b -> nameButton.append(b).toString());  
     }
      
-    private void onPreloadURL() {
+    private  onPreloadURL() {
         
         String stringmfm = URI.create("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString();
         String stringaswat = URI.create("http://broadcast.ice.infomaniak.ch/aswat-high.mp3").toString();
@@ -105,7 +104,4 @@ public class Radio {
         collect.forEach(x -> mediaURL.append(x).toString());
     }
 
-    void Play(){
-    mediaPlayer.load(this.url).play();
-    }
 }
