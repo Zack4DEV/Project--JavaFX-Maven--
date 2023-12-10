@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,7 +31,7 @@ public class Main extends Application {
      private MediaView mediaView; 
      private AnchorPane anchorPane;
      private TextArea name;
-     private URL url;
+     private String url;
      private final Pattern pattern = Pattern.compile("(http:\\)|[^#\\&\\?\\n]*");
      
      public Player(double width, double heigth){ 
