@@ -1,17 +1,20 @@
 package stream.radio;
 
+import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.media.Media;
+import javafx.scene.web.MediaView;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
 import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
+import javafx.event.EventHandler;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.net.URL;
-import java.net.URLSyntaxException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
