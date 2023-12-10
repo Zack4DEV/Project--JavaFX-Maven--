@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.image.ImageView
+import javafx.scene.image.ImageView;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 
