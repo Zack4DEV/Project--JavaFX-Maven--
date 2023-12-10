@@ -2,6 +2,7 @@ package stream.radio;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.scene.layout.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.MediaView;
 import javafx.scene.media.MediaPlayer;
@@ -19,6 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
+import java.util.stream.collect;
 
 public class Radio {
      private Button button;   
@@ -60,7 +62,7 @@ public class Radio {
      });  
     }
 
-     private String onPreloadName(){
+     public String onPreloadName(){
         List<String> arrayButton = Arrays.asList("mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic");
         List<List<String>> listName =  arrayButton.stream().map(b -> new Scanner(x).findAll("http://").map(b -> b.group()).collect(Collectors.toList())).flatMap(List::stream).collect(Collectors.toList());
 
@@ -70,7 +72,7 @@ public class Radio {
         return nameButton;
     }
      
-     private String onPreloadURL() {
+     public String onPreloadURL() {
         
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
