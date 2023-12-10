@@ -33,7 +33,8 @@ public class Radio {
      private final Pattern pattern = Pattern.compile("(http:\\)|[^#\\&\\?\\n]*");
 
      public Radio(double width, double heigth){ 
-
+        super();
+          
         List<String> arrayButton = Arrays.asList("mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic");
         List<List<String>> listName =  arrayButton.stream().map(b -> new Scanner(x).findAll("http://").map(b -> b.group()).collect(Collectors.toList())).flatMap(List::stream).collect(Collectors.toList());
 
@@ -73,11 +74,6 @@ public class Radio {
         collect.forEach(x -> mediaURL.append(x)).toString();
 
           
-
-         
-     super();
-     this.setprefwidth(width);   
-     this.setprefheight(height);
 
      AnchorPane anchorPane = new AnchorPane();
      anchorPane.setprefwidth(width);   
