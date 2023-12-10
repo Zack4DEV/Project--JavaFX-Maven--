@@ -79,7 +79,7 @@ public class Radio {
      this.setprefwidth(width);   
      this.setprefheight(height);
 
-     AnchorPane anchorPane = new AnchorPane(); F
+     AnchorPane anchorPane = new AnchorPane();
      anchorPane.setprefwidth(width);   
      anchorPane.setprefheight(height);
         
