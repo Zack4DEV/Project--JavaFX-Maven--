@@ -57,16 +57,17 @@ public class Radio {
      });  
     }
 
-     private onPreloadName(){
+     private String onPreloadName(){
         List<String> arrayButton = Arrays.asList("mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic");
         List<List<String>> listName =  arrayButton.stream().map(b -> new Scanner(x).findAll("http://").map(b -> b.group()).collect(Collectors.toList())).flatMap(List::stream).collect(Collectors.toList());
 
         StringBuilder nameButton = new StringBuilder(); 
 
-        collect.forEach(b -> nameButton.append(b)).toString();  
+        collect.forEach(b -> nameButton.append(b)).toString(); 
+        return nameButton;
     }
      
-    private  onPreloadURL() {
+     private String onPreloadURL() {
         
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -97,6 +98,8 @@ public class Radio {
         StringBuilder mediaURL = new StringBuilder(); 
 
         collect.forEach(x -> mediaURL.append(x)).toString();
+
+          return mediaURL;
     }
 
 }
