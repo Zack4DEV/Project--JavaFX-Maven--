@@ -47,7 +47,7 @@ public class Radio {
      button.setText("name");
     
   
-     button.setOnMouseClicked(new EventHandler<MouseEvent>{
+     button.setOnMouseClicked(new EventHandler<MouseEvent>({
 
      public void handle(MouseEvent mouseEvent){
      if(!name.getText().equals("")){
