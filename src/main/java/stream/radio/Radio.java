@@ -19,8 +19,8 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.*;
 import java.util.stream.Collectors;
-import java.util.stream.collect;
 
 public class Radio {
      private Button button;   
@@ -32,47 +32,15 @@ public class Radio {
      private String url;
      private final Pattern pattern = Pattern.compile("(http:\\)|[^#\\&\\?\\n]*");
 
-    public Radio(double width, double heigth){ 
-     super();
-     this.setPrefWidth(width);   
-     this.setPrefHeight(height);
+     public Radio(double width, double heigth){ 
 
-     AnchorPane anchorPane = new AnchorPane(); 
-     anchorPane.setPrefWidth(width);   
-     anchorPane.setPrefHeight(height);
-        
-     MediaView mediaView = new MediaView();
-     ImageView imageView = new ImageView();
-     button = new Button();
-
-     anchorPane.getChildren().addAll(mediaView,imageView,button);
-         
-     button.setPrefWidth(57);   
-     button.setPrefHeight(121);    
-
-     name = nameButton.getText();
-     button.setText("name");
-    
-     button.setOnMouseClicked(EventHandler<MouseEvent> handle -> {
-     if(!name.getText().equals("")){
-         url.setUrl((mediaURL.getText()).toURL());
-         mediaPlayer.load(this.url).play();
-
-     }
-     });  
-    }
-
-     public String onPreloadName(){
         List<String> arrayButton = Arrays.asList("mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic");
         List<List<String>> listName =  arrayButton.stream().map(b -> new Scanner(x).findAll("http://").map(b -> b.group()).collect(Collectors.toList())).flatMap(List::stream).collect(Collectors.toList());
 
         StringBuilder nameButton = new StringBuilder(); 
 
         collect.forEach(b -> nameButton.append(b)).toString(); 
-        return nameButton;
-    }
-     
-     public String onPreloadURL() {
+          
         
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -104,7 +72,35 @@ public class Radio {
 
         collect.forEach(x -> mediaURL.append(x)).toString();
 
-          return mediaURL;
+          
+
+         
+     super();
+     this.setprefwidth(width);   
+     this.setprefheight(height);
+
+     AnchorPane anchorPane = new AnchorPane(); F
+     anchorPane.setprefwidth(width);   
+     anchorPane.setprefheight(height);
+        
+     MediaView mediaView = new MediaView();
+     ImageView imageView = new ImageView();
+     button = new Button();
+
+     anchorPane.getChildren().addAll(mediaView,imageView,button);
+         
+     button.setprefwidth(57);   
+     button.setprefheight(121);    
+
+     button.setText("nameButton");
+    
+     button.setOnMouseClicked(EventHandler<MouseEvent> eventHandler = handle -> {
+     if(!name.getText().equals("")){
+         url.setUrl((mediaURL.getText()).toURL());
+         mediaPlayer.load(this.url).play();
+
+     }
+     });  
     }
 
 }
