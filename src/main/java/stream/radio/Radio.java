@@ -48,7 +48,7 @@ public class Radio {
     
   
      button.setOnMouseClicked(new EventHandler<MouseEvent>{
-     @Override
+
      public void handle(MouseEvent mouseEvent){
      if(!name.getText().equals("")){
          url.setUrl((mediaURL.getText()).toURL());
@@ -60,6 +60,15 @@ public class Radio {
     anchorPane.getChildren().addAll(button,mediaView);
     }
 
+     private void onPreloadName(){
+        List<String> arrayButton = Arrays.asList("mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic");
+        List<List<String>> listName =  arrayButton.stream().map(b -> new Scanner(x).findAll("http://").map(b -> b.group()).collect(Collectors.toList())).flatMap(List::stream).collect(Collectors.toList());
+
+        StringBuilder nameButton = new StringBuilder(); 
+
+        collect.forEach(b -> nameButton.append(b).toString());  
+    }
+     
     private void onPreloadURL() {
         
         String stringmfm = URI.create("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString();
@@ -99,16 +108,4 @@ public class Radio {
     void Play(){
     mediaPlayer.load(this.url).play();
     }
-
-    
-    private void onPreloadName(){
-        List<String> arrayButton = Arrays.asList("mfm","aswat","chada","mars","medradio","2m","atlantic","yabiladi","medi1","ness","hitradio","hitmaroc","tarab","watania","morocco english","tamazgha","izlan","coran","montecarlo","aljazeera","skynewsarabia","bbc arabic");
-        List<List<String>> listName =  arrayButton.stream().map(b -> new Scanner(x).findAll("http://").map(b -> b.group()).collect(Collectors.toList())).flatMap(List::stream).collect(Collectors.toList());
-
-        StringBuilder nameButton = new StringBuilder(); 
-
-        collect.forEach(b -> nameButton.append(b).toString());  
-    }
-
-    
 }
