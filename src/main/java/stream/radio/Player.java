@@ -11,7 +11,7 @@ import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 
 import java.io.File;
-import java.net.MalformedURLException;
+import java.io.IOException;
 
 class Player {
 
@@ -21,13 +21,16 @@ class Player {
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
 
-     @FXML
-     Scene scene = new Scene(new AnchorPane(mediaView), 173, 163);
-     @FXML 
-     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      public statuc void main(String[] args){
+      Scene scene = new Scene(new AnchorPane(mediaView), 173, 163);
+      Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-     stage.setScene(scene);
-     stage.show();
+      stage.setScene(scene);
+      stage.show();
   
-     mediaPlayer.play();  
+      mediaPlayer.play();
+      }catch(IOException e){
+      System.err.println(e);      
+      }
+      
 }
