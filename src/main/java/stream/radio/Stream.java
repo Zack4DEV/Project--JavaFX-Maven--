@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
+import java.util.stream.Stream;
 import java.util.stream.Collectors;  
 
 import java.net.URI;
@@ -14,7 +15,7 @@ public class Stream{
 
     private URL streamURL;
 
-    private void streamString(String url){
+    private String streamString(String url){
 
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -43,7 +44,7 @@ public class Stream{
 
         List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(Stream::List).Collect(Collectors.toList());
 
-        collect.forEach(System.out.println(stringName));
+        Collect.forEach(System.out.println(stringName));
         
         }
             
