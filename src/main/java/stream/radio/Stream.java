@@ -34,20 +34,20 @@ public class Stream{
         String stringskynewsarabia = new String("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
-        List<String> stringName = arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
+        List<String> stringNameList = arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
-        List<List<String>> stringNameList = stringName.stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(stream::List).collect(collectors.toList());
+        List<List<String>> stringName = stringNameList.stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(stream::List).collect(collectors.toList());
 
-        collect.forEach(System.out.println(string));
+        collect.forEach(System.out.println(stringName));
         
         }
             
         public static void main (String[] args) throws MalformedURLException {
         try {
         
-            string.build().toURI();
+            stringName.build().toURI();
             
-            streamURL.setURL(string);
+            streamURL.setURL(stringName);
         }
         catch(MalformedURLException e){
         System.err.println(e);                
