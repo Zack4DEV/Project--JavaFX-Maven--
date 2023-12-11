@@ -12,11 +12,11 @@ public class Main extends Application {
    
    @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(ClassLoader.getSystemResource("../../../resources/static/radio.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ClassLoader.getSystemResource("../../../resources/static/Main.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root, 967, 692);
 
-        scene.getStylesheets().add(ClassLoader.getSystemResource("../../../resources/static/StyleSheets/radio.css").toExternalForm());
+        scene.getStylesheets().add(ClassLoader.getSystemResource("../../../resources/static/StyleSheets/Main.css").toExternalForm());
         scene.setFill(Color.FLORALWHITE);
         stage.setTitle("Radio APP");
         stage.setScene(scene);
