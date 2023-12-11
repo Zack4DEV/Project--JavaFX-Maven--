@@ -3,9 +3,8 @@ package stream.radio;
 import javafx.fxml.FXML;
 
 import java.net.URI;
-import java.net.URI;
-import java.net.URI.URISyntaxException;
-
+import java.net.URL;
+import java.net.MalformedURLException;
 public class Stream{
 
     private URL streamURL;
@@ -43,14 +42,14 @@ public class Stream{
         
         }
             
-        public static void main (String[] args) throws URISyntaxException  {
+        public static void main (String[] args) throws MalformedURLException {
         try {
         
             string.build().toURI();
             
             streamURL.setURL(string);
         }
-        catch(URISyntaxException e){
+        catch(MalformedURLException e){
         System.err.println(e);                
         }
             
