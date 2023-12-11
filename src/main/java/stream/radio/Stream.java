@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
-import java.util.stream.Stream;
 import java.util.stream.Collectors;  
 
 import java.net.URI;
@@ -44,7 +43,7 @@ public class Stream{
         }
 
 
-    public String[] streamList(String string){
+    public String[] streamList(String[] streamString){
 
         List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
