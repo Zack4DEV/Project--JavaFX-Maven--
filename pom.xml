@@ -302,7 +302,7 @@
         </dependency>
 	<dependency>
             <groupId>org.openjfx</groupId>
-            <artifactId>javafx-web</artifactId>
+            <artifactId>javafx-graphics</artifactId>
             <version>22-ea+16</version>
         </dependency>
 	<dependency>
