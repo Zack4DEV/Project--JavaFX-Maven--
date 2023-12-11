@@ -8,10 +8,6 @@ import java.net.URI.URISyntaxException;
 
 public class Stream throws URISyntaxException {
 
-    private Media media;
-    private MediaPlayer mediaPlayer;
-    private MediaView mediaView; 
-
     private URL streamURL;
 
     private void streamString(String url){
