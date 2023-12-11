@@ -2,18 +2,10 @@ package stream.radio;
 
 import stream.radio.Player;
      
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.MediaView;
-     
-import java.io.IOException;
-import java.util.Objects;
-
 
 class Controller {
      @FXML 
