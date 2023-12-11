@@ -6,7 +6,7 @@ import java.net.URI;
 import java.net.URI;
 import java.net.URI.URISyntaxException;
 
-public class Stream throws URISyntaxException {
+public class Stream{
 
     private URL streamURL;
 
@@ -43,7 +43,7 @@ public class Stream throws URISyntaxException {
         
         }
             
-        public static void main (String[] args){
+        public static void main (String[] args) throws URISyntaxException  {
         try {
         
             string.build().toURI();
@@ -51,7 +51,7 @@ public class Stream throws URISyntaxException {
             streamURL.setURL(string);
         }
         catch(URISyntaxException e){
-        System.err.println(e)                
+        System.err.println(e);                
         }
             
         }
