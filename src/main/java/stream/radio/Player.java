@@ -11,19 +11,19 @@ import java.io.File;
 
 class Player {
 
-  
-     public static void main(String[] args) throws MediaException {
-     
-     private File mediaURL = new File(streamURL);
+      public File mediaURL = new File(streamURL);
      private Media media = new Media(mediaURL.toString());     
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
+     
+     
+     public static void main(String[] args) throws MediaException {
      
       try{ 
      
         mediaPlayer.play();
       
-      } catch(IOException e){
+      } catch(MediaException e){
       
         System.err.println(e);      
       }
