@@ -16,10 +16,10 @@ class Player {
      private Media media = new Media(mediaURL.toString());     
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
+
+     mediaPlayer.Media().play()
      
-     Media play = (Media) mediaPlayer.play();
-     
-     public static void main(String[] args) throws MediaException {
+     public static void main(String[] args){
      Player player = new Player();
   }
 }
