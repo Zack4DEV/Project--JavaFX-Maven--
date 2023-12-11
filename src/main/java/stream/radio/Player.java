@@ -16,17 +16,8 @@ class Player {
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
      
-     
+     mediaPlayer.play();
      public static void main(String[] args) throws MediaException {
-     
-      try{ 
-     
-        mediaPlayer.play();
-      
-      } catch(MediaException e){
-      
-        System.err.println(e);      
-      }
-      
+     Player player = new Player();
   }
 }
