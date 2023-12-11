@@ -12,7 +12,7 @@ import java.io.File;
 class Player {
 
 
-     public File mediaURL = new File(Stream.toURL(StreamURL));
+     public File mediaURL = new File(Stream.toURL().StreamURL);
      private Media media = new Media(mediaURL.toString());     
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
