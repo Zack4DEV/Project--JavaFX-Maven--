@@ -43,8 +43,6 @@ public class Stream{
         List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
         List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap().Collect(Collectors.toList());
-
-        Collect.forEach(System.out.println(stringName));
         
         }
             
@@ -55,5 +53,10 @@ public class Stream{
             streamURL.setUrl(stringName);
             
         }
+
+    public static void main(String[] args){
+        Stream stream = new Stream();
+        
+    }
   
 }
