@@ -39,15 +39,15 @@ public class Stream{
         String stringskynewsarabia = new String("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
+        List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
         
         }
 
 
-    public String[] streamList(String[] streamString){
+    public String[] streamList(String[] streamStringList){
 
-        List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
-        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner(streamString).findAll("http://") ).map( string -> string.group()).flatMap().Collect(Collectors.toList());
+        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap().Collect(Collectors.toList());
         
         
     }
