@@ -2,7 +2,7 @@ package stream.radio;
 
 import javafx.fxml.FXML;
 
-
+import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
 import java.util.stream.Collectors;  
@@ -39,9 +39,9 @@ public class Stream{
         String stringskynewsarabia = new String("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
-        List<String> stringNameList = arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
+        List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
-        List<List<String>> stringName = stringNameList.stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(stream::List).collect(collectors.toList());
+        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(Stream::List).Collect(Collectors.toList());
 
         collect.forEach(System.out.println(stringName));
         
