@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;  
 import java.util.stream.Stream;
 import java.util.stream.Collectors;  
+import java.util.stream.Collect;
 
 import java.net.URI;
 import java.net.URL;
@@ -48,7 +49,7 @@ public class Stream{
         
         }
             
-        public static void main (String[] args) throws MalformedURLException {
+        public void streamURL(String[] stringName) throws MalformedURLException {
         try {
         
             stringName.build().toURI();
