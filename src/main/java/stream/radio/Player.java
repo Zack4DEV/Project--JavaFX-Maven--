@@ -17,7 +17,7 @@ class Player {
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
 
-     mediaPlayer.Media().play()
+     mediaPlayer.Media().play();
      
      public static void main(String[] args){
      Player player = new Player();
