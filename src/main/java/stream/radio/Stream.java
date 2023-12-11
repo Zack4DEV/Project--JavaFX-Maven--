@@ -46,7 +46,7 @@ public class Stream{
         
         }
             
-        public URL toURL(){
+    public URL toURL(){
         
             stringName.build().toURI().toSring();
             
@@ -54,7 +54,7 @@ public class Stream{
             
         }
 
-    public static void main(String[] args) thorws MalformedURLException{
+    public static void main(String[] args) throws MalformedURLException {
         Stream stream = new Stream();
         
     }
