@@ -2,6 +2,7 @@ package stream.radio;
 
 import stream.radio.Stream;
 
+import javafx.event.ActionEvent;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -20,18 +21,22 @@ class Player {
      private Media media = new Media(mediaURL.toString());     
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
-
+     
+     ActionEvent actionEvent;
+  
       public static void main(String[] args) throws IOException {
+      
       try{
       Scene scene = new Scene(new AnchorPane(mediaView), 173, 163);
-      Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
       stage.setScene(scene);
       stage.show();
   
       mediaPlayer.play();
-      }catch(IOException e){
-      System.err.println(e);      
+      } catch(IOException e){
+      
+        System.err.println(e);      
       }
       
   }
