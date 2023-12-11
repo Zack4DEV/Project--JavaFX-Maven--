@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.net.MalformedURLException;
 
-class Player throws MalformedURLException {
+class Player {
 
   
      private File mediaURL = new File(streamURL);
