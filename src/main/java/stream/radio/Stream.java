@@ -6,7 +6,7 @@ import java.net.URI;
 import java.net.URI;
 import java.net.URI.URISyntaxException;
 
-public class Stream {
+public class Stream throws URISyntaxException {
 
     private Media media;
     private MediaPlayer mediaPlayer;
@@ -44,17 +44,20 @@ public class Stream {
         List<List<String>> stringNameList = stringName.stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(stream::List).collect(collectors.toList());
 
         collect.forEach(System.out.println(string));
-    }
-
-        public void streamURL(){
-        URL urlName = new URL(stringName.toURI().toURL())
-        streamURL.setURL(urlName);
-
-        return streamURL;
+        
         }
-  
+            
         public static void main (String[] args){
-        Stream stream = new Stream();      
+        try {
+        
+            string.build().toURI();
+            
+            streamURL.setURL(string);
+        }
+        catch(URISyntaxException e){
+        System.err.println(e)                
+        }
+            
         }
   
 }
