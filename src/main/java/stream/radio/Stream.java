@@ -42,18 +42,18 @@ public class Stream{
 
         List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
-        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(Stream::List).collect(Collectors.toList());
+        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(Stream::List).Collect(Collectors.toList());
 
-        collect.forEach(System.out.println(stringName));
+        Collect.forEach(System.out.println(stringName));
         
         }
             
-        public void toURL(String[] stringName) throws MalformedURLException {
+        url toURL() throws MalformedURLException {
         try {
         
             stringName.build().toURI().toSring();
             
-            streamURL.setURL(stringName);
+            streamURL.setUrl(stringName);
         }
         catch(MalformedURLException e){
         System.err.println(e);                
