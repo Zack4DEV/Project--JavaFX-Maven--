@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.MediaView;
 
+import java.io.IOException;
+
 class Controller {
      @FXML 
      Button button = new Button();
@@ -15,7 +17,7 @@ class Controller {
      @FXML
      MediaView mediaView = new MediaView();
            
-     public static void main(String[] args){
+     public static void main(String[] args) throws IOException{
      Player.main(args);
      } 
 }
