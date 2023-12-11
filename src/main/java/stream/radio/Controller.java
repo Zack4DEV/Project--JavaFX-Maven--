@@ -1,6 +1,6 @@
 package stream.radio;
 
-import stream.radio.Stream;
+import stream.radio.Player;
      
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,5 +32,4 @@ class Controller {
           window.show();
      } 
 
-     Stream stream = new Stream();
 }
