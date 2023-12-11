@@ -20,6 +20,6 @@ class Player {
      Media play = mediaPlayer.Media().play();
      
      public static void main(String[] args){
-     Player player = new Player(play);
+     Player player = new Player();
   }
 }
