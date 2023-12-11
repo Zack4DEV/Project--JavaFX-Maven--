@@ -21,7 +21,8 @@ class Player {
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
 
-      public statuc void main(String[] args){
+      public static void main(String[] args) throws IOException {
+      try{
       Scene scene = new Scene(new AnchorPane(mediaView), 173, 163);
       Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
