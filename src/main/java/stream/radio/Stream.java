@@ -48,7 +48,7 @@ public class Stream{
         
         }
             
-        public toURL(){
+        public URL toURL(){
         
             stringName.build().toURI().toSring();
             
