@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;  
 import java.util.stream.Stream;
 import java.util.stream.Collectors;  
-import java.util.stream.Collect;
 
 import java.net.URI;
 import java.net.URL;
@@ -16,7 +15,7 @@ public class Stream{
 
     private URL streamURL;
 
-    private String streamString(String url){
+    private String streamString(String name){
 
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -43,16 +42,16 @@ public class Stream{
 
         List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
-        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(Stream::List).Collect(Collectors.toList());
+        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap(Stream::List).collect(Collectors.toList());
 
-        Collect.forEach(System.out.println(stringName));
+        collect.forEach(System.out.println(stringName));
         
         }
             
-        public void streamURL(String[] stringName) throws MalformedURLException {
+        public toURL(String[] stringName) throws MalformedURLException {
         try {
         
-            stringName.build().toURI();
+            stringName.build().toURI().toSring();
             
             streamURL.setURL(stringName);
         }
