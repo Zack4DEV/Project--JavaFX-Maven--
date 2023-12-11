@@ -22,14 +22,8 @@ class Controller {
      ImageView imageView = new ImageView();
      @FXML
      MediaView mediaView = new MediaView();
-     
-     @FXML
-     public void Stream(ActionEvent actionEvent) throws IOException {
-          
-          Stage window = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-          window.setScene(root);
-
-          window.show();
+           
+     public static void main(String[] args){
+     Player.main(args);
      } 
-
 }
