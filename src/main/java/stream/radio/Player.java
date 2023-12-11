@@ -12,12 +12,12 @@ import java.io.File;
 class Player {
 
 
-     public File mediaURL = new File(streamURL);
+     public File mediaURL = new File(Stream.toURL(StreamURL));
      private Media media = new Media(mediaURL.toString());     
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
      
-     Media play = mediaPlayer.play();
+     Media play = (Media) mediaPlayer.play();
      
      public static void main(String[] args) throws MediaException {
      Player player = new Player();
