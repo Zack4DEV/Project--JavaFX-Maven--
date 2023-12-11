@@ -1,11 +1,6 @@
 package stream.radio;
 
 import javafx.fxml.FXML;
-import javafx.scene.media.MediaView;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.media.Media;
-import javafx.scene.input.MouseEvent;
-import javafx.event.EventHandler;
 
 import java.net.URI;
 import java.net.URI;
