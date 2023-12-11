@@ -54,7 +54,7 @@ public class Stream{
             
         }
 
-    public static void main(String[] args) throws MalformedURLException {
+    public static void main(String[] args){
         Stream stream = new Stream();
         
     }
