@@ -44,7 +44,7 @@ public class Stream{
         }
 
 
-    public String[] streamList(List<String> list){
+    public String[] streamList(String string){
 
         List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
