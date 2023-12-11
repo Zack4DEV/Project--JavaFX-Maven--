@@ -21,9 +21,10 @@ class Player {
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      private MediaView mediaView = new MediaView(mediaPlayer); 
 
-    
-     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+     @FXML
      Scene scene = new Scene(new AnchorPane(mediaView), 173, 163);
+     @FXML 
+     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
      stage.setScene(scene);
      stage.show();
