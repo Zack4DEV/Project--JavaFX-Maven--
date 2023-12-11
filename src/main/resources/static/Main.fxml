@@ -19,7 +19,7 @@
                         <Image url="../static/Images/mfm.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringmfm" layoutX="56.0" layoutY="118.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="mfm" />
+                <Button fx:id="stringmfm" layoutX="56.0" layoutY="118.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="mfm" />
             </children>
         </AnchorPane>
         <AnchorPane layoutX="172.0" prefHeight="173.0" prefWidth="163.0">
@@ -30,7 +30,7 @@
                         <Image url="../static/Images/aswat.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringaswat" layoutX="48.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="aswat" />
+                <Button fx:id="stringaswat" layoutX="48.0" layoutY="120.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="aswat" />
 
 
             </children>
@@ -43,7 +43,7 @@
                         <Image url="../static/Images/chada.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringchada" layoutX="57.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="chada" />
+                <Button fx:id="stringchada" layoutX="57.0" layoutY="121.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="chada" />
 
 
             </children>
@@ -56,7 +56,7 @@
                         <Image url="../static/Images/mars.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringmars" layoutX="53.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="mars" />
+                <Button fx:id="stringmars" layoutX="53.0" layoutY="121.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="mars" />
 
 
             </children>
@@ -69,7 +69,7 @@
                         <Image url="../static/Images/med.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringmedradio" layoutX="46.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="med radio" />
+                <Button fx:id="stringmedradio" layoutX="46.0" layoutY="120.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="med radio" />
 
 
             </children>
@@ -82,7 +82,7 @@
                         <Image url="../static/Images/2m.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringtania" layoutX="72.0" layoutY="122.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="2m" />
+                <Button fx:id="stringtania" layoutX="72.0" layoutY="122.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="2m" />
 
 
             </children>
@@ -95,7 +95,7 @@
                         <Image url="../static/Images/atlantic.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringatlantic" layoutX="45.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="atlantic" />
+                <Button fx:id="stringatlantic" layoutX="45.0" layoutY="121.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="atlantic" />
 
 
             </children>
@@ -108,7 +108,7 @@
                         <Image url="../static/Images/yabiladi.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringyabiladi" layoutX="52.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="yabiladi" />
+                <Button fx:id="stringyabiladi" layoutX="52.0" layoutY="123.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="yabiladi" />
 
 
             </children>
@@ -121,7 +121,7 @@
                         <Image url="../static/Images/medi1.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringmedi" layoutX="57.0" layoutY="124.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="medi1" />
+                <Button fx:id="stringmedi" layoutX="57.0" layoutY="124.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="medi1" />
 
 
             </children>
@@ -134,7 +134,7 @@
                         <Image url="../static/Images/ness.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringness" layoutX="62.0" layoutY="125.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="ness" />
+                <Button fx:id="stringness" layoutX="62.0" layoutY="125.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="ness" />
 
 
             </children>
@@ -147,7 +147,7 @@
                         <Image url="../static/Images/hitradio.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringhitradio" layoutX="49.0" layoutY="125.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="hitradio" />
+                <Button fx:id="stringhitradio" layoutX="49.0" layoutY="125.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="hitradio" />
 
 
             </children>
@@ -160,7 +160,7 @@
                         <Image url="../static/Images/hitmaroc.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringhitmaroc" layoutX="48.0" layoutY="124.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="hit maroc" />
+                <Button fx:id="stringhitmaroc" layoutX="48.0" layoutY="124.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="hit maroc" />
 
 
             </children>
@@ -173,7 +173,7 @@
                         <Image url="../static/Images/tarabradio.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringtarab" layoutX="53.0" layoutY="118.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="tarab" />
+                <Button fx:id="stringtarab" layoutX="53.0" layoutY="118.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="tarab" />
 
 
             </children>
@@ -186,7 +186,7 @@
                         <Image url="../static/Images/watania.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="watania" layoutX="58.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="watania" />
+                <Button fx:id="watania" layoutX="58.0" layoutY="120.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="watania" />
 
 
             </children>
@@ -199,7 +199,7 @@
                         <Image url="../static/Images/moroccoenglish.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringmoroccoenglish" layoutX="24.0" layoutY="120.0" mnemonicParsing="false" onAction="#onPlayAudio" prefHeight="30.0" prefWidth="115.0" style="-fx-background-radius: 100;" text="morocco english" />
+                <Button fx:id="stringmoroccoenglish" layoutX="24.0" layoutY="120.0" mnemonicParsing="false" onAction="#Stream" prefHeight="30.0" prefWidth="115.0" style="-fx-background-radius: 100;" text="morocco english" />
 
 
             </children>
@@ -212,7 +212,7 @@
                         <Image url="../static/Images/tamazgha.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringtamazgha" layoutX="51.0" layoutY="121.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="tamazgha" />
+                <Button fx:id="stringtamazgha" layoutX="51.0" layoutY="121.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="tamazgha" />
 
 
             </children>
@@ -225,7 +225,7 @@
                         <Image url="../static/Images/izlan.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringizlan" layoutX="64.0" layoutY="122.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="izlan" />
+                <Button fx:id="stringizlan" layoutX="64.0" layoutY="122.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="izlan" />
 
 
             </children>
@@ -238,7 +238,7 @@
                         <Image url="../static/Images/coran.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringcoran" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="coran" />
+                <Button fx:id="stringcoran" layoutX="60.0" layoutY="123.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="coran" />
 
 
             </children>
@@ -251,7 +251,7 @@
                         <Image url="../static/Images/montecarlo.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringmontecarlo" layoutX="34.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="montecarlo" />
+                <Button fx:id="stringmontecarlo" layoutX="34.0" layoutY="123.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="montecarlo" />
 
 
             </children>
@@ -264,7 +264,7 @@
                         <Image url="../static/Images/aljazeera.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringaljazeera" layoutX="50.0" layoutY="122.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="aljazeera" />
+                <Button fx:id="stringaljazeera" layoutX="50.0" layoutY="122.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="aljazeera" />
 
 
             </children>
@@ -277,7 +277,7 @@
                         <Image url="../static/Images/skynewsarabia.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringskynewsarabia" layoutX="35.0" layoutY="123.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="skynewsarabia" />
+                <Button fx:id="stringskynewsarabia" layoutX="35.0" layoutY="123.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="skynewsarabia" />
 
 
             </children>
@@ -290,7 +290,7 @@
                         <Image url="../static/Images/bbcarabic.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="stringbbcarabic" layoutX="50.0" layoutY="124.0" mnemonicParsing="false" onAction="#onPlayAudio" style="-fx-background-radius: 100;" text="bbc arabic" />
+                <Button fx:id="stringbbcarabic" layoutX="50.0" layoutY="124.0" mnemonicParsing="false" onAction="#Stream" style="-fx-background-radius: 100;" text="bbc arabic" />
 
 
             </children>
