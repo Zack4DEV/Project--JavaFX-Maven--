@@ -40,21 +40,24 @@ public class Stream{
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
         List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
-        
+
+        for(int i=1 ; i< stringNameList.size() ; i++){
+            String string = (String) stringNameList[i];
+        }
         }
 
 
-    public String[] streamList(String[] streamStringList){
+       public String[] streamList(String[] streamStringList){
 
 
-        List<List<String>> stringName = stringNameList.Stream().map( string -> new Scanner().findAll("http://") ).map( string -> string.group()).flatMap().Collect(Collectors.toList());
+        List<List<String>> stringName = stringNameList.Stream().map( stringScan -> new Scanner(string).findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
         
         
     }
     
     public URL toURL(){
         
-            stringName.build().toURI().toSring();
+            stringName.build().toURI().toString();
             
             streamURL.setUrl(stringName);
             
