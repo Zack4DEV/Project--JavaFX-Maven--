@@ -59,7 +59,7 @@ public class Stream{
     public URL toURL() throws MalformedURLException {
 
         URL streamURL = new URL();
-        streamURL.setUrl( new URL(stream.radio.Stream.toURI());
+        streamURL.setUrl( new URL(stream.radio.Stream.toURI()));
             
         }
 
