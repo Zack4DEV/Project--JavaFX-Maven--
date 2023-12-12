@@ -3,6 +3,7 @@ package stream.radio;
 import stream.radio.Stream;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -11,12 +12,16 @@ import java.io.File;
 
 class Player {
 
-
-     public File mediaURL = new File(Stream.toURL().StreamURL);
+     
+     File mediaURL = new File(Stream.toURL());
+     @FXML
      private Media media = new Media(mediaURL.toString());     
+     @FXML
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
+     @FXML
      private MediaView mediaView = new MediaView(mediaPlayer); 
 
+     @Override
      public void setPlay(Media media){
      mediaPlayer.play();
      }
