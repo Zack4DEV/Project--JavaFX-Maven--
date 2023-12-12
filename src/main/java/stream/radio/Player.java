@@ -4,6 +4,7 @@ import stream.radio.Stream;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -13,7 +14,9 @@ import java.io.File;
 class Player {
 
      
-     File mediaURL = new File(Stream.toURL());
+     File mediaURL = new File(stream.radio.Stream.toURL());
+     @FXML
+     Button play = new Button(stream.radio.Stream.streamList());
      @FXML
      private Media media = new Media(mediaURL.toString());     
      @FXML
@@ -23,7 +26,12 @@ class Player {
 
      @Override
      public void setPlay(Media media){
-     mediaPlayer.play();
+     play.setOnAction(new EventHandler<ActionEvent<MouseEvent>>(){
+          @Override
+          public void handle(ActionEvent<MouseEvent>){
+          mediaPlayer.play();
+          }
+     });
      }
      
      public static void main(String[] args){
