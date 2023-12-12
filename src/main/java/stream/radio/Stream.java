@@ -45,21 +45,21 @@ public class Stream{
     public String streamList(String[] streamStringList){
 
 
-        String stringName = (String) stringNameList.Stream().map( stringScan -> new Scanner(stream.radio.streamString()).findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
+        String stringName = (String) stringNameList.Stream().map( stringScan -> new Scanner(stream.radio.Stream.streamString()).findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
         
         
     }
     
     public URI toURI() throws URISyntaxException {
 
-        URI streamURI = new URI(stream.radio.streamList());
+        URI streamURI = new URI(stream.radio.Stream.streamList());
             
         }
     
     public URL toURL() thorws MalformedURLException{
 
         streamURL = new URL();
-        streamURL.setUrl( new URL(stream.radio.toURI());
+        streamURL.setUrl( new URL(stream.radio.Stream.toURI());
             
         }
 
