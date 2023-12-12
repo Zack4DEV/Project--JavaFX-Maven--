@@ -5,10 +5,14 @@ import stream.radio.Stream;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.media.MediaException;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+
 import java.io.File;
 
 class Player {
