@@ -11,7 +11,7 @@ import java.net.URISyntaxException;
 import java.net.MalformedURLException;
 public class Stream{
 
-    private String streamString(String name){
+    private String stringStream(String name){
 
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -36,30 +36,31 @@ public class Stream{
         String stringskynewsarabia = new String("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
-        List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
-
+        List<String> stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
         
         }
 
 
-    public String streamList(String[] streamStringList){
+    public String streamList(List<String> stringNameList){
 
-
-        String stringName = (String) stringNameList.Stream().map( stringScan -> new Scanner(stream.radio.Stream.streamString()).findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
+        stringNameList.Stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
         
+        stringNameList.forEach(String stringName -> stringScan.add(stream.radio.Stream.stringStream())        
+
         
     }
     
     public URI toURI() throws URISyntaxException {
 
-        URI streamURI = new URI(stream.radio.Stream.streamList());
-            
-        }
+        StringBuilder string = new StringBuilder(stream.radio.Stream.streamList());
+        
+        URI streamURI = string.build().toURI();            
+        
+    }
     
     public URL toURL() throws MalformedURLException {
 
-        URL streamURL = new URL();
-        streamURL.setUrl( new URL(stream.radio.Stream.toURI()));
+        URL streamURL = new URL (stream.radio.Stream.toURI());
             
         }
 
