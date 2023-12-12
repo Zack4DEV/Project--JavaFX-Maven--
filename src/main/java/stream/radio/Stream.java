@@ -1,7 +1,5 @@
 package stream.radio;
 
-import javafx.fxml.FXML;
-
 import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
@@ -9,10 +7,9 @@ import java.util.stream.Collectors;
 
 import java.net.URI;
 import java.net.URL;
+import java.net.URISyntaxException;
 import java.net.MalformedURLException;
 public class Stream{
-
-    private URL streamURL;
 
     private String streamString(String name){
 
@@ -41,25 +38,28 @@ public class Stream{
 
         List<String> stringNameList = Arrays.AsList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
 
-        for(int i=1 ; i< stringNameList.size() ; i++){
-            String string = (String) stringNameList[i];
-        }
+        
         }
 
 
-       public String[] streamList(String[] streamStringList){
+    public String streamList(String[] streamStringList){
 
 
-        List<List<String>> stringName = stringNameList.Stream().map( stringScan -> new Scanner(string).findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
+        String stringName = (String) stringNameList.Stream().map( stringScan -> new Scanner(stream.radio.streamString()).findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
         
         
     }
     
-    public URL toURL(){
-        
-            stringName.build().toURI().toString();
+    public URI toURI() throws URISyntaxException {
+
+        URI streamURI = new URI(stream.radio.streamList());
             
-            streamURL.setUrl(stringName);
+        }
+    
+    public URL toURL() thorws MalformedURLException{
+
+        streamURL = new URL();
+        streamURL.setUrl( new URL(stream.radio.toURI());
             
         }
 
