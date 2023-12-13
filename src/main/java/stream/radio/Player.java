@@ -26,7 +26,7 @@ public class Player {
      @FXML
      private MediaView mediaView = new MediaView(); 
   
-     interface Links< L extends Data.Stream>{ 
+     interface Links< L extends Data.Links>{ 
 
      public Media setMediaLinks(Media media,Hyperlink links) throws MediaException {
      
