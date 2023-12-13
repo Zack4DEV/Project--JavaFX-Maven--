@@ -25,7 +25,7 @@ class Player {
      @FXML
      Button play = new Button(mediaString);
 
-     media mediaURL = url.setUrl(mediaString.toUri().toString());
+     Media mediaURL = url.setUrl(mediaString.toUri().toString());
      
      @FXML
      private Media media = new Media(mediaURL);     
