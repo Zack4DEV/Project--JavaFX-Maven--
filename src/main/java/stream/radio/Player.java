@@ -16,16 +16,14 @@ import javafx.scene.input.MouseEvent;
 import java.net.URL;
 import java.net.MalformedURLException;
 
-
-
 import java.io.File;
 
 class Player {
 
      
      String mediaString = stream.radio.Stream::streamMedia;
-     
-     URL mediaURL = new URL(mediaString.toURI().toString());
+     URL url = mediaString.toURI().toString();
+     URL mediaURL = new URL(url);
      
      @FXML
      Button play = new Button(mediaString);
@@ -45,7 +43,4 @@ class Player {
      });
      }
      
-     public static void main(String[] args){
-     Player player = new Player();
-  }
 }
