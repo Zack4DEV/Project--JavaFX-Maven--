@@ -43,7 +43,7 @@ public class Stream {
 
         List stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
         
-        stringNameList.stream().map( stringScan -> new Scanner(stringNameList).findAll("http://") ).map( stringScan -> stringScan.group() ).flatMap(list -> list.stream() ).Collect(Collectors.toList());
+        stringNameList.stream().map( stringScan -> new scanner(stringNameList).findAll("http://") ).map( stringScan -> stringScan.group() ).flatMap(list -> list.stream() ).Collect(Collectors.toList());
         
         collect.forEach(stringNameList -> stringScan.add());        
 
