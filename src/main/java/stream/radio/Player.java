@@ -22,7 +22,8 @@ class Player {
 
      
      String mediaString = stream.radio.Stream::streamMedia;
-     URL url = mediaString.toURI().toString();
+     
+     URL url = mediaString.toUri().toString();
      URL mediaURL = new URL(url);
      
      @FXML
