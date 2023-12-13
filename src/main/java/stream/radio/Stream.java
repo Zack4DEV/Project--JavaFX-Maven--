@@ -3,7 +3,8 @@ package stream.radio;
 import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
-import java.util.stream.Collectors;  
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import java.net.URI;
 import java.net.URL;
@@ -43,7 +44,7 @@ public class Stream{
 
     public String streamList(List<String> stringNameList){
 
-        stringNameList.Stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
+        stringNameList.stream.map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
         
         stringNameList.forEach(string -> stringScan.collect());        
 
