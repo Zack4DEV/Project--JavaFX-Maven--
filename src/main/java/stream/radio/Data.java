@@ -14,7 +14,7 @@ import java.net.URL;
 import java.net.URISyntaxException;
 import java.net.MalformedURLException;
 
-public class Data {
+public class Data implements Media {
 
     public class Media {
 
@@ -45,13 +45,15 @@ public class Data {
         }
     }
 
-    public class Stream implements Media {
+    public class Stream  {
         
     public void streamList(){
         
-        List<? extends Media > stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
+        List<? extends Media > stringNameList = arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
+
+        stringScan = new Scanner(stringNameList).findAll("http://");
         
-        stringNameList.stream().map( stringScan -> new Scanner(stringNameList).findAll("http://") ).map( stringScan -> stringScan.group() ).flatMap(list -> list.stream() ).Collect(Collectors.toList());
+        stringNameList.stream().map( stringScan -> stringScan.group() ).flatMap(list -> list.stream() ).collect(Collectors.toList());
         
         collect.forEach(stringNameList -> stringScan.add());        
 
