@@ -21,9 +21,9 @@ import java.io.File;
 class Player {
 
      
-     String mediaString = stream.radio.Stream::streamMedia;
+     var mediaString = Stream::streamMedia;
      
-     URL url = mediaString.toUri().toString();
+     URL url = (URL) mediaString.toUri().toString();
      URL mediaURL = new URL(url);
      
      @FXML
