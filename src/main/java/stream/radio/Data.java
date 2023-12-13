@@ -9,8 +9,7 @@ import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
 
-
-public class Data {
+abstract class Data {
     
     public interface Links {
         
@@ -42,8 +41,8 @@ public class Data {
             
             
         public List<Hyperlink> getLinks(Hyperlink link){
-            List<Hyperlink> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
-            links.forEach(link -> links.select());
+            List<> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
+            links.forEach(link -> links.get());
             return link;
         }
 
