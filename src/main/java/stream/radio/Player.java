@@ -20,8 +20,12 @@ import java.io.File;
 
 class Player {
 
+     public void getMedia(){
      
-     var mediaString = Stream::streamMedia;
+          Stream mediaString = Stream::StreamMedia;
+     
+          return mediaString;
+     }
      
      URL url = (URL) mediaString.toUri().toString();
      URL mediaURL = new URL(url);
