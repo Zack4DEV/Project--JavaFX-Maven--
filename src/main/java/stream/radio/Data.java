@@ -16,7 +16,7 @@ import java.net.MalformedURLException;
 
 public class Data {
 
-    class Media {
+    public class Media {
 
         public String streamMedia(){ 
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
@@ -44,7 +44,9 @@ public class Data {
 
         }
     }
-    
+
+    public class Stream implements Media {
+        
     public void streamList(){
         
         List<? extends Media > stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
@@ -74,4 +76,6 @@ public class Data {
     */
   
   
+    }
+
 }
