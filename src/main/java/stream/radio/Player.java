@@ -36,7 +36,7 @@ class Player {
      
      public String getMedia(){
      
-          String mediaString =  (String) stream.radio.Stream.mediaString();
+          String mediaString =  new stream.radio.Stream.mediaString();
      
           return mediaString;
      }
