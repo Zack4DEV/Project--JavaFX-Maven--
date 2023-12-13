@@ -41,7 +41,7 @@ public class Data {
         Hyperlink streamaljazeera = new Hyperlink("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8");
         Hyperlink streamskynewsarabia = new Hyperlink("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
         Hyperlink streambbcarabic = new Hyperlink("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
-        
+
         }
         
         public List<Hyperlink> getStream(Hyperlink link){
@@ -64,6 +64,8 @@ public class Data {
         listview.getItems().addAll(links);
         }
     }
+    
+}
 
     
     public class Media<S extends Stream> {
@@ -73,6 +75,4 @@ public class Data {
 
     }
   
-    }
-
 }
