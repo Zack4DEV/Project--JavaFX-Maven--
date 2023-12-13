@@ -45,7 +45,7 @@ public class Stream{
 
         stringNameList.Stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
         
-        stringNameList.forEach(String stringName -> stringScan.add(stream.radio.Stream.stringStream()));        
+        stringScan.forEach(String stringName -> stringName.add(stream.radio.Stream.streamList()));        
 
         
     }
