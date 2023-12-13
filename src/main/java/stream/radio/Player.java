@@ -29,7 +29,7 @@ public class Player {
      public Media setMediaLinks(Media media,Hyperlink links) throws MediaException {
      
           Media mediaLinks = (Media)  media.setUrl(links);
-          System.out.println(+"("media")"+"Playing");
+          System.out.println(+"("media")"+"Playing+");
      }
 
      public void getMediaLinks(Hyperlink links){
