@@ -7,7 +7,8 @@ import javafx.event.EventHandler;
 
 import java.util.*;
 import java.util.ArrayList;  
-import java.util.List;  
+import java.util.List;
+import java.util.stream.Collectors;
 
 abstract class Data {
     
@@ -40,10 +41,11 @@ abstract class Data {
 
             
             
-        public List<Hyperlink> getLinks(Hyperlink link){
+        public List<Hyperlink> getLinks(){
             List links = new ArrayList(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
-            links.forEach(link -> links.parse());
-            return link;
+            links.forEach(List linksAll -> links.stream().filter().collect(Collectors.toList()));
+
+            links.forEach(Hyperlink link -> linksAll.collect());
         }
 
         public void setLinks(List<Hyperlink> links ,Hyperlink link){
