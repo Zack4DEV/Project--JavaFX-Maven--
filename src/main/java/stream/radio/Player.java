@@ -1,5 +1,7 @@
 package stream.radio;
 
+import stream.radio.Data; 
+     
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -24,7 +26,7 @@ public class Player {
      @FXML
      private MediaView mediaView = new MediaView(); 
   
-     public class Links { 
+     interface Links< L extends Data.Stream>{ 
 
      public Media setMediaLinks(Media media,Hyperlink links) throws MediaException {
      
