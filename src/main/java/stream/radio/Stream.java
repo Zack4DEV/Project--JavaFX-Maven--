@@ -15,8 +15,9 @@ import java.net.URISyntaxException;
 import java.net.MalformedURLException;
 public class Stream implements Media {
 
-    interface Media{
-        
+    interface Media {
+
+        public String streamMedia(){ 
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
         String stringchada = new String("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
@@ -40,11 +41,12 @@ public class Stream implements Media {
         String stringskynewsarabia = new String("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
+        }
     }
     
     public void streamList(){
         
-        List<? extends stream.radio.Media > stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
+        List<? extends Media > stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
         
         stringNameList.stream().map( stringScan -> new Scanner(stringNameList).findAll("http://") ).map( stringScan -> stringScan.group() ).flatMap(list -> list.stream() ).Collect(Collectors.toList());
         
