@@ -1,8 +1,5 @@
 package stream.radio;
 
-import stream.radio.Data;
-
-import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
@@ -13,42 +10,50 @@ import javafx.scene.media.MediaException;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
-import java.net.URL;
-import java.net.MalformedURLException;
 
-import java.io.File;
+public class Player {
 
-class Player {
-
-     private URL url;
+     private final Hyperlink links;
      
      @FXML
-     Button play = new Button(mediaString);
+     private Button play = new Button();
+     @FXML
+     private Media media = new Media();     
+     @FXML
+     private MediaPlayer mediaPlayer = new MediaPlayer();
+     @FXML
+     private MediaView mediaView = new MediaView(); 
+  
+     public class Links { 
 
-     Media mediaURL = url.setUrl(mediaString.toUri().toString());
+     public Media setMediaLinks(Media media,Hyperlink links) throws MediaException {
      
-     @FXML
-     private Media media = new Media(mediaURL);     
-     @FXML
-     private MediaPlayer mediaPlayer = new MediaPlayer(media);
-     @FXML
-     private MediaView mediaView = new MediaView(mediaPlayer); 
-     
-     public String getMedia(){
-     
-          String mediaString =  new streamMedia();
-     
-          return mediaString;
+          Media mediaLinks = (Media)  media.setUrl(links);
+          System.out.println(+"("media")"+"Playing");
      }
-     
-     
+
+     public void getMediaLinks(Hyperlink links){
+
+          return links;
+     }
+
+}
+
+    public class Play implements Links {
+
+    public void getPlay(){
+
+    }
+         
     public void setPlay(){
-     play.setOnAction(new EventHandler<ActionEvent>(){
+    play.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(ActionEvent ae){
           mediaPlayer.play();
           }
      });
      }
+
+}
      
 }
