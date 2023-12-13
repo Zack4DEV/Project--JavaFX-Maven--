@@ -69,6 +69,7 @@ abstract class Data {
     public class Media<S extends Links> {
 
         public List<S> Media(List<Hyperlink> media){ 
+            return media;
         }
 
     }
