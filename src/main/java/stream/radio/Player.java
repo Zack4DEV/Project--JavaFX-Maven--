@@ -11,7 +11,7 @@ import java.util.*;
 
 abstract class Player {
 
-    private final hl = new HyperLink();
+    private final Hyperlink hl = new HyperLink();
     @FXML
     Media media = new Media(hl.toString());
     @FXML
