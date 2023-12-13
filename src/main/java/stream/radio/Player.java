@@ -39,10 +39,9 @@ public class Player {
           return links;
      }
 
-          */
 }
 
-    abstract class Play implements Links {
+    abstract class Play {
 
     public void getPlay(){
 
@@ -56,6 +55,7 @@ public class Player {
           }
      });
      }
+          */
 
 }
      
