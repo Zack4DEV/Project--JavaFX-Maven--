@@ -13,7 +13,8 @@ import java.net.URI;
 import java.net.URL;
 import java.net.URISyntaxException;
 import java.net.MalformedURLException;
-public class Stream implements Media {
+
+public class Data {
 
     interface Media {
 
