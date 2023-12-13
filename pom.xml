@@ -204,7 +204,7 @@
              <configuration>
                  <archive>
                      <manifest>
-                         <mainClass>stream.radio/stream.radio.Main</mainClass>
+                         <mainClass>stream.radio.Main</mainClass>
                      </manifest>
                  </archive>
                   <descriptorRefs>
