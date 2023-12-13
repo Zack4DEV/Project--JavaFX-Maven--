@@ -22,7 +22,7 @@ class Player {
 
      public String getMedia(){
      
-          String mediaString = (String) Stream::streamMedia;
+          String mediaString =  new stream.radio.Stream.streamMedia();
      
           return mediaString;
      }
