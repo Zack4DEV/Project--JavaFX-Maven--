@@ -16,7 +16,7 @@ import java.net.MalformedURLException;
 
 public class Data {
 
-    interface Media {
+    class Media {
 
         public String streamMedia(){ 
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
