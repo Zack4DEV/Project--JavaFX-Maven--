@@ -20,11 +20,11 @@ import java.io.File;
 class Player {
 
      
-     File mediaURL = new File(stream.radio.Stream.toURL());
+     File mediaURI = new File(stream.radio.Stream.streamList());
      @FXML
      Button play = new Button(stream.radio.Stream.streamList());
      @FXML
-     private Media media = new Media(mediaURL.toString());     
+     private Media media = new Media(mediaURI.toURI().toString());     
      @FXML
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      @FXML
