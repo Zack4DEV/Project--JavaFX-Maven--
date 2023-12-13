@@ -20,6 +20,20 @@ import java.io.File;
 
 class Player {
 
+     private URL url;
+     
+     @FXML
+     Button play = new Button(mediaString);
+
+     media mediaURL = url.setUrl(mediaString.toUri().toString());
+     
+     @FXML
+     private Media media = new Media(mediaURL);     
+     @FXML
+     private MediaPlayer mediaPlayer = new MediaPlayer(media);
+     @FXML
+     private MediaView mediaView = new MediaView(mediaPlayer); 
+     
      public String getMedia(){
      
           String mediaString =  new stream.radio.Stream.streamMedia();
@@ -27,19 +41,8 @@ class Player {
           return mediaString;
      }
      
-     URL url = (URL) mediaString.toUri().toString();
-     URL mediaURL = new URL(url);
      
-     @FXML
-     Button play = new Button(mediaString);
-     @FXML
-     private Media media = new Media(mediaURL);     
-     @FXML
-     private MediaPlayer mediaPlayer = new MediaPlayer(media);
-     @FXML
-     private MediaView mediaView = new MediaView(mediaPlayer); 
-
-     public void setPlay(){
+    public void setPlay(){
      play.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(ActionEvent ae){
