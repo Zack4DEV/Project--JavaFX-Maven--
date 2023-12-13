@@ -41,12 +41,12 @@ abstract class Data {
 
             
         public void setLinks(List<Hyperlink> links ,Hyperlink link){           
-           for(final Hyperlink link : links) {
-           links.add(link);
-           link.setOnAction(new EventHandler<ActionEvent>() {
+           for(final Hyperlink l : links) {
+           links.add(l);
+           l.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent ae) {
-                    link.getText();
+                    l.getText();
                 }
             });
         }
