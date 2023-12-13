@@ -13,42 +13,42 @@ import java.util.List;
 public class Data {
 
     final ListView listview = new ListView();
-    List<Hyperlink> links = new ArrayList<>(streammfm,streamaswat,streamchada,streammars,streammedradio,streamtania,streamatlantic,streamyabiladi,streammedi,streamness,streamhitradio,streamhitmaroc,streamtarab,streamwatania,streammoroccoenglish,streamtamazgha,streamizlan,streamcoran,streammontecarlo,streamaljazeera,streamskynewsarabia,streambbcarabic);
+    List<Hyperlink> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
     
-    public interface Stream {
+    public interface Links {
         
-        public void Stream(Hyperlink link){
+        public void hyperLinks(Hyperlink link){
             
-        Hyperlink streammfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
-        Hyperlink streamaswat = new Hyperlink("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
-        Hyperlink streamchada = new Hyperlink("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
-        Hyperlink streammars = new Hyperlink("http://streamer.eagrpservices.com/audio/radiomars.mp3");
-        Hyperlink streammedradio = new Hyperlink("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3");
-        Hyperlink streamtania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8");
-        Hyperlink streamatlantic = new Hyperlink("http://atlanticradio.ma:8000/stream/1");
-        Hyperlink streamyabiladi = new Hyperlink("http://snassen.yabiladi.com:8000/stream/1");
-        Hyperlink streammedi = new Hyperlink("http://51.222.88.199:80/medi1");
-        Hyperlink streamness = new Hyperlink("http://radio.nessradio.net:8000/nessradio.mp3");
-        Hyperlink streamhitradio = new Hyperlink("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3");
-        Hyperlink streamhitmaroc = new Hyperlink("http://api.webrad.io/data/streams/68/hits1-maroc");
-        Hyperlink streamtarab = new Hyperlink("http://streaming2.rimradio.ma/livetarab");
-        Hyperlink streamwatania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8");
-        Hyperlink streammoroccoenglish = new Hyperlink("http://streamer.radio.co/s6cba51492/listen");
-        Hyperlink streamtamazgha = new Hyperlink("http://streaming2.rimradio.ma/liveamazighe");
-        Hyperlink streamizlan = new Hyperlink("http://izlan.fr/radios/atlas/stream");
-        Hyperlink streamcoran = new Hyperlink("http://dedi.radio-coran.net:8000/livehq.mp3");
-        Hyperlink streammontecarlo = new Hyperlink("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3");
-        Hyperlink streamaljazeera = new Hyperlink("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8");
-        Hyperlink streamskynewsarabia = new Hyperlink("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
-        Hyperlink streambbcarabic = new Hyperlink("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
+        Hyperlink hlmfm = new Hyperlink("http://hler.eagrpservices.com/audio/mfmradio.ogg");
+        Hyperlink hlaswat = new Hyperlink("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
+        Hyperlink hlchada = new Hyperlink("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
+        Hyperlink hlmars = new Hyperlink("http://hler.eagrpservices.com/audio/radiomars.mp3");
+        Hyperlink hlmedradio = new Hyperlink("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3");
+        Hyperlink hltania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8");
+        Hyperlink hlatlantic = new Hyperlink("http://atlanticradio.ma:8000/hl/1");
+        Hyperlink hlyabiladi = new Hyperlink("http://snassen.yabiladi.com:8000/hl/1");
+        Hyperlink hlmedi = new Hyperlink("http://51.222.88.199:80/medi1");
+        Hyperlink hlness = new Hyperlink("http://radio.nessradio.net:8000/nessradio.mp3");
+        Hyperlink hlhitradio = new Hyperlink("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3");
+        Hyperlink hlhitmaroc = new Hyperlink("http://api.webrad.io/data/hls/68/hits1-maroc");
+        Hyperlink hltarab = new Hyperlink("http://hling2.rimradio.ma/livetarab");
+        Hyperlink hlwatania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8");
+        Hyperlink hlmoroccoenglish = new Hyperlink("http://hler.radio.co/s6cba51492/listen");
+        Hyperlink hltamazgha = new Hyperlink("http://hling2.rimradio.ma/liveamazighe");
+        Hyperlink hlizlan = new Hyperlink("http://izlan.fr/radios/atlas/hl");
+        Hyperlink hlcoran = new Hyperlink("http://dedi.radio-coran.net:8000/livehq.mp3");
+        Hyperlink hlmontecarlo = new Hyperlink("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3");
+        Hyperlink hlaljazeera = new Hyperlink("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8");
+        Hyperlink hlskynewsarabia = new Hyperlink("http://radio.skynewsarabia.com/hl/radio/skynewsarabia");
+        Hyperlink hlbbcarabic = new Hyperlink("http://hl.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
         }
         
-        public List<Hyperlink> getStream(Hyperlink link){
+        public List<Hyperlink> getLinks(Hyperlink link){
             return link;
         }
 
-        public void setStream(List<Hyperlink> links ,Hyperlink link){
+        public void setLinks(List<Hyperlink> links ,Hyperlink link){
            links.add(link);
            
            for(final Hyperlink hyperlink : links) {
@@ -67,7 +67,7 @@ public class Data {
     }
     
     
-    public class Media<S extends Stream> {
+    public class Media<S extends Links> {
 
         public List<S> Media(List<Hyperlink> media){ 
         }
