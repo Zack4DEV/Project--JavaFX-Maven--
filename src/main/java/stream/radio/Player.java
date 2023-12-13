@@ -32,7 +32,7 @@ class Player {
 
      @Override
      public void setPlay(){
-     play.setOnAction(new EventHandler<ActionEvent<>>(){
+     play.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(ActionEvent<MouseEvent> ae){
           mediaPlayer.play();
