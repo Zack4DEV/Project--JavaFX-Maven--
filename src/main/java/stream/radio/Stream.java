@@ -3,8 +3,8 @@ package stream.radio;
 import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
+import java.util.stream;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import java.net.URI;
 import java.net.URL;
@@ -37,17 +37,17 @@ public class Stream{
         String stringskynewsarabia = new String("http://radio.skynewsarabia.com/stream/radio/skynewsarabia");
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
-        List<String> stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
         
         }
 
 
-    public String streamMedia(){
+    public String streamMedia(String media){
 
-        String media = new  String();
+        List<String> stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
+        
         stringNameList.stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap(list -> list.stream()).Collect(Collectors.toList());
         
-        stringNameList.forEach(media -> stringNameList.add(media));        
+        stringNameList.forEach(media.add());        
 
         
     }
@@ -68,9 +68,6 @@ public class Stream{
         }
 
     */
-    public static void main(String[] args){
-        Stream s = new Stream();
-        
-    }
+  
   
 }
