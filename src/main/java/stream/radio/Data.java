@@ -41,7 +41,7 @@ abstract class Data {
             
             
         public List<Hyperlink> getLinks(Hyperlink link){
-            List<> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
+            List links = new ArrayList(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
             links.forEach(link -> links.get());
             return link;
         }
