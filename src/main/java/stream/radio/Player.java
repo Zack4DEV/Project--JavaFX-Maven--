@@ -31,7 +31,7 @@ class Player {
      private MediaView mediaView = new MediaView(mediaPlayer); 
 
      @Override
-     public void setPlay(Media media){
+     public void setPlay(){
      play.setOnAction(new EventHandler<ActionEvent<>>(){
           @Override
           public void handle(ActionEvent<MouseEvent> ae){
