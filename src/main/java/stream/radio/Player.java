@@ -20,9 +20,9 @@ import java.io.File;
 
 class Player {
 
-     public void getMedia(){
+     public String getMedia(){
      
-          Stream mediaString = Stream::StreamMedia;
+          String mediaString = (String) Stream::streamMedia;
      
           return mediaString;
      }
