@@ -14,7 +14,7 @@ import java.net.URISyntaxException;
 import java.net.MalformedURLException;
 public class Stream {
 
-    public String streamMedia(String media){
+    public String streamMedia(){
         
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -45,7 +45,7 @@ public class Stream {
         
         stringNameList.stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap(list -> list.stream()).Collect(Collectors.toList());
         
-        Collect.forEach(media.add());        
+        collect.forEach(stringScan -> stringNameList.add(streamMedia(String mediaString)));        
 
         
     }
