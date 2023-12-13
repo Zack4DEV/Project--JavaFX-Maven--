@@ -40,12 +40,13 @@ abstract class Data {
         Hyperlink hlbbcarabic = new Hyperlink("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
             
-            
+        /**   
         public List<Hyperlink> getLinks(){
             List links = new ArrayList(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
 
-         //   links.forEach(Hyperlink link -> links.AsList().collect());
+           links.forEach(Hyperlink link -> links.AsList().collect());
         }
+        */
 
         public void setLinks(List<Hyperlink> links ,Hyperlink link){
            links.add(link);
