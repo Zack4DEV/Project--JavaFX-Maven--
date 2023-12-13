@@ -12,7 +12,7 @@ import java.net.URISyntaxException;
 import java.net.MalformedURLException;
 public class Stream{
 
-    private String stringStream(String name){
+    private String stringMedia(){
 
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -42,34 +42,34 @@ public class Stream{
         }
 
 
-    public String streamList(List<String> stringNameList){
+    public String streamMedia(){
 
-        String stream = new  String();
-        stringNameList.stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap(java.util.stream.Stream::list).Collect(Collectors.toList());
+        String media = new  String();
+        stringNameList.stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap(list -> list.stream()).Collect(Collectors.toList());
         
-        stringNameList.forEach(stream -> stringNameList.add(stream));        
+        stringNameList.forEach(media -> stringNameList.add(media));        
 
         
     }
 
     /**
-    public URI toURI() throws URISyntaxException {
+    public string toURI() throws URISyntaxException {
 
-        StringBuilder string = new StringBuilder(stream.radio.Stream.streamList());
         
-        URI streamURI = string.build().toURI();            
+        URI mediaURI = stream.radio.streamMedia().build().toURI();
+        mediaURI.toString();
         
     }
     
     public URL toURL() throws MalformedURLException {
 
-        URL streamURL = new URL (stream.radio.Stream.toURI());
+        URL mediaURL = new URL (mediaURI);
             
         }
 
     */
     public static void main(String[] args){
-        stream.radio.Stream s = new stream.radio.Stream();
+        Stream s = new Stream();
         
     }
   
