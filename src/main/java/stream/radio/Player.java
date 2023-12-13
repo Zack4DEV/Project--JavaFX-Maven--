@@ -27,6 +27,7 @@ public class Player {
   
      interface Links { 
 
+          /**
      public void setMediaLinks(Media media,Hyperlink links) throws MediaException {
      
           Media mediaLinks = (Media)  media.set(links);
@@ -38,6 +39,7 @@ public class Player {
           return links;
      }
 
+          */
 }
 
     abstract class Play implements Links {
