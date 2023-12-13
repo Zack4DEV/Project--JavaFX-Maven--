@@ -20,7 +20,7 @@ import java.io.File;
 class Player {
 
      
-     String mediaString = new stream.radio.Stream.streamList();
+     String mediaString = new String( stream.radio.Stream.streamList() ) ;
      
      File mediaFile = new File(mediaString);
      @FXML
@@ -32,11 +32,10 @@ class Player {
      @FXML
      private MediaView mediaView = new MediaView(mediaPlayer); 
 
-     @Override
      public void setPlay(){
      play.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> ae){
+          public void handle(ActionEvent ae){
           mediaPlayer.play();
           }
      });
