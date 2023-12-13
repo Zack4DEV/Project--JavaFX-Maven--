@@ -20,7 +20,7 @@ import java.io.File;
 class Player {
 
      
-     String mediaString = new String( stream.radio.Stream.streamList() ) ;
+     String mediaString = new String( stream.radio.Stream.streamMedia() ) ;
      
      File mediaFile = new File(mediaString);
      @FXML
