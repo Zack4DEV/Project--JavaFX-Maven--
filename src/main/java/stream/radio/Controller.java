@@ -17,7 +17,4 @@ class Controller {
      @FXML
      MediaView mediaView = new MediaView();
            
-     public static void main(String[] args) throws IOException{
-     Player.main(args);
-     } 
 }
