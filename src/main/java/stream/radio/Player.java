@@ -1,6 +1,4 @@
 package stream.radio;
-
-import stream.radio.Data; 
      
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,7 +17,6 @@ public class Player {
     play.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(ActionEvent ae){
-          mediaPlayer.play();
           }
      });
      }
