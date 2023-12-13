@@ -1,6 +1,6 @@
 package stream.radio;
 
-import stream.radio.Stream;
+import stream.radio.Data;
 
 import javafx.application.Application;
 import javafx.fxml.FXML;
