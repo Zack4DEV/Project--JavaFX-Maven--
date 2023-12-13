@@ -43,7 +43,7 @@ abstract class Data {
             
         public List<Hyperlink> getLinks(){
             List links = new ArrayList(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
-            links.forEach(List linksAll -> links.stream().filter().collect(Collectors.toList()));
+            links.forEach(List linksAll -> links.stream().filter().collect( Collectors.toList() ) );
 
             links.forEach(Hyperlink link -> linksAll.collect());
         }
