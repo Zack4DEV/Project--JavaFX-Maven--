@@ -15,7 +15,7 @@ import java.net.URI;
 import java.net.URL;
 import java.net.URISyntaxException;
 import java.net.MalformedURLException;
-public class Stream {
+public class Stream implements Media {
     
     public void streamList(){
         
