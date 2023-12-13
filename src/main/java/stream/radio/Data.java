@@ -63,10 +63,9 @@ public class Data {
 
         listview.getItems().addAll(links);
         }
+    
     }
     
-}
-
     
     public class Media<S extends Stream> {
 
@@ -75,4 +74,5 @@ public class Data {
 
     }
   
+
 }
