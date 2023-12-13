@@ -17,7 +17,7 @@ public class Data {
         final ListView listview = new ListView();
         List<Hyperlink> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
         
-        public void hyperLinks(Hyperlink link){
+        public void hyperLinks(){
             
         Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         Hyperlink hlaswat = new Hyperlink("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
@@ -43,13 +43,12 @@ public class Data {
         Hyperlink hlbbcarabic = new Hyperlink("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
             for(int i=1; i < links.size() ; i++){
-            link = links[i];
+            link = (Hyperlink) links[i];
             }
             
-            return link;
         }
         
-        public List<Hyperlink> getLinks(Hyperlink link){
+        public List<Hyperlink> getLinks(){
             link =  new hyperLinks();  
             return link;
         }
@@ -62,7 +61,7 @@ public class Data {
 
                 @Override
                 public void handle(ActionEvent ae) {
-                    getHostServices().showDocument(hyperlink.getText());
+                    showDocument(hyperlink.getText());
                 }
             });
         }
