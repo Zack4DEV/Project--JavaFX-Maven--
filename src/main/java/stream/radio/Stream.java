@@ -44,7 +44,7 @@ public class Stream{
 
     public String streamList(List<String> stringNameList){
 
-        stringNameList.stream.map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
+        stringNameList.(java.util.stream.Stream).map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
         
         stringNameList.forEach(string -> stringScan.collect());        
 
