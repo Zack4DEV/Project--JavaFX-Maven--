@@ -45,7 +45,7 @@ public class Stream{
     public String streamList(List<String> stringNameList){
 
         String stream = new  String();
-        stringNameList.stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap().Collect(Collectors.toList());
+        stringNameList.stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap(java.util.stream.Stream::list).Collect(Collectors.toList());
         
         stringNameList.forEach(stream -> stringNameList.add(stream));        
 
@@ -69,7 +69,7 @@ public class Stream{
 
     */
     public static void main(String[] args){
-        Stream stream = new Stream();
+        stream.radio.Stream s = new stream.radio.Stream();
         
     }
   
