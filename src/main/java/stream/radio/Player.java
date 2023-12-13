@@ -13,6 +13,9 @@ import javafx.scene.media.MediaException;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
+import java.net.URL;
+import java.net.MalformedURLException;
+
 
 
 import java.io.File;
@@ -20,13 +23,14 @@ import java.io.File;
 class Player {
 
      
-     String mediaString = new String( stream.radio.Stream.streamMedia() ) ;
+     String mediaString = stream.radio.Stream::streamMedia;
      
-     File mediaFile = new File(mediaString);
+     URL mediaURL = new URL(mediaString.toURI().toString())
+     
      @FXML
      Button play = new Button(mediaString);
      @FXML
-     private Media media = new Media(mediaFile.toURI().toString());     
+     private Media media = new Media(mediaURL);     
      @FXML
      private MediaPlayer mediaPlayer = new MediaPlayer(media);
      @FXML
