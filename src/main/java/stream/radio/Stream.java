@@ -3,17 +3,19 @@ package stream.radio;
 import java.util.*;
 import java.util.ArrayList;  
 import java.util.List;  
-import java.util.stream;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.*;
 import java.util.stream.Collectors;
 
 import java.net.URI;
 import java.net.URL;
 import java.net.URISyntaxException;
 import java.net.MalformedURLException;
-public class Stream{
+public class Stream {
 
-    private String stringMedia(){
-
+    public String streamMedia(String media){
+        
         String stringmfm = new String("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String stringaswat = new String("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
         String stringchada = new String("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
@@ -38,16 +40,12 @@ public class Stream{
         String stringbbcarabic = new String("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
         
-        }
-
-
-    public String streamMedia(String media){
 
         List<String> stringNameList = Arrays.asList(stringmfm,stringaswat,stringchada,stringmars,stringmedradio,stringtania,stringatlantic,stringyabiladi,stringmedi,stringness,stringhitradio,stringhitmaroc,stringtarab,stringwatania,stringmoroccoenglish,stringtamazgha,stringizlan,stringcoran,stringmontecarlo,stringaljazeera,stringskynewsarabia,stringbbcarabic);
         
         stringNameList.stream().map( stringScan -> new Scanner().findAll("http://") ).map( stringScan -> stringScan.group()).flatMap(list -> list.stream()).Collect(Collectors.toList());
         
-        stringNameList.forEach(media.add());        
+        Collect.forEach(media.add());        
 
         
     }
