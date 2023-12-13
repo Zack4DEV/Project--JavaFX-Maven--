@@ -15,33 +15,32 @@ import javafx.scene.input.MouseEvent;
 
 public class Player {
 
-     private final Hyperlink links;
      
      @FXML
      private Button play = new Button();
      @FXML
-     private Media media = new Media();     
+     private Media media = new Media(Player.Links.getMediaLinks());     
      @FXML
-     private MediaPlayer mediaPlayer = new MediaPlayer();
+     private MediaPlayer mediaPlayer = new MediaPlayer(media);
      @FXML
-     private MediaView mediaView = new MediaView(); 
+     private MediaView mediaView = new MediaView(mediaPlayer); 
   
-     interface Links< L extends Data.Links>{ 
+     interface Links { 
 
-     public Media setMediaLinks(Media media,Hyperlink links) throws MediaException {
+     public void setMediaLinks(Media media,Hyperlink links) throws MediaException {
      
-          Media mediaLinks = (Media)  media.setUrl(links);
+          Media mediaLinks = (Media)  media.set(links);
           System.out.println( +(media) "Playing");
      }
 
      public void getMediaLinks(Hyperlink links){
-
+          Media links = new stream.radio.Data.Links();
           return links;
      }
 
 }
 
-    public class Play implements Links {
+    abstract class Play implements Links {
 
     public void getPlay(){
 
