@@ -11,7 +11,7 @@ import java.util.List;
 
 abstract class Data {
     
-    public interface Links {
+    public class Links {
         
         final ListView listview = new ListView();
                     
@@ -42,7 +42,7 @@ abstract class Data {
             
         public List<Hyperlink> getLinks(Hyperlink link){
             List links = new ArrayList(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
-            links.forEach(link -> links.get());
+            links.forEach(link -> links.parse());
             return link;
         }
 
