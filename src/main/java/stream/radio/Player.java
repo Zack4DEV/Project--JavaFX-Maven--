@@ -12,6 +12,8 @@ import javafx.scene.media.MediaView;
 import javafx.scene.media.MediaException;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.input.MouseEvent;
+
 
 import java.io.File;
 
@@ -30,7 +32,7 @@ class Player {
 
      @Override
      public void setPlay(Media media){
-     play.setOnAction(new EventHandler<ActionEvent<MouseEvent>>(){
+     play.setOnAction(new EventHandler<ActionEvent<>>(){
           @Override
           public void handle(ActionEvent<MouseEvent> ae){
           mediaPlayer.play();
