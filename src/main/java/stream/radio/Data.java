@@ -43,7 +43,7 @@ public class Data {
             
         public List<Hyperlink> getLinks(Hyperlink link){
             List<Hyperlink> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
-            links.forEach(link -> links.select())
+            links.forEach(link -> links.select());
             return link;
         }
 
