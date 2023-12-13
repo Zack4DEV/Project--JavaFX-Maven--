@@ -21,33 +21,12 @@ public class Player {
      @FXML
      private Media media = new Media();     
      @FXML
-     private MediaPlayer mediaPlayer = new MediaPlayer(media);
+     private MediaPlayer mediaPlayer = new MediaPlayer();
      @FXML
      private MediaView mediaView = new MediaView(mediaPlayer); 
   
-     interface Links { 
-
-          /**
-     public void setMediaLinks(Media media,Hyperlink links) throws MediaException {
-     
-          Media mediaLinks = (Media)  media.set(links);
-          System.out.println( +(media) "Playing");
-     }
-
-     public void getMediaLinks(Hyperlink links){
-          Media links = new stream.radio.Data.Links();
-          return links;
-     }
-
-}
-
-    abstract class Play {
-
-    public void getPlay(){
-
-    }
          
-    public void setPlay(){
+    public void play(){
     play.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(ActionEvent ae){
@@ -55,7 +34,6 @@ public class Player {
           }
      });
      }
-          */
 
 }
      
