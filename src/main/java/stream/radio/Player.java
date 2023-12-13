@@ -6,15 +6,15 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 
-public class Player {
+public class Action {
 
      
-     @FXML
-     private Button play = new Button();
+    @FXML
+    private Button button = new Button("hl*");
   
          
-    public void play(){
-    play.setOnAction(new EventHandler<ActionEvent>(){
+    public void action(){
+    button.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(ActionEvent ae){
           }
