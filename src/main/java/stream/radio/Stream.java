@@ -51,7 +51,8 @@ public class Stream{
 
         
     }
-    
+
+    /**
     public URI toURI() throws URISyntaxException {
 
         StringBuilder string = new StringBuilder(stream.radio.Stream.streamList());
@@ -66,6 +67,7 @@ public class Stream{
             
         }
 
+    */
     public static void main(String[] args){
         Stream stream = new Stream();
         
