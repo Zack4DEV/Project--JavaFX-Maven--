@@ -19,7 +19,7 @@ public class Player {
      @FXML
      private Button play = new Button();
      @FXML
-     private MediaPlayer mediaPlayer = new MediaPlayer(new Media());
+     private MediaPlayer mediaPlayer = new MediaPlayer();
      @FXML
      private MediaView mediaView = new MediaView(mediaPlayer); 
   
