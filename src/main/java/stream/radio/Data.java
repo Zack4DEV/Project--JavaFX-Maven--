@@ -15,10 +15,7 @@ public class Data {
     public interface Links {
         
         final ListView listview = new ListView();
-        List<Hyperlink> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
-        
-        public void hyperLinks(){
-            
+                    
         Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         Hyperlink hlaswat = new Hyperlink("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
         Hyperlink hlchada = new Hyperlink("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
@@ -42,14 +39,11 @@ public class Data {
         Hyperlink hlskynewsarabia = new Hyperlink("http://radio.skynewsarabia.com/stteam/radio/skynewsarabia");
         Hyperlink hlbbcarabic = new Hyperlink("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
 
-            for(int i=1; i < links.size() ; i++){
-            link = (Hyperlink) links[i];
-            }
             
-        }
-        
-        public List<Hyperlink> getLinks(){
-            link =  new hyperLinks();  
+            
+        public List<Hyperlink> getLinks(Hyperlink link){
+            List<Hyperlink> links = new ArrayList<>(hlmfm,hlaswat,hlchada,hlmars,hlmedradio,hltania,hlatlantic,hlyabiladi,hlmedi,hlness,hlhitradio,hlhitmaroc,hltarab,hlwatania,hlmoroccoenglish,hltamazgha,hlizlan,hlcoran,hlmontecarlo,hlaljazeera,hlskynewsarabia,hlbbcarabic);
+            links.forEach(link -> links.select())
             return link;
         }
 
@@ -57,11 +51,10 @@ public class Data {
            links.add(link);
            
            for(final Hyperlink hyperlink : links) {
-            hyperlink.setOnAction(new EventHandler<ActionEvent>() {
-
+           hyperlink.setOnAction(new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent ae) {
-                    showDocument(hyperlink.getText());
+                    hyperlink.getText();
                 }
             });
         }
