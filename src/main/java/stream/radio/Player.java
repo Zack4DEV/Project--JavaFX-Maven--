@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.media.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaErrorEvent;
-import javafx.scene.media.Exception;
+import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.control.Hyperlink;
@@ -231,7 +231,7 @@ public class Player {
 
     
     public void action() throws Exception{
-    button.setOnAction(new EventHandler<ActionEvent>(){
+    button.setOnAction(new EventHandler<ActionEvent<MouseEvent>>(){
           @Override
           public void handle(MouseEvent e){
           }
