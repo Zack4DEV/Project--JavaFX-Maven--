@@ -61,7 +61,7 @@ abstract class Player {
         
     }
     
-        public class URLs {
+        public class Players {
         
         public void mfmPlay() throws MalformedURLException{
         final Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
