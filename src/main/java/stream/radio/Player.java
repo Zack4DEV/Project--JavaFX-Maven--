@@ -3,7 +3,7 @@ package stream.radio;
 import stream.radio.Action;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Hyperlink;
+import javafx.net.Hyperlink;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
@@ -25,9 +25,10 @@ abstract class Player {
     }
     
         public class hyperLinks {
-
+        
         public void mfmPlay(){
-        mfmPlayer = new MediaPlayer(new Media(new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString()));
+        Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
+        mfmPlayer = new MediaPlayer(new Media(hlmfm).toString()));
         mfmPlayer.play();
         }
 
