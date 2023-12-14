@@ -22,7 +22,7 @@ public class Action {
     Hyperlink hl;
     String hlString = (String) hl.toString();
 
-    Player <? Ps extends <Players>Player  >player = new Player();
+    Players <? P extends Player > players = new Players();
     
     @FXML
     private Button button = new Button("");
@@ -36,7 +36,7 @@ public class Action {
      }
 
 
-    public class Actions extends player {
+    public class Actions extends players {
          
     @FXML
     private Button btnmfm = new Button("mfm");
