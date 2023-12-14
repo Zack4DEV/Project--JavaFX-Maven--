@@ -63,7 +63,7 @@ abstract class Player {
     
         public class URLs {
         
-        public void mfmPlay() throws URISyntaxException URLMalformedException{
+        public void mfmPlay() throws URLMalformedException{
         final URL hlmfm = new URL("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String hlStringmfm = (String) hlmfm.toURI().toString();
         MediaPlayer mfmPlayer = new MediaPlayer( new Media(hlStringmfm) );
