@@ -24,12 +24,10 @@ abstract class Player {
         mediaPlayer.play();
     }
     
-    interface hyperLinks {
-
+        public class hyperLinks {
 
         public void mfmPlay(){
-        Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
-        mfmPlayer = new MediaPlayer(new Media(hlmfm.toString()));
+        mfmPlayer = new MediaPlayer(new Media(new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg").toString()));
         mfmPlayer.play();
         }
 
@@ -131,12 +129,6 @@ abstract class Player {
         Hyperlink hlcoran = new Hyperlink("http://dedi.radio-coran.net:8000/livehq.mp3");
         coranPlayer = new MediaPlayer(new Media(hlcoran.toString()));
         coranPlayer.play();
-        }
-
-        public void marsPlay(){
-        Hyperlink hlmars = new Hyperlink("http://streamer.eagrpservices.com/audio/radiomars.mp3");
-        marsPlayer = new MediaPlayer(new Media(hlmars.toString()));
-        marsPlayer.play();
         }
         
         public void montecarloPlay(){
