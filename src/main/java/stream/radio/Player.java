@@ -63,7 +63,7 @@ abstract class Player {
         
     }
     
-        class Players {
+        interface Players {
         
         public void mfmPlay() throws MalformedURLException{
         final Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
@@ -239,7 +239,7 @@ abstract class Player {
      }
 
 
-   class ActionPlayers extends Players {
+   class ActionPlayers implements Players{
 
     Players players = Players.class.getResource();
 
