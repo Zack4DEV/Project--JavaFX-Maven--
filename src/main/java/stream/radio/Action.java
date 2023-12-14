@@ -22,15 +22,12 @@ public class Action {
     Hyperlink hl;
     String hlString = (String) hl.toString();
 
-    Players players = new Players();
-    Player player = <Player>Player.players;
+    Player player = new Player();
+    Players players = <Players>player.Players;
     
-
-
     @FXML
     private Button button = new Button("");
   
-         
     public void action() throws MediaErrorEvent{
     button.setOnAction(new EventHandler<MouseEvent>(){
           @Override
