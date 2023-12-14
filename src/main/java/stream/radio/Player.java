@@ -45,7 +45,7 @@ public class Player {
                 if (mediaPlayer.getError() == null) {
                     mediaPlayer.setOnError(new Runnable() {
                         public void run() {
-                        button.setOnAction(new EventHandler<ActionEvent<MouseEvent>>(){
+                        button.setOnAction(new EventHandler<ActionEvent>(){
                         @Override
                         public void handle(MouseEvent e){
                         }
@@ -121,7 +121,7 @@ public class Player {
         final Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
         String hlStringmfm = (String) hlmfm.toString();
         MediaPlayer mfmPlayer = new MediaPlayer( new Media(hlStringmfm) );
-        btnmfm.setOnAction(new EventHandler<MouseEvent>(){
+        btnmfm.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent emfm){
                mfmPlayer.play();
@@ -133,7 +133,7 @@ public class Player {
         final Hyperlink hlaswat = new Hyperlink("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
         String hlStringaswat = (String) hlaswat.toString();
         MediaPlayer aswatPlayer = new MediaPlayer( new Media(hlStringaswat) );
-        btnaswat.setOnAction(new EventHandler<MouseEvent>(){
+        btnaswat.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent easwat){
                aswatPlayer.play();
@@ -145,7 +145,7 @@ public class Player {
         final Hyperlink hlchada = new Hyperlink("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
         String hlStringchada = (String) hlchada.toString();
         MediaPlayer chadaPlayer = new MediaPlayer( new Media(hlStringchada) );
-        btnchada.setOnAction(new EventHandler<MouseEvent>(){
+        btnchada.setOnAction(new EventHandler<ActionEvent>(){
         @Override
           public void handle(MouseEvent echada){
                chadaPlayer.play();
@@ -157,7 +157,7 @@ public class Player {
         final Hyperlink hlmars = new Hyperlink("http://streamer.eagrpservices.com/audio/radiomars.mp3");
         String hlStringmars = (String) hlmars.toString();
         MediaPlayer marsPlayer = new MediaPlayer( new Media(hlStringmars) );
-        btnmars.setOnAction(new EventHandler<MouseEvent>(){
+        btnmars.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent emars){
                marsPlayer.play();
@@ -169,7 +169,7 @@ public class Player {
         final Hyperlink hlmedradio = new Hyperlink("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3");
         String hlStringmedradio = (String) hlmedradio.toString();
         MediaPlayer medradioPlayer = new MediaPlayer( new Media(hlStringmedradio) );
-        btnmedradio.setOnAction(new EventHandler<MouseEvent>(){
+        btnmedradio.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent emedradio){
                medradioPlayer.play();
@@ -181,7 +181,7 @@ public class Player {
         final Hyperlink hltania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8");
         String hlStringtania = (String) hltania.toString();
         MediaPlayer taniaPlayer = new MediaPlayer( new Media(hlStringtania) );
-        btntania.setOnAction(new EventHandler<MouseEvent>(){
+        btntania.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent etania){
                taniaPlayer.play();
@@ -193,7 +193,7 @@ public class Player {
         final Hyperlink hlatlantic = new Hyperlink("http://atlanticradio.ma:8000/stream/1");
         String hlStringatlantic = (String) hlatlantic.toString();
         MediaPlayer atlanticPlayer = new MediaPlayer( new Media(hlStringatlantic) );
-        btnatlantic.setOnAction(new EventHandler<MouseEvent>(){
+        btnatlantic.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent eatlantic){
                atlanticPlayer.play();
@@ -205,7 +205,7 @@ public class Player {
         final Hyperlink hlyabiladi = new Hyperlink("http://snassen.yabiladi.com:8000/stream/1");
         String hlStringyabiladi = (String) hlyabiladi.toString();
         MediaPlayer yabiladiPlayer = new MediaPlayer( new Media(hlStringyabiladi) );
-        btnyabiladi.setOnAction(new EventHandler<MouseEvent>(){
+        btnyabiladi.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent eyabiladi){
                yabiladiPlayer.play();
@@ -217,7 +217,7 @@ public class Player {
         final Hyperlink hlmedi = new Hyperlink("http://51.222.88.199:80/medi1");
         String hlStringmedi = (String) hlmedi.toString();
         MediaPlayer mediPlayer = new MediaPlayer( new Media(hlStringmedi) );
-        btnmedi.setOnAction(new EventHandler<MouseEvent>(){
+        btnmedi.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent emedi){
                mediPlayer.play();
@@ -229,7 +229,7 @@ public class Player {
         final Hyperlink hlness = new Hyperlink("http://radio.nessradio.net:8000/nessradio.mp3");
         String hlStringness = (String) hlness.toString();
         MediaPlayer nessPlayer = new MediaPlayer( new Media(hlStringness) );
-        btnness.setOnAction(new EventHandler<MouseEvent>(){
+        btnness.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent eness){
                nessPlayer.play();
@@ -241,7 +241,7 @@ public class Player {
         final Hyperlink hlhitradio = new Hyperlink("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3");
         String hlStringhitradio = (String) hlhitradio.toString();
         MediaPlayer hitradioPlayer = new MediaPlayer( new Media(hlStringhitradio) );
-        btnhitradio.setOnAction(new EventHandler<MouseEvent>(){
+        btnhitradio.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent ehitradio){
                hitradioPlayer.play();
@@ -253,7 +253,7 @@ public class Player {
         final Hyperlink hlhitmaroc = new Hyperlink("http://api.webrad.io/data/hls/68/hits1-maroc");
         String hlStringhitmaroc = (String) hlhitmaroc.toString();
         MediaPlayer hitmarocPlayer = new MediaPlayer( new Media(hlStringhitmaroc) );
-        btnhitmaroc.setOnAction(new EventHandler<MouseEvent>(){
+        btnhitmaroc.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent ehitmaroc){
                hitmarocPlayer.play();
@@ -264,7 +264,7 @@ public class Player {
         final Hyperlink hltarab = new Hyperlink("http://streaming2.rimradio.ma/livetarab");
         String hlStringtarab = (String) hltarab.toString();
         MediaPlayer tarabPlayer = new MediaPlayer( new Media(hlStringtarab) );
-        btntarab.setOnAction(new EventHandler<MouseEvent>(){
+        btntarab.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent etarab){
                tarabPlayer.play();
@@ -276,7 +276,7 @@ public class Player {
         final Hyperlink hlwatania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8");
         String hlStringwatania = (String) hlwatania.toString();
         MediaPlayer wataniaPlayer = new MediaPlayer( new Media(hlStringwatania) );
-        btnwatania.setOnAction(new EventHandler<MouseEvent>(){
+        btnwatania.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent ewatania){
                wataniaPlayer.play();
@@ -288,7 +288,7 @@ public class Player {
         final Hyperlink hlmoroccoenglish = new Hyperlink("http://streamer.radio.co/s6cba51492/listen");
         String hlStringmoroccoenglish = (String) hlmoroccoenglish.toString();
         MediaPlayer moroccoenglishPlayer = new MediaPlayer( new Media(hlStringmoroccoenglish) );
-        btnmoroccoenglish.setOnAction(new EventHandler<MouseEvent>(){
+        btnmoroccoenglish.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent emoroccoenglish){
                moroccoenglishPlayer.play();
@@ -300,7 +300,7 @@ public class Player {
         final Hyperlink hltamazgha = new Hyperlink("http://streaming2.rimradio.ma/liveamazighe");
         String hlStringtamazgha = (String) hltamazgha.toString();
         MediaPlayer tamazghaPlayer = new MediaPlayer( new Media(hlStringtamazgha) );
-        btntamazgha.setOnAction(new EventHandler<MouseEvent>(){
+        btntamazgha.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent etamazgha){
                tamazghaPlayer.play();
@@ -312,7 +312,7 @@ public class Player {
         final Hyperlink hlizlan = new Hyperlink("http://izlan.fr/radios/atlas/stream");
         String hlStringizlan = (String) hlizlan.toString();
         MediaPlayer izlanPlayer = new MediaPlayer( new Media(hlStringizlan) );
-        btnizlan.setOnAction(new EventHandler<MouseEvent>(){
+        btnizlan.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent eizlan){
                izlanPlayer.play();
@@ -324,7 +324,7 @@ public class Player {
         final Hyperlink hlcoran = new Hyperlink("http://dedi.radio-coran.net:8000/livehq.mp3");
         String hlStringcoran = (String) hlcoran.toString();
         MediaPlayer coranPlayer = new MediaPlayer( new Media(hlStringcoran) );
-        btncoran.setOnAction(new EventHandler<MouseEvent>(){
+        btncoran.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent ecoran){
                coranPlayer.play();
@@ -336,7 +336,7 @@ public class Player {
         final Hyperlink hlmontecarlo = new Hyperlink("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3");
         String hlStringmontecarlo = (String) hlmontecarlo.toString();
         MediaPlayer montecarloPlayer = new MediaPlayer( new Media(hlStringmontecarlo) );
-        btnmontecarlo.setOnAction(new EventHandler<MouseEvent>(){
+        btnmontecarlo.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent emontecarlo){
                montecarloPlayer.play();
@@ -348,7 +348,7 @@ public class Player {
         final Hyperlink hlaljazeera = new Hyperlink("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8");
         String hlStringaljazeera = (String) hlaljazeera.toString();
         MediaPlayer aljazeeraPlayer = new MediaPlayer( new Media(hlStringaljazeera) );
-        btnaljazeera.setOnAction(new EventHandler<MouseEvent>(){
+        btnaljazeera.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent ealjazeera){
                aljazeeraPlayer.play();
@@ -360,7 +360,7 @@ public class Player {
         final Hyperlink hlskynewsarabia = new Hyperlink("http://radio.skynewsarabia.com/stteam/radio/skynewsarabia");
         String hlStringskynewsarabia = (String) hlskynewsarabia.toString();
         MediaPlayer skynewsarabiaPlayer = new MediaPlayer( new Media(hlStringskynewsarabia) );
-        btnskynewsarabia.setOnAction(new EventHandler<MouseEvent>(){
+        btnskynewsarabia.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent eskynewsarabia){
                skynewsarabiaPlayer.play();
@@ -372,7 +372,7 @@ public class Player {
         final Hyperlink hlbbcarabic = new Hyperlink("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
         String hlStringbbcarabic = (String) hlbbcarabic.toString();
         MediaPlayer bbcarabicPlayer = new MediaPlayer( new Media(hlStringbbcarabic) );
-        btnbbcarabic.setOnAction(new EventHandler<MouseEvent>(){
+        btnbbcarabic.setOnAction(new EventHandler<ActionEvent>(){
           @Override
           public void handle(MouseEvent ebbcarabic){
                bbcarabicPlayer.play();
