@@ -231,7 +231,7 @@ abstract class Player {
 
     Players players = new Players();
     
-    public void action() throws MediaErrorEvent{
+    public void action() throws MediaException{
     button.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent e){
@@ -287,7 +287,7 @@ abstract class Player {
     @FXML
     private Button btnbbcarabic = new Button("bbcarabic");   
 
-     public void mfmAction() throws MediaErrorEvent{
+     public void mfmAction() throws MediaException{
      btnmfm.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emfm){
@@ -296,7 +296,7 @@ abstract class Player {
      });          
      }
 
-     public void aswatAction() throws MediaErrorEvent{
+     public void aswatAction() throws MediaException{
      btnaswat.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent easwat){
@@ -305,7 +305,7 @@ abstract class Player {
      });          
      }
 
-     public void chadaAction() throws MediaErrorEvent{
+     public void chadaAction() throws MediaException{
      btnchada.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent echada){
@@ -314,7 +314,7 @@ abstract class Player {
      });          
      }
 
-     public void marsAction() throws MediaErrorEvent{
+     public void marsAction() throws MediaException{
      btnmars.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emars){
@@ -323,7 +323,7 @@ abstract class Player {
      });          
      }
 
-     public void medradioAction() throws MediaErrorEvent{
+     public void medradioAction() throws MediaException{
      btnmedradio.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emedradio){
@@ -332,7 +332,7 @@ abstract class Player {
      });          
      }
 
-     public void taniaAction() throws MediaErrorEvent{
+     public void taniaAction() throws MediaException{
      btntania.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent etania){
@@ -341,7 +341,7 @@ abstract class Player {
      });          
      }
 
-     public void atlanticAction() throws MediaErrorEvent{
+     public void atlanticAction() throws MediaException{
      btnatlantic.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eatlantic){
@@ -350,7 +350,7 @@ abstract class Player {
      });          
      }
 
-     public void yabiladiAction() throws MediaErrorEvent{
+     public void yabiladiAction() throws MediaException{
      btnyabiladi.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eyabiladi){
@@ -359,7 +359,7 @@ abstract class Player {
      });          
      }
 
-     public void mediAction() throws MediaErrorEvent{
+     public void mediAction() throws MediaException{
      btnmedi.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emedi){
@@ -368,7 +368,7 @@ abstract class Player {
      });          
      }
 
-     public void nessAction() throws MediaErrorEvent{
+     public void nessAction() throws MediaException{
      btnness.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eness){
@@ -377,7 +377,7 @@ abstract class Player {
      });          
      }
 
-     public void hitradioAction() throws MediaErrorEvent{
+     public void hitradioAction() throws MediaException{
      btnhitradio.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ehitradio){
@@ -386,7 +386,7 @@ abstract class Player {
      });          
      }
 
-     public void hitmarocAction() throws MediaErrorEvent{
+     public void hitmarocAction() throws MediaException{
      btnhitmaroc.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ehitmaroc){
@@ -395,7 +395,7 @@ abstract class Player {
      });          
      }
 
-     public void tarabAction() throws MediaErrorEvent{
+     public void tarabAction() throws MediaException{
      btntarab.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent etarab){
@@ -404,7 +404,7 @@ abstract class Player {
      });          
      }
 
-     public void wataniaAction() throws MediaErrorEvent{
+     public void wataniaAction() throws MediaException{
      btnwatania.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ewatania){
@@ -413,7 +413,7 @@ abstract class Player {
      });          
      }
 
-     public void moroccoenglishAction() throws MediaErrorEvent{
+     public void moroccoenglishAction() throws MediaException{
      btnmoroccoenglish.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emoroccoenglish){
@@ -422,7 +422,7 @@ abstract class Player {
      });          
      }
 
-     public void tamazghaAction() throws MediaErrorEvent{
+     public void tamazghaAction() throws MediaException{
      btntamazgha.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent etamazgha){
@@ -431,7 +431,7 @@ abstract class Player {
      });          
      }
 
-     public void izlanAction() throws MediaErrorEvent{
+     public void izlanAction() throws MediaException{
      btnizlan.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eizlan){
@@ -441,7 +441,7 @@ abstract class Player {
      }
 
 
-     public void coranAction() throws MediaErrorEvent{
+     public void coranAction() throws MediaException{
      btncoran.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ecoran){
@@ -450,7 +450,7 @@ abstract class Player {
      });          
      }
 
-     public void montecarloAction() throws MediaErrorEvent{
+     public void montecarloAction() throws MediaException{
      btnmontecarlo.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emontecarlo){
@@ -459,7 +459,7 @@ abstract class Player {
      });          
      }
 
-     public void aljazeeraAction() throws MediaErrorEvent{
+     public void aljazeeraAction() throws MediaException{
      btnaljazeera.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ealjazeera){
@@ -468,7 +468,7 @@ abstract class Player {
      });          
      }
 
-     public void skynewsarabiaAction() throws MediaErrorEvent{
+     public void skynewsarabiaAction() throws MediaException{
      btnskynewsarabia.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eskynewsarabia){
@@ -477,7 +477,7 @@ abstract class Player {
      });          
      }
 
-     public void bbcarabicAction() throws MediaErrorEvent{
+     public void bbcarabicAction() throws MediaException{
      btnbbcarabic.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ebbcarabic){
