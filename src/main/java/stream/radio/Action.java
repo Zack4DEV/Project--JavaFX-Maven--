@@ -18,7 +18,7 @@ import java.net.MalformedURLException;
 
 public class Action {
 
-    Player player = new Player();
+    Player player = new Player(Hyperlink hl);
 
      
     @FXML
