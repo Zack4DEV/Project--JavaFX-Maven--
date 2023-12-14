@@ -22,8 +22,8 @@ public class Action {
     Hyperlink hl;
     String hlString = (String) hl.toString();
 
-    Player player = new Player();
-    Players players = <Players>player.Players;
+    Players players = new Players(hlString);
+    Player <Player>player = <Player>Player.players;
     
     @FXML
     private Button button = new Button("");
