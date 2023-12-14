@@ -20,7 +20,7 @@ import java.net.URISyntaxException;
 
 abstract class Player {
 
-    private final URL hl = new URL();
+    private final URL hl = new URL("");
     Media media;
     MediaPlayer mediaPlayer;
     MediaView mediaView;
