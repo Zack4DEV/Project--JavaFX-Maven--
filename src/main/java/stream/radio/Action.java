@@ -19,7 +19,7 @@ import java.net.MalformedURLException;
 public class Action {
 
     Hyperlink hl;
-    Player players = new Player.Players(hl);
+    Player players = new Player.Players((hl));
      
     @FXML
     private Button button = new Button("");
