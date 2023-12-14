@@ -12,20 +12,23 @@ import javafx.scene.media.MediaView;
 import javafx.event.EventHandler;
 import java.util.*;
 import java.net.*;
+import javafx.net.URI;
 import javafx.scene.control.Hyperlink;
+
 
 abstract class Player {
 
     private final Hyperlink hl;
-    String hlString = (String) hl.getSource();
     Media media;
     MediaPlayer mediaPlayer;
     MediaView mediaView;
 
+    String hlString = (String) hl.toURI().toString();
+    
     public void play() throws Exception {
 
         try {
-        media = new Media(stringHl);
+        media = new Media(hlString);
         if (media.getError() == null) {
             media.setOnError(new Runnable() {
                 public void run() {
@@ -58,153 +61,154 @@ abstract class Player {
         
         public void mfmPlay(){
         Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
-        mfmPlayer = new MediaPlayer(new Media());
-        String hlStringmfm = (String) hlmfm.getSource();
+        MediaPlayer mfmPlayer;
+        String hlStringmfm = (String) hlmfm.toURI().toString();
         mfmPlayer.play(hlStringmfm);
         }
 
         public void aswatPlay(){
         Hyperlink hlaswat = new Hyperlink("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
-        aswatPlayer = new MediaPlayer(new Media());
-        String hlStringaswat = (String) hlaswat.getSource();
+        MediaPlayer aswatPlayer;
+        String hlStringaswat = (String) hlaswat.toURI().toString();
         aswatPlayer.play(hlStringaswat);
         }
 
         public void chadaPlay(){
         Hyperlink hlchada = new Hyperlink("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
-        chadaPlayer = new MediaPlayer(new Media());
-        String hlStringchada = (String) hlchada.getSource();
+        MediaPlayer chadaPlayer;
+        String hlStringchada = (String) hlchada.toURI().toString();
         chadaPlayer.play(hlStringchada);
         }
 
         public void marsPlay(){
         Hyperlink hlmars = new Hyperlink("http://streamer.eagrpservices.com/audio/radiomars.mp3");
-        marsPlayer = new MediaPlayer(new Media());
-        String hlStringmars = (String) hlmars.getSource();
+        MediaPlayer marsPlayer;
+        String hlStringmars = (String) hlmars.toURI().toString();
         marsPlayer.play(hlStringmars);        
         }
-         public void medradioPlay(){
+        
+        public void medradioPlay(){
         Hyperlink hlmedradio = new Hyperlink("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3");
-        medradioPlayer = new MediaPlayer(new Media());
-        String hlStringmedradio = (String) hlmedradio.getSource();
+        MediaPlayer medradioPlayer;
+        String hlStringmedradio = (String) hlmedradio.toURI().toString();
         medradioPlayer.play(hlStringmedradio);
         }
 
         public void taniaPlay(){
         Hyperlink hltania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8");
-        taniaPlayer = new MediaPlayer(new Media());
-        String hlStringtania = (String) hltania.getSource();
+        MediaPlayer taniaPlayer;
+        String hlStringtania = (String) hltania.toURI().toString();
         taniaPlayer.play(hlStringtania);
         }
 
         public void atlanticPlay(){
         Hyperlink hlatlantic = new Hyperlink("http://atlanticradio.ma:8000/stream/1");
-        atlanticPlayer = new MediaPlayer(new Media());
-        String hlStringatlantic = (String) hlatlantic.getSource();
+        MediaPlayer atlanticPlayer;
+        String hlStringatlantic = (String) hlatlantic.toURI().toString();
         atlanticPlayer.play(hlStringatlantic);
         }
 
         public void yabiladiPlay(){
         Hyperlink hlyabiladi = new Hyperlink("http://snassen.yabiladi.com:8000/stream/1");
-        yabilaladidiPlayer = new MediaPlayer(new Media());
-        String hlStringyabiladi = (String) hlyabiladi.getSource();
+        MediaPlayer yabilaladidiPlayer;
+        String hlStringyabiladi = (String) hlyabiladi.toURI().toString();
         yabiladiPlayer.play(hlStringyabiladi);
         }
 
         public void mediPlay(){
         Hyperlink hlmedi = new Hyperlink("http://51.222.88.199:80/medi1");
-        mediPlayer = new MediaPlayer(new Media());
-        String hlStringmedi = (String) hlmedi.getSource();
+        MediaPlayer mediPlayer;
+        String hlStringmedi = (String) hlmedi.toURI().toString();
         mediPlayer.play(hlStringmedi);       
          }
 
         public void nessPlay(){
         Hyperlink hlness = new Hyperlink("http://radio.nessradio.net:8000/nessradio.mp3");
-        nessPlayer = new MediaPlayer(new Media());
-        String hlStringness = (String) hlness.getSource();
+        MediaPlayer nessPlayer;
+        String hlStringness = (String) hlness.toURI().toString();
         nessPlayer.play(hlStringness);
         }
 
         public void hitradioPlay(){
         Hyperlink hlhitradio = new Hyperlink("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3");
-        hitradioPlayer = new MediaPlayer(new Media());
-        String hlStringhitradio = (String) hlhitradio.getSource();
+        MediaPlayer hitradioPlayer;
+        String hlStringhitradio = (String) hlhitradio.toURI().toString();
         hitradioPlayer.play(hlStringhitradio);
         }
 
         public void hitmarocPlay(){
         Hyperlink hlhitmaroc = new Hyperlink("http://api.webrad.io/data/hls/68/hits1-maroc");
-        hitmarocPlayer = new MediaPlayer(new Media());
-        String hlStringhitmaroc = (String) hlhitmaroc.getSource();
+        MediaPlayer hitmarocPlayer;
+        String hlStringhitmaroc = (String) hlhitmaroc.toURI().toString();
         hitmarocPlayer.play(hlStringhitmaroc);
         }
         public void tarabPlay(){
         Hyperlink hltarab = new Hyperlink("http://streaming2.rimradio.ma/livetarab");
-        tarabPlayer = new MediaPlayer(new Media());
-        String hlStringness = (String) hlness.getSource();
+        MediaPlayer tarabPlayer;
+        String hlStringness = (String) hlness.toURI().toString();
         nessPlayer.play(hlStringness);        
         }
 
         public void wataniaPlay(){
         Hyperlink hlwatania = new Hyperlink("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8");
-        wataniaPlayer = new MediaPlayer(new Media());
-        String hlStringwatania = (String) hlwatania.getSource();
+        MediaPlayer wataniaPlayer;
+        String hlStringwatania = (String) hlwatania.toURI().toString();
         wataniaPlayer.play(hlStringwatania);
         }
 
         public void moroccoenglishPlay(){
         Hyperlink hlmoroccoenglish = new Hyperlink("http://streamer.radio.co/s6cba51492/listen");
-        moroccoenglishPlayer = new MediaPlayer(new Media());
-        String hlStringmoroccoenglish = (String) hlmoroccoenglish.getSource();
+        MediaPlayer moroccoenglishPlayer;
+        String hlStringmoroccoenglish = (String) hlmoroccoenglish.toURI().toString();
         moroccoenglishPlayer.play(hlStringmoroccoenglish);        
         }
 
         public void tamazghaPlay(){
         Hyperlink hltamazgha = new Hyperlink("http://streaming2.rimradio.ma/liveamazighe");
-        tamazghaPlayer = new MediaPlayer(new Media());
-        String hlStringtamazgha = (String) hltamazgha.getSource();
+        MediaPlayer tamazghaPlayer;
+        String hlStringtamazgha = (String) hltamazgha.toURI().toString();
         tamazghaPlayer.play(hlStringtamazgha);
         }
 
         public void izlanPlay(){
         Hyperlink hlizlan = new Hyperlink("http://izlan.fr/radios/atlas/stream");
-        izlanPlayer = new MediaPlayer(new Media());
-        String hlStringizlan = (String) hlizlan.getSource();
+        MediaPlayer izlanPlayer;
+        String hlStringizlan = (String) hlizlan.toURI().toString();
         izlanPlayer.play(hlStringizlan);        
         }
 
         public void coranPlay(){
         Hyperlink hlcoran = new Hyperlink("http://dedi.radio-coran.net:8000/livehq.mp3");
-        coranPlayer = new MediaPlayer(new Media());
-        String hlStringcoran = (String) hlcoran.getSource();
+        MediaPlayer coranPlayer;
+        String hlStringcoran = (String) hlcoran.toURI().toString();
         coranPlayer.play(hlStringcoran);        
         }
         
         public void montecarloPlay(){
         Hyperlink hlmontecarlo = new Hyperlink("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3");
-        montecarloPlayer = new MediaPlayer(new Media());
-        String hlStringmontecarlo = (String) hlmontecarlo.getSource();
+        MediaPlayer montecarloPlayer;
+        String hlStringmontecarlo = (String) hlmontecarlo.toURI().toString();
         montecarloPlayer.play(hlStringmontecarlo);
         }
 
         public void aljazeeraPlay(Hyperlink hlaljazeera){
         Hyperlink hlaljazeera = new Hyperlink("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8");
-        aljazeeraPlayer = new MediaPlayer(new Media());
-        String hlStringaljazeera = (String) hlaljazeera.getSource();
+        MediaPlayer aljazeeraPlayer;
+        String hlStringaljazeera = (String) hlaljazeera.toURI().toString();
         aljazeeraPlayer.play(hlStringaljazeera);
         }
 
         public void skynewsarabiaPlay(){
-        Hyperlink hlskybewsarabia = new Hyperlink("http://radio.skynewsarabia.com/stteam/radio/skynewsarabia");
-        skybewsarabiaPlayer = new MediaPlayer(new Media());
-        String hlStringskynewsarabia = (String) hlskynewsarabia.getSource();
+        Hyperlink hlskynewsarabia = new Hyperlink("http://radio.skynewsarabia.com/stteam/radio/skynewsarabia");
+        MediaPlayer skynewsarabiaPlayer;
+        String hlStringskynewsarabia = (String) hlskynewsarabia.toURI().toString();
         skynewsarabiaPlayer.play(hlStringskynewsarabia);
         }
 
         public void bbcarabicPlay(){
         Hyperlink hlbbcarabic = new Hyperlink("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
-        bbcarabicPlayer = new MediaPlayer(new Media());
-        String hlStringbbcarabic = (String) hlbbcarabic.getSource();
+        MediaPlayer bbcarabicPlayer;
+        String hlStringbbcarabic = (String) hlbbcarabic.toURI().toString();
         bbcarabicPlayer.play(hlStringbbcarabic);
         }
     
