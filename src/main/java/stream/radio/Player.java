@@ -35,7 +35,7 @@ abstract class Player {
                 }
             });
             try {
-                mediaPlayer = new MediaPlayer(String);
+                mediaPlayer = new MediaPlayer(hlString);
                 if (mediaPlayer.getError() == null) {
                     mediaPlayer.setOnError(new Runnable() {
                         public void run() {
@@ -61,155 +61,155 @@ abstract class Player {
         
         public void mfmPlay(){
         URL hlmfm = new URL("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
-        MediaPlayer mfmPlayer;
         String hlStringmfm = (String) hlmfm.toURI().toString();
-        mfmPlayer.play(hlStringmfm);
+        MediaPlayer mfmPlayer = new MediaPlayer(hlStringmfm);
+        mfmPlayer.play();
         }
 
         public void aswatPlay(){
         URL hlaswat = new URL("http://broadcast.ice.infomaniak.ch/aswat-high.mp3");
-        MediaPlayer aswatPlayer;
         String hlStringaswat = (String) hlaswat.toURI().toString();
-        aswatPlayer.play(hlStringaswat);
+        MediaPlayer aswatPlayer = new MediaPlayer(hlStringaswat);
+        aswatPlayer.play();
         }
 
         public void chadaPlay(){
         URL hlchada = new URL("http://live-reflector.ice.infomaniak.ch/chadafm-high.mp3");
-        MediaPlayer chadaPlayer;
         String hlStringchada = (String) hlchada.toURI().toString();
-        chadaPlayer.play(hlStringchada);
+        MediaPlayer chadaPlayer = new MediaPlayer(hlStringchada);
+        chadaPlayer.play();
         }
 
         public void marsPlay(){
         URL hlmars = new URL("http://streamer.eagrpservices.com/audio/radiomars.mp3");
-        MediaPlayer marsPlayer;
         String hlStringmars = (String) hlmars.toURI().toString();
-        marsPlayer.play(hlStringmars);        
+        MediaPlayer marsPlayer = new MediaPlayer(hlStringmars);
+        marsPlayer.play();        
         }
         
         public void medradioPlay(){
         URL hlmedradio = new URL("http://medradio-maroc.ice.infomaniak.ch/medradio-maroc-64.mp3");
-        MediaPlayer medradioPlayer;
         String hlStringmedradio = (String) hlmedradio.toURI().toString();
-        medradioPlayer.play(hlStringmedradio);
+        MediaPlayer medradioPlayer = new MediaPlayer(hlStringmedradio);
+        medradioPlayer.play();
         }
 
         public void taniaPlay(){
         URL hltania = new URL("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_2m/radio_hls_ts/index.m3u8");
-        MediaPlayer taniaPlayer;
         String hlStringtania = (String) hltania.toURI().toString();
-        taniaPlayer.play(hlStringtania);
+        MediaPlayer taniaPlayer = new MediaPlayer(hlStringtania);
+        taniaPlayer.play();
         }
 
         public void atlanticPlay(){
         URL hlatlantic = new URL("http://atlanticradio.ma:8000/stream/1");
-        MediaPlayer atlanticPlayer;
         String hlStringatlantic = (String) hlatlantic.toURI().toString();
-        atlanticPlayer.play(hlStringatlantic);
+        MediaPlayer atlanticPlayer = new MediaPlayer(hlStringatlantic);
+        atlanticPlayer.play();
         }
 
         public void yabiladiPlay(){
         URL hlyabiladi = new URL("http://snassen.yabiladi.com:8000/stream/1");
-        MediaPlayer yabilaladidiPlayer;
         String hlStringyabiladi = (String) hlyabiladi.toURI().toString();
-        yabiladiPlayer.play(hlStringyabiladi);
+        MediaPlayer yabilaladidiPlayer = new MediaPlayer(hlStringyabiladi);
+        yabiladiPlayer.play();
         }
 
         public void mediPlay(){
         URL hlmedi = new URL("http://51.222.88.199:80/medi1");
-        MediaPlayer mediPlayer;
         String hlStringmedi = (String) hlmedi.toURI().toString();
-        mediPlayer.play(hlStringmedi);       
+        MediaPlayer mediPlayer = new MediaPlayer(hlStringmedi);
+        mediPlayer.play();       
          }
 
         public void nessPlay(){
         URL hlness = new URL("http://radio.nessradio.net:8000/nessradio.mp3");
-        MediaPlayer nessPlayer;
         String hlStringness = (String) hlness.toURI().toString();
-        nessPlayer.play(hlStringness);
+        MediaPlayer nessPlayer = new MediaPlayer(hlStringness);
+        nessPlayer.play();
         }
 
         public void hitradioPlay(){
         URL hlhitradio = new URL("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3");
-        MediaPlayer hitradioPlayer;
         String hlStringhitradio = (String) hlhitradio.toURI().toString();
-        hitradioPlayer.play(hlStringhitradio);
+        MediaPlayer hitradioPlayer = new MediaPlayer(hlStringhitradio);
+        hitradioPlayer.play();
         }
 
         public void hitmarocPlay(){
         URL hlhitmaroc = new URL("http://api.webrad.io/data/hls/68/hits1-maroc");
-        MediaPlayer hitmarocPlayer;
         String hlStringhitmaroc = (String) hlhitmaroc.toURI().toString();
-        hitmarocPlayer.play(hlStringhitmaroc);
+        MediaPlayer hitmarocPlayer = new MediaPlayer(hlStringhitmaroc);
+        hitmarocPlayer.play();
         }
         public void tarabPlay(){
         URL hltarab = new URL("http://streaming2.rimradio.ma/livetarab");
-        MediaPlayer tarabPlayer;
         String hlStringness = (String) hlness.toURI().toString();
-        nessPlayer.play(hlStringness);        
+        MediaPlayer tarabPlayer = new MediaPlayer(hlStringness);
+        nessPlayer.play();        
         }
 
         public void wataniaPlay(){
         URL hlwatania = new URL("http://cdnamd-hls-globecast.akamaized.net/live/ramdisk/radio_idaa_watanya/hls_snrt_radio/index.m3u8");
-        MediaPlayer wataniaPlayer;
         String hlStringwatania = (String) hlwatania.toURI().toString();
-        wataniaPlayer.play(hlStringwatania);
+        MediaPlayer wataniaPlayer = new MediaPlayer(hlStringwatania);
+        wataniaPlayer.play();
         }
 
         public void moroccoenglishPlay(){
         URL hlmoroccoenglish = new URL("http://streamer.radio.co/s6cba51492/listen");
-        MediaPlayer moroccoenglishPlayer;
         String hlStringmoroccoenglish = (String) hlmoroccoenglish.toURI().toString();
-        moroccoenglishPlayer.play(hlStringmoroccoenglish);        
+        MediaPlayer moroccoenglishPlayer = new MediaPlayer(hlStringmoroccoenglish);
+        moroccoenglishPlayer.play();        
         }
 
         public void tamazghaPlay(){
         URL hltamazgha = new URL("http://streaming2.rimradio.ma/liveamazighe");
-        MediaPlayer tamazghaPlayer;
         String hlStringtamazgha = (String) hltamazgha.toURI().toString();
-        tamazghaPlayer.play(hlStringtamazgha);
+        MediaPlayer tamazghaPlayer = new MediaPlayer(hlStringtamazgha);
+        tamazghaPlayer.play();
         }
 
         public void izlanPlay(){
         URL hlizlan = new URL("http://izlan.fr/radios/atlas/stream");
-        MediaPlayer izlanPlayer;
         String hlStringizlan = (String) hlizlan.toURI().toString();
-        izlanPlayer.play(hlStringizlan);        
+        MediaPlayer izlanPlayer = new MediaPlayer(hlStringizlan);
+        izlanPlayer.play();        
         }
 
         public void coranPlay(){
         URL hlcoran = new URL("http://dedi.radio-coran.net:8000/livehq.mp3");
-        MediaPlayer coranPlayer;
         String hlStringcoran = (String) hlcoran.toURI().toString();
-        coranPlayer.play(hlStringcoran);        
+        MediaPlayer coranPlayer = new MediaPlayer(hlStringcoran);
+        coranPlayer.play();        
         }
         
         public void montecarloPlay(){
         URL hlmontecarlo = new URL("http://montecarlodoualiya128k.ice.infomaniak.ch/mc-doualiya.mp3");
-        MediaPlayer montecarloPlayer;
         String hlStringmontecarlo = (String) hlmontecarlo.toURI().toString();
-        montecarloPlayer.play(hlStringmontecarlo);
+        MediaPlayer montecarloPlayer = new MediaPlayer(hlStringmontecarlo);
+        montecarloPlayer.play();
         }
 
-        public void aljazeeraPlay(URL hlaljazeera){
+        public void aljazeeraPlay(){
         URL hlaljazeera = new URL("http://live-hls-audio-web-aja.getaj.net/VOICE-AJA/01.m3u8");
-        MediaPlayer aljazeeraPlayer;
         String hlStringaljazeera = (String) hlaljazeera.toURI().toString();
-        aljazeeraPlayer.play(hlStringaljazeera);
+        MediaPlayer aljazeeraPlayer = new MediaPlayer(hlStringaljazeera);
+        aljazeeraPlayer.play();
         }
 
         public void skynewsarabiaPlay(){
         URL hlskynewsarabia = new URL("http://radio.skynewsarabia.com/stteam/radio/skynewsarabia");
-        MediaPlayer skynewsarabiaPlayer;
         String hlStringskynewsarabia = (String) hlskynewsarabia.toURI().toString();
-        skynewsarabiaPlayer.play(hlStringskynewsarabia);
+        MediaPlayer skynewsarabiaPlayer = new MediaPlayer(hlStringskynewsarabia);
+        skynewsarabiaPlayer.play();
         }
 
         public void bbcarabicPlay(){
         URL hlbbcarabic = new URL("http://stream.live.vc.bbcmedia.co.uk/bbc_arabic_radio");
-        MediaPlayer bbcarabicPlayer;
         String hlStringbbcarabic = (String) hlbbcarabic.toURI().toString();
-        bbcarabicPlayer.play(hlStringbbcarabic);
+        MediaPlayer bbcarabicPlayer = new MediaPlayer(hlStringbbcarabic);
+        bbcarabicPlayer.play();
         }
     
     }
