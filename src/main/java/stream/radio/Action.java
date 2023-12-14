@@ -1,6 +1,6 @@
 package stream.radio;
 
-import stream.radio.Player.Players; 
+import stream.radio.Player; 
      
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -277,9 +277,7 @@ public class Action {
           }
      });          
      }
-          
-     }
-         
+                   
      }
      
 }
