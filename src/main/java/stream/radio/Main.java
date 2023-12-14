@@ -8,22 +8,33 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.io.IOException;
+
 public class Main extends Application {
    
    @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(ClassLoader.getSystemResource("../../../resources/static/Main.fxml"));
-        Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 967, 692);
+       FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/static/Main.fxml"));
+       fxmlLoader.setRoot(this);
+       fxmlLoader.setController(this);
 
-        scene.getStylesheets().add(ClassLoader.getSystemResource("../../../resources/static/StyleSheets/Main.css").toExternalForm());
-        scene.setFill(Color.FLORALWHITE);
-        stage.setTitle("Radio APP");
-        stage.setScene(scene);
-        stage.initStyle(StageStyle.TRANSPARENT);
-        stage.setResizable(true);
+       try {
+          Parent root = (Parent) fxmlLoader.load();
+           Scene scene = new Scene(root);
+           
+           scene.getStylesheets().add(ClassLoader.getSystemResource("/static/StyleSheets/Main.css").toExternalForm());
+           scene.setFill(Color.FLORALWHITE);
+           stage.setTitle("Radio APP");
+           stage.setScene(scene);
+           stage.initStyle(StageStyle.TRANSPARENT);
+           stage.setResizable(true);
 
-        stage.show();
+           stage.show();
+       } catch (IOException exception) {
+           throw new RuntimeException(exception);
+       }
+
+        
     }
 
     public static void main(String[] args) {
