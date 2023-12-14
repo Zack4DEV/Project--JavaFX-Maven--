@@ -22,7 +22,7 @@ import java.net.MalformedURLException;
 
 
 
-abstract class Player {
+public class Player {
 
     private final Hyperlink hl = new Hyperlink("");
     Media media;
@@ -63,7 +63,7 @@ abstract class Player {
         
     }
     
-        public class Players {
+        class Players {
         
         public void mfmPlay() throws MalformedURLException{
         final Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
@@ -221,7 +221,7 @@ abstract class Player {
     }
 
 
-    public class Action {
+    abstract class Action {
 
     @FXML
     private Button button = new Button("");
@@ -240,7 +240,7 @@ abstract class Player {
      }
 
 
-    public class ActionPlayers extends Players {
+    class ActionPlayers extends Players {
          
     @FXML
     private Button btnmfm = new Button("mfm");
