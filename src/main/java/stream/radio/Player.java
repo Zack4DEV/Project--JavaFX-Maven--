@@ -239,7 +239,7 @@ abstract class Player {
      }
 
 
-    class ActionPlayers extends Players {
+   abstract class ActionPlayers extends Players {
 
     Players players = Players.class.getResource();
 
