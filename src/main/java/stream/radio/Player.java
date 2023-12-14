@@ -229,7 +229,7 @@ abstract class Player {
     private final Hyperlink hl = new Hyperlink("");
     String hlString = (String) hl.toString();
 
-    Player player = new Player(hlString);
+    Players players = new Players(hlString);
     
     public void action() throws MediaErrorEvent{
     button.setOnAction(new EventHandler<MouseEvent>(){
@@ -240,7 +240,7 @@ abstract class Player {
      }
 
 
-    public class ActionPlayer extends Player {
+    public class ActionPlayers extends Players {
          
     @FXML
     private Button btnmfm = new Button("mfm");
