@@ -241,7 +241,6 @@ public class Player {
         final Hyperlink hlhitradio = new Hyperlink("http://hitradio-maroc.ice.infomaniak.ch/hitradio-maroc-128.mp3");
         String hlStringhitradio = (String) hlhitradio.toString();
         MediaPlayer hitradioPlayer = new MediaPlayer( new Media(hlStringhitradio) );
-        public void hitradioAction(){
         btnhitradio.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ehitradio){
