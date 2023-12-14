@@ -232,7 +232,7 @@ abstract class Player {
     Players players = new Players();
     
     public void action() throws MediaException{
-    button.setOnAction(new EventHandler<MouseEvent>(){
+    button.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent e){
           }
@@ -288,7 +288,7 @@ abstract class Player {
     private Button btnbbcarabic = new Button("bbcarabic");   
 
      public void mfmAction() throws MediaException{
-     btnmfm.setOnAction(new EventHandler<MouseEvent>(){
+     btnmfm.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent emfm){
                players.mfmPlayer.play();
@@ -297,7 +297,7 @@ abstract class Player {
      }
 
      public void aswatAction() throws MediaException{
-     btnaswat.setOnAction(new EventHandler<MouseEvent>(){
+     btnaswat.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent easwat){
                players.aswatPlayer.play();
@@ -306,7 +306,7 @@ abstract class Player {
      }
 
      public void chadaAction() throws MediaException{
-     btnchada.setOnAction(new EventHandler<MouseEvent>(){
+     btnchada.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent echada){
                players.chadaPlayer.play();
@@ -315,7 +315,7 @@ abstract class Player {
      }
 
      public void marsAction() throws MediaException{
-     btnmars.setOnAction(new EventHandler<MouseEvent>(){
+     btnmars.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent emars){
                players.marsPlayer.play();
@@ -324,7 +324,7 @@ abstract class Player {
      }
 
      public void medradioAction() throws MediaException{
-     btnmedradio.setOnAction(new EventHandler<MouseEvent>(){
+     btnmedradio.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent emedradio){
                players.medradioPlayer.play();
@@ -333,7 +333,7 @@ abstract class Player {
      }
 
      public void taniaAction() throws MediaException{
-     btntania.setOnAction(new EventHandler<MouseEvent>(){
+     btntania.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent etania){
                players.taniaPlayer.play();
@@ -342,7 +342,7 @@ abstract class Player {
      }
 
      public void atlanticAction() throws MediaException{
-     btnatlantic.setOnAction(new EventHandler<MouseEvent>(){
+     btnatlantic.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent eatlantic){
                players.atlanticPlayer.play();
@@ -351,7 +351,7 @@ abstract class Player {
      }
 
      public void yabiladiAction() throws MediaException{
-     btnyabiladi.setOnAction(new EventHandler<MouseEvent>(){
+     btnyabiladi.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent eyabiladi){
                players.yabiladiPlayer.play();
@@ -360,7 +360,7 @@ abstract class Player {
      }
 
      public void mediAction() throws MediaException{
-     btnmedi.setOnAction(new EventHandler<MouseEvent>(){
+     btnmedi.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent emedi){
                players.mediPlayer.play();
@@ -369,7 +369,7 @@ abstract class Player {
      }
 
      public void nessAction() throws MediaException{
-     btnness.setOnAction(new EventHandler<MouseEvent>(){
+     btnness.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent eness){
                players.nessPlayer.play();
@@ -378,7 +378,7 @@ abstract class Player {
      }
 
      public void hitradioAction() throws MediaException{
-     btnhitradio.setOnAction(new EventHandler<MouseEvent>(){
+     btnhitradio.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent ehitradio){
                players.hitradioPlayer.play();
@@ -387,7 +387,7 @@ abstract class Player {
      }
 
      public void hitmarocAction() throws MediaException{
-     btnhitmaroc.setOnAction(new EventHandler<MouseEvent>(){
+     btnhitmaroc.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent ehitmaroc){
                players.hitmarocPlayer.play();
@@ -396,7 +396,7 @@ abstract class Player {
      }
 
      public void tarabAction() throws MediaException{
-     btntarab.setOnAction(new EventHandler<MouseEvent>(){
+     btntarab.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent etarab){
                players.tarabPlayer.play();
@@ -405,7 +405,7 @@ abstract class Player {
      }
 
      public void wataniaAction() throws MediaException{
-     btnwatania.setOnAction(new EventHandler<MouseEvent>(){
+     btnwatania.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent ewatania){
                players.wataniaPlayer.play();
@@ -414,7 +414,7 @@ abstract class Player {
      }
 
      public void moroccoenglishAction() throws MediaException{
-     btnmoroccoenglish.setOnAction(new EventHandler<MouseEvent>(){
+     btnmoroccoenglish.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent emoroccoenglish){
                players.moroccoenglishPlayer.play();
@@ -423,7 +423,7 @@ abstract class Player {
      }
 
      public void tamazghaAction() throws MediaException{
-     btntamazgha.setOnAction(new EventHandler<MouseEvent>(){
+     btntamazgha.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent etamazgha){
                players.tamazghaPlayer.play();
@@ -432,7 +432,7 @@ abstract class Player {
      }
 
      public void izlanAction() throws MediaException{
-     btnizlan.setOnAction(new EventHandler<MouseEvent>(){
+     btnizlan.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent eizlan){
                players.izlanPlayer.play();
@@ -442,7 +442,7 @@ abstract class Player {
 
 
      public void coranAction() throws MediaException{
-     btncoran.setOnAction(new EventHandler<MouseEvent>(){
+     btncoran.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent ecoran){
                players.coranPlayer.play();
@@ -451,7 +451,7 @@ abstract class Player {
      }
 
      public void montecarloAction() throws MediaException{
-     btnmontecarlo.setOnAction(new EventHandler<MouseEvent>(){
+     btnmontecarlo.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent emontecarlo){
                players.montecarloPlayer.play();
@@ -460,7 +460,7 @@ abstract class Player {
      }
 
      public void aljazeeraAction() throws MediaException{
-     btnaljazeera.setOnAction(new EventHandler<MouseEvent>(){
+     btnaljazeera.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent ealjazeera){
                players.aljazeeraPlayer.play();
@@ -469,7 +469,7 @@ abstract class Player {
      }
 
      public void skynewsarabiaAction() throws MediaException{
-     btnskynewsarabia.setOnAction(new EventHandler<MouseEvent>(){
+     btnskynewsarabia.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent eskynewsarabia){
                players.skynewsarabiaPlayer.play();
@@ -478,7 +478,7 @@ abstract class Player {
      }
 
      public void bbcarabicAction() throws MediaException{
-     btnbbcarabic.setOnAction(new EventHandler<MouseEvent>(){
+     btnbbcarabic.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent ebbcarabic){
                players.bbcarabicPlayer.play();
