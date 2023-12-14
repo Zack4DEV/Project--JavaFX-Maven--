@@ -1,7 +1,5 @@
 package stream.radio;
 
-import stream.radio.Action;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.media.*;
@@ -231,7 +229,7 @@ abstract class Player {
     private final Hyperlink hl = new Hyperlink("");
     String hlString = (String) hl.toString();
 
-    Player player = new Player();
+    Player player = new Player(hlString);
     
     public void action() throws MediaErrorEvent{
     button.setOnAction(new EventHandler<MouseEvent>(){
