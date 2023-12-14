@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.media.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaErrorEvent;
-import javafx.scene.media.MediaException;
+import javafx.scene.media.Exception;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.control.Hyperlink;
@@ -58,7 +58,7 @@ abstract class Player {
             }
         } else {
         }
-    } catch (Exception mediaException) {
+    } catch (Exception Exception) {
     }
         
     }
@@ -230,7 +230,7 @@ abstract class Player {
     String hlString = (String) hl.toString();
 
     
-    public void action() throws MediaException{
+    public void action() throws Exception{
     button.setOnAction(new EventHandler<>(){
           @Override
           public void handle(MouseEvent e){
@@ -288,200 +288,200 @@ abstract class Player {
     @FXML
     private Button btnbbcarabic = new Button("bbcarabic");   
 
-     public  abstract void mfmAction() throws MediaException{
+     public void mfmAction() throws Exception{
      btnmfm.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent emfm){
+          public void handle(MouseEvent emfm){
                players.mfmPlayer.play();
           }
      });          
      }
 
-     public  abstract void aswatAction() throws MediaException{
+     public void aswatAction() throws Exception{
      btnaswat.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent easwat){
+          public void handle(MouseEvent easwat){
                players.aswatPlayer.play();
           }
      });          
      }
 
-     public  abstract void chadaAction() throws MediaException{
+     public void chadaAction() throws Exception{
      btnchada.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent echada){
+          public void handle(MouseEvent echada){
                players.chadaPlayer.play();
           }
      });          
      }
 
-     public  abstract void marsAction() throws MediaException{
+     public void marsAction() throws Exception{
      btnmars.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent emars){
+          public void handle(MouseEvent emars){
                players.marsPlayer.play();
           }
      });          
      }
 
-     public  abstract void medradioAction() throws MediaException{
+     public void medradioAction() throws Exception{
      btnmedradio.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent emedradio){
+          public void handle(MouseEvent emedradio){
                players.medradioPlayer.play();
           }
      });          
      }
 
-     public  abstract void taniaAction() throws MediaException{
+     public void taniaAction() throws Exception{
      btntania.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent etania){
+          public void handle(MouseEvent etania){
                players.taniaPlayer.play();
           }
      });          
      }
 
-     public  abstract void atlanticAction() throws MediaException{
+     public void atlanticAction() throws Exception{
      btnatlantic.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent eatlantic){
+          public void handle(MouseEvent eatlantic){
                players.atlanticPlayer.play();
           }
      });          
      }
 
-     public  abstract void yabiladiAction() throws MediaException{
+     public void yabiladiAction() throws Exception{
      btnyabiladi.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent eyabiladi){
+          public void handle(MouseEvent eyabiladi){
                players.yabiladiPlayer.play();
           }
      });          
      }
 
-     public  abstract void mediAction() throws MediaException{
+     public void mediAction() throws Exception{
      btnmedi.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent emedi){
+          public void handle(MouseEvent emedi){
                players.mediPlayer.play();
           }
      });          
      }
 
-     public  abstract void nessAction() throws MediaException{
+     public void nessAction() throws Exception{
      btnness.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent eness){
+          public void handle(MouseEvent eness){
                players.nessPlayer.play();
           }
      });          
      }
 
-     public  abstract void hitradioAction() throws MediaException{
+     public void hitradioAction() throws Exception{
      btnhitradio.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent ehitradio){
+          public void handle(MouseEvent ehitradio){
                players.hitradioPlayer.play();
           }
      });          
      }
 
-     public  abstract void hitmarocAction() throws MediaException{
+     public void hitmarocAction() throws Exception{
      btnhitmaroc.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent ehitmaroc){
+          public void handle(MouseEvent ehitmaroc){
                players.hitmarocPlayer.play();
           }
      });          
      }
 
-     public  abstract void tarabAction() throws MediaException{
+     public void tarabAction() throws Exception{
      btntarab.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent etarab){
+          public void handle(MouseEvent etarab){
                players.tarabPlayer.play();
           }
      });          
      }
 
-     public  abstract void wataniaAction() throws MediaException{
+     public void wataniaAction() throws Exception{
      btnwatania.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent ewatania){
+          public void handle(MouseEvent ewatania){
                players.wataniaPlayer.play();
           }
      });          
      }
 
-     public  abstract void moroccoenglishAction() throws MediaException{
+     public void moroccoenglishAction() throws Exception{
      btnmoroccoenglish.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent emoroccoenglish){
+          public void handle(MouseEvent emoroccoenglish){
                players.moroccoenglishPlayer.play();
           }
      });          
      }
 
-     public  abstract void tamazghaAction() throws MediaException{
+     public void tamazghaAction() throws Exception{
      btntamazgha.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent etamazgha){
+          public void handle(MouseEvent etamazgha){
                players.tamazghaPlayer.play();
           }
      });          
      }
 
-     public  abstract void izlanAction() throws MediaException{
+     public void izlanAction() throws Exception{
      btnizlan.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent eizlan){
+          public void handle(MouseEvent eizlan){
                players.izlanPlayer.play();
           }
      });          
      }
 
 
-     public  abstract void coranAction() throws MediaException{
+     public void coranAction() throws Exception{
      btncoran.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent ecoran){
+          public void handle(MouseEvent ecoran){
                players.coranPlayer.play();
           }
      });          
      }
 
-     public  abstract void montecarloAction() throws MediaException{
+     public void montecarloAction() throws Exception{
      btnmontecarlo.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent emontecarlo){
+          public void handle(MouseEvent emontecarlo){
                players.montecarloPlayer.play();
           }
      });          
      }
 
-     public  abstract void aljazeeraAction() throws MediaException{
+     public void aljazeeraAction() throws Exception{
      btnaljazeera.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent ealjazeera){
+          public void handle(MouseEvent ealjazeera){
                players.aljazeeraPlayer.play();
           }
      });          
      }
 
-     public  abstract void skynewsarabiaAction() throws MediaException{
+     public void skynewsarabiaAction() throws Exception{
      btnskynewsarabia.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent eskynewsarabia){
+          public void handle(MouseEvent eskynewsarabia){
                players.skynewsarabiaPlayer.play();
           }
      });          
      }
 
-     public  abstract void bbcarabicAction() throws MediaException{
+     public void bbcarabicAction() throws Exception{
      btnbbcarabic.setOnAction(new EventHandler<>(){
           @Override
-          public  abstract void handle(MouseEvent ebbcarabic){
+          public void handle(MouseEvent ebbcarabic){
                players.bbcarabicPlayer.play();
           }
      });          
