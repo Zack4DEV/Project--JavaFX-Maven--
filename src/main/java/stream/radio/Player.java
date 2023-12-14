@@ -111,7 +111,7 @@ abstract class Player {
         public void yabiladiPlay(){
         URL hlyabiladi = new URL("http://snassen.yabiladi.com:8000/stream/1");
         String hlStringyabiladi = (String) hlyabiladi.toURI().toString();
-        MediaPlayer yabilaladidiPlayer = new MediaPlayer( new Media(hlStringyabiladi) );
+        MediaPlayer yabiladiPlayer = new MediaPlayer( new Media(hlStringyabiladi) );
         yabiladiPlayer.play();
         }
 
@@ -144,9 +144,9 @@ abstract class Player {
         }
         public void tarabPlay(){
         URL hltarab = new URL("http://streaming2.rimradio.ma/livetarab");
-        String hlStringness = (String) hlness.toURI().toString();
-        MediaPlayer tarabPlayer = new MediaPlayer( new Media(hlStringness) );
-        nessPlayer.play();        
+        String hlStringtarab = (String) hltarab.toURI().toString();
+        MediaPlayer tarabPlayer = new MediaPlayer( new Media(hlStringtarab) );
+        tarabPlayer.play();        
         }
 
         public void wataniaPlay(){
