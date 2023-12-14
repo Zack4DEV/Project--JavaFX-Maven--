@@ -12,7 +12,7 @@ import javafx.scene.media.MediaView;
 import javafx.event.EventHandler;
 import java.util.*;
 import java.net.*;
-import javafx.net.URI;
+import java.net.URI;
 import javafx.scene.control.Hyperlink;
 
 
