@@ -3,13 +3,14 @@ package stream.radio;
 import stream.radio.Action;
 
 import javafx.fxml.FXML;
-import javafx.net.Hyperlink;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.event.EventHandler;
 import java.util.*;
+import java.net.*;
+import java.net.Hyperlink;
 
 abstract class Player {
 
