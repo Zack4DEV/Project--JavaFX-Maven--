@@ -22,7 +22,7 @@ import java.net.MalformedURLException;
 
 
 
-public class Player {
+abstract class Player {
 
     private final Hyperlink hl = new Hyperlink("");
     Media media;
@@ -221,7 +221,7 @@ public class Player {
     }
 
 
-    abstract class Action {
+    public class Action {
 
     @FXML
     private Button button = new Button("");
@@ -239,7 +239,7 @@ public class Player {
      }
 
 
-    abstract class ActionPlayers extends Players {
+    class ActionPlayers extends Players {
 
     Players players = Players.class.getResource();
 
