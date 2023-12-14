@@ -34,7 +34,7 @@ public class Action {
      }
 
 
-    public class Actions implements Player {
+    public class Actions extends Player {
          
     @FXML
     private Button btnmfm = new Button("mfm");
