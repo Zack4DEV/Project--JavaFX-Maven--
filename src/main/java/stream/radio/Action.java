@@ -1,13 +1,20 @@
 package stream.radio;
 
-import stream.radio.Player; 
+import stream.radio.Player.Players; 
      
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaErrorEvent;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
+
+import java.net.*;
+import java.net.MalformedURLException;
+
 
 public class Action {
 
@@ -26,6 +33,9 @@ public class Action {
 
     public class Actions {
 
+    
+    Players players = new Players(Hyperlink hlplay);
+         
     @FXML
     private Button btnmfm = new Button("mfm");
     @FXML
@@ -75,7 +85,7 @@ public class Action {
      btnmfm.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emfm){
-               mfmPlayer.play();
+               players.mfmPlayer.play();
           }
      });          
      }
@@ -84,7 +94,7 @@ public class Action {
      btnaswat.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent easwat){
-               aswatPlayer.play();
+               players.aswatPlayer.play();
           }
      });          
      }
@@ -93,7 +103,7 @@ public class Action {
      btnchada.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent echada){
-               chadaPlayer.play();
+               players.chadaPlayer.play();
           }
      });          
      }
@@ -102,7 +112,7 @@ public class Action {
      btnmars.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emars){
-               marsPlayer.play();
+               players.marsPlayer.play();
           }
      });          
      }
@@ -111,7 +121,7 @@ public class Action {
      btnmedradio.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emedradio){
-               medradioPlayer.play();
+               players.medradioPlayer.play();
           }
      });          
      }
@@ -120,7 +130,7 @@ public class Action {
      btntania.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent etania){
-               taniaPlayer.play();
+               players.taniaPlayer.play();
           }
      });          
      }
@@ -129,7 +139,7 @@ public class Action {
      btnatlantic.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eatlantic){
-               atlanticPlayer.play();
+               players.atlanticPlayer.play();
           }
      });          
      }
@@ -138,7 +148,7 @@ public class Action {
      btnyabiladi.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eyabiladi){
-               yabiladiPlayer.play();
+               players.yabiladiPlayer.play();
           }
      });          
      }
@@ -147,7 +157,7 @@ public class Action {
      btnmedi.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emedi){
-               mediPlayer.play();
+               players.mediPlayer.play();
           }
      });          
      }
@@ -156,7 +166,7 @@ public class Action {
      btnness.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eness){
-               nessPlayer.play();
+               players.nessPlayer.play();
           }
      });          
      }
@@ -165,7 +175,7 @@ public class Action {
      btnhitradio.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ehitradio){
-               hitradioPlayer.play();
+               players.hitradioPlayer.play();
           }
      });          
      }
@@ -174,7 +184,7 @@ public class Action {
      btnhitmaroc.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ehitmaroc){
-               hitmarocPlayer.play();
+               players.hitmarocPlayer.play();
           }
      });          
      }
@@ -183,7 +193,7 @@ public class Action {
      btntarab.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent etarab){
-               tarabPlayer.play();
+               players.tarabPlayer.play();
           }
      });          
      }
@@ -192,7 +202,7 @@ public class Action {
      btnwatania.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ewatania){
-               wataniaPlayer.play();
+               players.wataniaPlayer.play();
           }
      });          
      }
@@ -201,7 +211,7 @@ public class Action {
      btnmoroccoenglish.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emoroccoenglish){
-               moroccoenglishPlayer.play();
+               players.moroccoenglishPlayer.play();
           }
      });          
      }
@@ -210,7 +220,7 @@ public class Action {
      btntamazgha.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent etamazgha){
-               tamazghaPlayer.play();
+               players.tamazghaPlayer.play();
           }
      });          
      }
@@ -219,25 +229,17 @@ public class Action {
      btnizlan.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eizlan){
-               izlanPlayer.play();
+               players.izlanPlayer.play();
           }
      });          
      }
 
-     public void mfmAction() throws MediaErrorEvent{
-     btnmfm.setOnAction(new EventHandler<MouseEvent>(){
-          @Override
-          public void handle(MouseEvent emfm){
-               mfmPlayer.play();
-          }
-     });          
-     }
 
      public void coranAction() throws MediaErrorEvent{
      btncoran.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ecoran){
-               coranPlayer.play();
+               players.coranPlayer.play();
           }
      });          
      }
@@ -246,7 +248,7 @@ public class Action {
      btnmontecarlo.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent emontecarlo){
-               montecarloPlayer.play();
+               players.montecarloPlayer.play();
           }
      });          
      }
@@ -255,7 +257,7 @@ public class Action {
      btnaljazeera.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ealjazeera){
-               aljazeeraPlayer.play();
+               players.aljazeeraPlayer.play();
           }
      });          
      }
@@ -264,7 +266,7 @@ public class Action {
      btnskynewsarabia.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent eskynewsarabia){
-               skynewsarabiaPlayer.play();
+               players.skynewsarabiaPlayer.play();
           }
      });          
      }
@@ -273,7 +275,7 @@ public class Action {
      btnbbcarabic.setOnAction(new EventHandler<MouseEvent>(){
           @Override
           public void handle(MouseEvent ebbcarabic){
-               bbcarabicPlayer.play();
+               players.bbcarabicPlayer.play();
           }
      });          
      }
