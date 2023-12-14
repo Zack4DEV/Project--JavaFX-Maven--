@@ -8,27 +8,60 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaException;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.event.EventHandler;
 import java.util.*;
 
 abstract class Player {
 
-    private final Hyperlink hl = new HyperLink();
-    @FXML
-    Media media = new Media(hl.toString());
-    @FXML
-    MediaPlayer mediaPlayer = new MediaPlayer(media);
-    @FXML
-    MediaView mediaView = new MediaView(mediaPlayer);
+    private final Hyperlink hl;
+    Media media;
+    MediaPlayer mediaPlayer;
+    MediaView mediaView;
 
     public void play() throws MediaException {
-        mediaPlayer.play();
+
+        try {
+        media = new Media(hl.toString());
+        if (media.getError() == null) {
+            media.setOnError(new Runnable() {
+                public void run() {
+                    // Handle asynchronous error in Media object.
+                }
+            });
+            try {
+                mediaPlayer = new MediaPlayer(media);
+                if (mediaPlayer.getError() == null) {
+                    mediaPlayer.setOnError(new Runnable() {
+                        public void run() {
+                            // Handle asynchronous error in MediaPlayer object.
+                        }
+                    });
+                    mediaView = new MediaView(mediaPlayer);
+                    mediaView.setOnError(new EventHandler<MediaErrorEvent>() {
+                        public void handle(MediaErrorEvent t) {
+                            // Handle asynchronous error in MediaView.
+                        }
+                    });
+                } else {
+                    // Handle synchronous error creating MediaPlayer.
+                }
+            } catch (Exception mediaPlayerException) {
+                // Handle exception in MediaPlayer constructor.
+            }
+        } else {
+            // Handle synchronous error creating Media.
+        }
+    } catch (MediaException mediaException) {
+        // Handle exception in Media constructor.
+    }
+        
     }
     
         public class hyperLinks {
         
         public void mfmPlay(){
         Hyperlink hlmfm = new Hyperlink("http://streamer.eagrpservices.com/audio/mfmradio.ogg");
-        mfmPlayer = new MediaPlayer(new Media(hlmfm).toString()));
+        mfmPlayer = new MediaPlayer(new Media(hlmfm).toString());
         mfmPlayer.play();
         }
 
