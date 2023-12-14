@@ -1,7 +1,8 @@
 package stream.radio;
 
 import stream.radio.Player; 
-     
+import stream.radio.Player.Players; 
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
