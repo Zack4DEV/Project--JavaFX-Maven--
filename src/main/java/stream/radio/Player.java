@@ -45,11 +45,6 @@ public class Player {
                 if (mediaPlayer.getError() == null) {
                     mediaPlayer.setOnError(new Runnable() {
                         public void run() {
-                        button.setOnAction(new EventHandler<ActionEvent>(){
-                        @Override
-                        public void handle(ActionEvent e){
-                        }
-                        });
                         }
                     });
                     mediaView = new MediaView(mediaPlayer);
@@ -68,9 +63,9 @@ public class Player {
         
     }
     
-        public class Players {
+    public class Players {
 
-        @FXML
+    @FXML
     private Button button = new Button("");
     @FXML
     private Button btnmfm = new Button("mfm");
