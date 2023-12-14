@@ -18,8 +18,8 @@ import java.net.MalformedURLException;
 
 public class Action {
 
-    Player player = new Player(Hyperlink hl);
-
+    Player player;
+    Hyperlink hl;
      
     @FXML
     private Button button = new Button("");
