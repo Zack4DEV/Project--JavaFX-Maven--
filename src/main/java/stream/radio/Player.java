@@ -10,7 +10,7 @@ import javafx.scene.media.MediaView;
 import javafx.event.EventHandler;
 import java.util.*;
 import java.net.*;
-import java.net.Hyperlink;
+import javafx.scene.control.Hyperlink;
 
 abstract class Player {
 
