@@ -229,7 +229,6 @@ public class Player {
     private final Hyperlink hl = new Hyperlink("");
     String hlString = (String) hl.toString();
 
-    Players players = Players.class.getResource();
     
     public void action() throws MediaException{
     button.setOnAction(new EventHandler<>(){
@@ -241,7 +240,9 @@ public class Player {
 
 
     class ActionPlayers extends Players {
-         
+
+    Players players = Players.class.getResource();
+
     @FXML
     private Button btnmfm = new Button("mfm");
     @FXML
