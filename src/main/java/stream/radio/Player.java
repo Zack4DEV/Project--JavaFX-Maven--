@@ -47,7 +47,7 @@ public class Player {
                         public void run() {
                         button.setOnAction(new EventHandler<ActionEvent>(){
                         @Override
-                        public void handle(ActionEvent<MouseEvent> e){
+                        public void handle(ActionEvent e){
                         }
                         });
                         }
@@ -123,7 +123,7 @@ public class Player {
         MediaPlayer mfmPlayer = new MediaPlayer( new Media(hlStringmfm) );
         btnmfm.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> emfm){
+          public void handle(ActionEvent emfm){
                mfmPlayer.play();
           }
          });   
@@ -135,7 +135,7 @@ public class Player {
         MediaPlayer aswatPlayer = new MediaPlayer( new Media(hlStringaswat) );
         btnaswat.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> easwat){
+          public void handle(ActionEvent easwat){
                aswatPlayer.play();
           }
          });    
@@ -147,7 +147,7 @@ public class Player {
         MediaPlayer chadaPlayer = new MediaPlayer( new Media(hlStringchada) );
         btnchada.setOnAction(new EventHandler<ActionEvent>(){
         @Override
-          public void handle(ActionEvent<MouseEvent> echada){
+          public void handle(ActionEvent echada){
                chadaPlayer.play();
           }
          }); 
@@ -159,7 +159,7 @@ public class Player {
         MediaPlayer marsPlayer = new MediaPlayer( new Media(hlStringmars) );
         btnmars.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> emars){
+          public void handle(ActionEvent emars){
                marsPlayer.play();
           }
          });    
@@ -171,7 +171,7 @@ public class Player {
         MediaPlayer medradioPlayer = new MediaPlayer( new Media(hlStringmedradio) );
         btnmedradio.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> emedradio){
+          public void handle(ActionEvent emedradio){
                medradioPlayer.play();
           }
          }); 
@@ -183,7 +183,7 @@ public class Player {
         MediaPlayer taniaPlayer = new MediaPlayer( new Media(hlStringtania) );
         btntania.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> etania){
+          public void handle(ActionEvent etania){
                taniaPlayer.play();
           }
          });  
@@ -195,7 +195,7 @@ public class Player {
         MediaPlayer atlanticPlayer = new MediaPlayer( new Media(hlStringatlantic) );
         btnatlantic.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> eatlantic){
+          public void handle(ActionEvent eatlantic){
                atlanticPlayer.play();
           }
          });
@@ -207,7 +207,7 @@ public class Player {
         MediaPlayer yabiladiPlayer = new MediaPlayer( new Media(hlStringyabiladi) );
         btnyabiladi.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> eyabiladi){
+          public void handle(ActionEvent eyabiladi){
                yabiladiPlayer.play();
           }
          }); 
@@ -219,7 +219,7 @@ public class Player {
         MediaPlayer mediPlayer = new MediaPlayer( new Media(hlStringmedi) );
         btnmedi.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> emedi){
+          public void handle(ActionEvent emedi){
                mediPlayer.play();
           }
          });     
@@ -231,7 +231,7 @@ public class Player {
         MediaPlayer nessPlayer = new MediaPlayer( new Media(hlStringness) );
         btnness.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> eness){
+          public void handle(ActionEvent eness){
                nessPlayer.play();
           }
          }); 
@@ -243,7 +243,7 @@ public class Player {
         MediaPlayer hitradioPlayer = new MediaPlayer( new Media(hlStringhitradio) );
         btnhitradio.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> ehitradio){
+          public void handle(ActionEvent ehitradio){
                hitradioPlayer.play();
           }
          });
@@ -255,7 +255,7 @@ public class Player {
         MediaPlayer hitmarocPlayer = new MediaPlayer( new Media(hlStringhitmaroc) );
         btnhitmaroc.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> ehitmaroc){
+          public void handle(ActionEvent ehitmaroc){
                hitmarocPlayer.play();
           }
          }); 
@@ -266,7 +266,7 @@ public class Player {
         MediaPlayer tarabPlayer = new MediaPlayer( new Media(hlStringtarab) );
         btntarab.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> etarab){
+          public void handle(ActionEvent etarab){
                tarabPlayer.play();
           }
          });        
@@ -278,7 +278,7 @@ public class Player {
         MediaPlayer wataniaPlayer = new MediaPlayer( new Media(hlStringwatania) );
         btnwatania.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> ewatania){
+          public void handle(ActionEvent ewatania){
                wataniaPlayer.play();
           }
          });
@@ -290,7 +290,7 @@ public class Player {
         MediaPlayer moroccoenglishPlayer = new MediaPlayer( new Media(hlStringmoroccoenglish) );
         btnmoroccoenglish.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> emoroccoenglish){
+          public void handle(ActionEvent emoroccoenglish){
                moroccoenglishPlayer.play();
           }
          });       
@@ -302,7 +302,7 @@ public class Player {
         MediaPlayer tamazghaPlayer = new MediaPlayer( new Media(hlStringtamazgha) );
         btntamazgha.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> etamazgha){
+          public void handle(ActionEvent etamazgha){
                tamazghaPlayer.play();
           }
          });
@@ -314,7 +314,7 @@ public class Player {
         MediaPlayer izlanPlayer = new MediaPlayer( new Media(hlStringizlan) );
         btnizlan.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> eizlan){
+          public void handle(ActionEvent eizlan){
                izlanPlayer.play();
           }
          });  
@@ -326,7 +326,7 @@ public class Player {
         MediaPlayer coranPlayer = new MediaPlayer( new Media(hlStringcoran) );
         btncoran.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> ecoran){
+          public void handle(ActionEvent ecoran){
                coranPlayer.play();
           }
          });         
@@ -338,7 +338,7 @@ public class Player {
         MediaPlayer montecarloPlayer = new MediaPlayer( new Media(hlStringmontecarlo) );
         btnmontecarlo.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> emontecarlo){
+          public void handle(ActionEvent emontecarlo){
                montecarloPlayer.play();
           }
          }); 
@@ -350,7 +350,7 @@ public class Player {
         MediaPlayer aljazeeraPlayer = new MediaPlayer( new Media(hlStringaljazeera) );
         btnaljazeera.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> ealjazeera){
+          public void handle(ActionEvent ealjazeera){
                aljazeeraPlayer.play();
           }
          }); 
@@ -362,7 +362,7 @@ public class Player {
         MediaPlayer skynewsarabiaPlayer = new MediaPlayer( new Media(hlStringskynewsarabia) );
         btnskynewsarabia.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> eskynewsarabia){
+          public void handle(ActionEvent eskynewsarabia){
                skynewsarabiaPlayer.play();
           }
          });
@@ -374,7 +374,7 @@ public class Player {
         MediaPlayer bbcarabicPlayer = new MediaPlayer( new Media(hlStringbbcarabic) );
         btnbbcarabic.setOnAction(new EventHandler<ActionEvent>(){
           @Override
-          public void handle(ActionEvent<MouseEvent> ebbcarabic){
+          public void handle(ActionEvent ebbcarabic){
                bbcarabicPlayer.play();
           }
          }); 
