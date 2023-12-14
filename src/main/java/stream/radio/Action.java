@@ -1,6 +1,6 @@
 package stream.radio;
 
-import stream.radio.Player.Players; 
+import stream.radio.Player; 
      
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -33,8 +33,7 @@ public class Action {
 
     public class Actions {
 
-    
-    Players players = new Players(Hyperlink hlplay);
+    Player players = new Player.Players(Hyperlink hlplay);
          
     @FXML
     private Button btnmfm = new Button("mfm");
