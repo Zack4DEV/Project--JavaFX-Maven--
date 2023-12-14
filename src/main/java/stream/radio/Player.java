@@ -229,7 +229,7 @@ abstract class Player {
     private final Hyperlink hl = new Hyperlink("");
     String hlString = (String) hl.toString();
 
-    Players players = new Players(hlString);
+    Players players = new Players();
     
     public void action() throws MediaErrorEvent{
     button.setOnAction(new EventHandler<MouseEvent>(){
